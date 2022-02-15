@@ -1,0 +1,81 @@
+V "GNAT Lib v4.6"
+M P W=b
+P SS ZX
+R nnnnnnnnnnvnnnnnnnvnnvnnnvvnnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+
+U prueba%b		prueba.adb		1bdb213c NE OO SU
+W ada%s			ada.ads			ada.ali
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W ada.text_io.integer_aux%s  a-tiinau.adb	a-tiinau.ali
+W ada.text_io.integer_io%s
+W fracciones%s		fracciones.adb		fracciones.ali
+W system%s		system.ads		system.ali
+W system.exception_table%s  s-exctab.adb	s-exctab.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.standard_library%s  s-stalib.adb	s-stalib.ali
+
+D ada.ads		20070406091342 3ffc8e18
+D a-except.ads		20090727140100 0c711ac9
+D a-finali.ads		20090409150019 e5e85fa4
+D a-filico.ads		20090409150019 872dc219
+D a-ioexce.ads		20091130110856 8b9de6cd
+D a-stream.ads		20090409150019 2ca4ee37
+D a-tags.ads		20101021101406 c7695348
+D a-textio.ads		20091028140912 386df5d4
+D a-tiinau.ads		20090409150019 8114c8e4
+D a-tiinio.ads		20090409150019 aa04e5d6
+D a-tiinio.adb		20091130162119 df9cd7af
+D a-unccon.ads		20070406091342 f9eb8f06
+D fracciones.ads	20180218200310 5e0debb9
+D interfac.ads		20090409150019 f77d8799
+D i-cstrea.ads		20100622165701 1bd72c32
+D prueba.adb		20180221082326 7dbb3f51
+D system.ads		20140416172229 23e1f70b
+D s-crtl.ads		20100617122610 ac77b159
+D s-exctab.ads		20090417131547 66e51330
+D s-ficobl.ads		20100909103250 443b9d66
+D s-finimp.ads		20090409150019 46853fe8
+D s-finroo.ads		20090409150019 dbb860c9
+D s-parame.ads		20091130110856 9c5d83fa
+D s-secsta.ads		20090707124243 eea35a36
+D s-soflin.ads		20090729085153 9414c974
+D s-stache.ads		20090417130712 596fc1b4
+D s-stalib.ads		20101021102512 c4241c00
+D s-stoele.ads		20090417130712 facd7d98
+D s-stoele.adb		20100617152355 afc5dc80
+D s-stratt.ads		20100909123135 aedef97e
+D s-traent.ads		20090417130712 5221ee41
+D s-unstyp.ads		20090409150019 6ae15c76
+D s-wchcon.ads		20090417130712 bfeb2e3d
+X 1 ada.ads
+16K9*Ada 19e8 16|1r6 2r5
+X 8 a-textio.ads
+49K13*Text_IO 472e16 16|1w10 2r9
+264U14*Put_Line 16|41s9 45s17 47s17 48s17 49s17 50s17
+X 10 a-tiinio.ads
+45k21*Integer_IO 84e27 16|6r35
+X 13 fracciones.ads
+1K9*Fracciones 27e15 16|1w19 2r18
+3R14*Fraccion 26e27 16|16r12 17r12 18r12
+5V18*"+"{3R14} 16|28s13
+6V18*"-"{3R14} 16|17s24 29s12 29s18 31s19 32s19
+7V18*"-"{3R14} 16|30s13 33s13
+8V18*"*"{3R14} 16|31s13 38s23
+9V18*"/"{3R14} 16|32s13
+10V18*"="{boolean} 16|27s14 28s16 29s15 30s16 31s16 32s16 33s16 40s14
+15V18*"/"{3R14} 16|16s25 17s26 27s18 28s20 29s20 30s20 31s21 32s21 33s20
+. 35s15 40s18
+17V18*Numerador{integer} 16|22s12
+18V18*Denominador{positive} 16|22s35
+X 16 prueba.adb
+4U11*Prueba 4b11 52l5 52t11
+6K17 Integer_Es[10|45] 7r13
+8X9 Practica_no_Apta 14r31 44r14
+10U19 Error 10b19 15l21 15t26 27s29 28s28 29s28 30s28 31s29 32s29 33s28 40s29
+16r9 A{13|3R14} 28r12 29r13 30r12 31r12 32r12 33r12
+17r9 B{13|3R14} 22r23 22r48 27r12 28r14 30r14 31r14 32r14 33r14 38r24
+18r9 P{13|3R14} 35m9 38m17 38r22 40r12
+36i13 I{integer}
+

@@ -1,0 +1,71 @@
+V "GNAT Lib v4.6"
+P ZX
+R nvnnnnnnnvnnnnnnnnnnnnnvvnnnnnnnnnnnvnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnnnnnnnnnnv1+nn
+
+U retardadores%b	retardadores.adb	670ebb8a NE OO PK GE
+W ada%s			ada.ads			ada.ali
+W ada.real_time%s	a-reatim.adb		a-reatim.ali
+
+U retardadores%s	retardadores.ads	3ad953b4 BN EE NE OO PK GE
+
+D ada.ads		20070406091342 3ffc8e18
+D a-except.ads		20090727140100 0c711ac9
+D a-reatim.ads		20090409150019 63f07669
+D a-unccon.ads		20070406091342 f9eb8f06
+D interfac.ads		20090409150019 f77d8799
+D i-c.ads		20101007125900 809c38c4
+D retardadores.ads	20180307081226 3ad953b4
+D retardadores.adb	20180307081227 3e279e57
+D system.ads		20140416172229 23e1f70b
+D s-atacco.ads		20090409150019 1dc856ad
+D s-exctab.ads		20090417131547 66e51330
+D s-linux.ads		20090730092306 47911ab1
+D s-multip.ads		20101011073009 38ac9f73
+D s-osinte.ads		20101127183452 6e2d2e09
+D s-parame.ads		20091130110856 9c5d83fa
+D s-soflin.ads		20090729085153 9414c974
+D s-stache.ads		20090417130712 596fc1b4
+D s-stausa.ads		20101018101807 bba781f7
+D s-stalib.ads		20101021102512 c4241c00
+D s-stoele.ads		20090417130712 facd7d98
+D s-stoele.adb		20100617152355 afc5dc80
+D s-tasinf.ads		20090409150019 21316953
+D s-taspri.ads		20080408071349 af44aca8
+D s-taprop.ads		20090409150019 07f79e46
+D s-taskin.ads		20101021101406 b2eaee08
+D s-traent.ads		20090417130712 5221ee41
+D s-unstyp.ads		20090409150019 6ae15c76
+X 1 ada.ads
+16K9*Ada 19e8 8|1r6 1r25
+X 3 a-reatim.ads
+39K13*Real_Time 139e18 8|1w10 1r29
+41O9*Time 8|35r27
+46O9*Time_Span 8|33r25
+53V13*Clock{41O9} 8|35s35
+55V13*"+"{41O9} 8|40s51
+81V13*To_Time_Span{46O9} 8|34s11
+X 7 retardadores.ads
+2f4 Retardo{float} 8|34r34
+3+9 Elementos 6r37 7r37 8|3r49 6r40 7r40 11r24 14r40 18r40 44r37 48r37
+4i4 Tamaño{positive} 8|3r38 34r52
+5k9*Retardadores 2z4 3z9 4z4 9l5 9e17 8|2b14 56l5 56t17
+6U14*Escribir 6>24 8|44b14 47l8 47t16
+6*24 el_Elemento{3+9} 8|44b24 46r34
+7U14*Leer 7<20 8|48b14 51l8 51t12
+7*20 un_Elemento{3+9} 8|48b20 50m30
+8U14*Parar 8|52b14 55l8 55t13
+X 8 retardadores.adb
+3A9 array_Elementos(7|3+9)<integer> 10r14
+5w14 Línea_de_Retardo 13b19 29l8 29t24 39r10 46r7 50r7
+6U17 Escribir 6>27 14b17 17l11 17t19 46s24
+6*27 el_Elemento{7|3+9} 14b27 16r21
+7U17 Leer 7<23 18b17 21l11 21t15 50s24
+7*23 un_Elemento{7|3+9} 18b23 20m10
+8U17 Desplazar 22b17 28l11 28t20 39s27
+10a7 Línea{3A9} 24r20 24r27 25m10 25r17 25r32 26r27 26r34 26r47 27m10 27r17
+11*7 Entrada{7|3+9} 16m10 27r33
+11*16 Salida{7|3+9} 20r25 24m10
+31t9 Centinela 32b14 42l8 42t17 54r13
+33o7 Periodo{3|46O9} 40r53
+35o7 Instante_Siguiente{3|41O9} 38r22 40m10 40r32
+

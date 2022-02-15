@@ -1,0 +1,117 @@
+V "GNAT Lib v4.9"
+A -mtune=generic
+A -march=i686
+P ZX
+
+RN
+RV NO_ABORT_STATEMENTS
+RV NO_DELAY
+RV NO_FIXED_POINT
+RV NO_FLOATING_POINT
+RV NO_PROTECTED_TYPES
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_TASKING
+RV NO_DEFAULT_INITIALIZATION
+RV NO_ELABORATION_CODE
+RV SPARK_05
+RV MAX_TASKS=2
+RV MAX_ENTRY_QUEUE_LENGTH=1+
+
+U horno%b		horno.adb		ef1f9105 OO PK
+W ada%s			ada.ads			ada.ali
+W ada.real_time%s	a-reatim.adb		a-reatim.ali
+W ada.real_time.delays%s  a-retide.adb		a-retide.ali
+W retardadores%s	retardadores.adb	retardadores.ali  AD
+W system%s		system.ads		system.ali
+W system.parameters%s	s-parame.adb		s-parame.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.task_info%s	s-tasinf.adb		s-tasinf.ali
+W system.tasking%s	s-taskin.adb		s-taskin.ali
+W system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
+W system.tasking.stages%s  s-tassta.adb		s-tassta.ali
+
+U horno%s		horno.ads		99cfb3f9 EE NE OO PK
+
+D ada.ads		20070406091342 3ffc8e18
+D a-except.ads		20140129161953 f86a4103
+D a-reatim.ads		20090409150019 63f07669
+D a-retide.ads		20090409150019 081cdaa4
+D a-unccon.ads		20070406091342 f9eb8f06
+D horno.ads		20041112154314 99cfb3f9
+D horno.adb		20041112154314 2ff90721
+D interfac.ads		20140225151838 69adb1b9
+D i-c.ads		20110801143639 5421119b
+D retardadores.ads	20041112154314 3ad953b4
+D retardadores.adb	20041112154314 3e279e57
+D system.ads		20140730121127 bd760655
+D s-atacco.ads		20120515093410 4c36d12f
+D s-exctab.ads		20140225151139 54135002
+D s-linux.ads		20140409145429 5b2f79a5
+D s-multip.ads		20101011073009 38ac9f73
+D s-oscons.ads		20140730121128 09f64252
+D s-osinte.ads		20140409145429 59011f13
+D s-parame.ads		20140225151139 ab8cb46a
+D s-soflin.ads		20140225151139 aa763b52
+D s-stache.ads		20140225151139 a37c21ec
+D s-stausa.ads		20110804134155 017a0a05
+D s-stalib.ads		20140225151139 a891183f
+D s-stoele.ads		20140225151139 2dc34a04
+D s-stoele.adb		20140225151139 ed88f8fb
+D s-tasinf.ads		20120730151500 21316953
+D s-taspri.ads		20110927094500 15f617a8
+D s-taprop.ads		20111212143339 1dd2e1b6
+D s-taskin.ads		20140131154341 3f821f32
+D s-taprob.ads		20110927094500 502249e3
+D s-tassta.ads		20121029110946 70812003
+D s-traent.ads		20140225151139 b5116092
+D s-unstyp.ads		20140225151139 510692af
+X 1 ada.ads
+16K9*Ada 19e8 7|1r6 1r25
+X 3 a-reatim.ads
+39K13*Real_Time 139e18 7|1w10 1r29
+41O9*Time<duration> 7|56r27
+46O9*Time_Span<duration> 7|55r25
+53V13*Clock{41O9} 7|56s35
+55V14*"+"{41O9} 7|64s51
+81V13*To_Time_Span{46O9} 7|55s38
+X 6 horno.ads
+1K9*Horno 7l5 7e10 7|3b14 82l5 82t10
+2F9*Temperaturas<float> 6r40 7|17r25 21r43 26r10 36r43 50r20 78r40
+3F9*Potencias<float> 5r37 7|11r45 22r40 23r40 27r10 40r40 44r40 57r17 69r37
+5U14*Escribir 5>24 7|69b14 77l8 77t16
+5f24 la_Potencia{3F9} 7|69b24 71r10 75r44
+6U14*Leer 6<20 7|78b14 81l8 81t12
+6f20 la_Temperatura{2F9} 7|78b20 80m18
+X 7 horno.adb
+6f4 L{float} 10r45 12r54
+8N4 Ts 12r56 50r60 55r51
+9K12 Retardador_de_Potencias[10|5] 61r10 72r10 75r10
+15N4 Ct 50r57
+16N4 Cp 50r38
+17f4 T_Ambiente{6|2F9} 26r26 50r44
+20w14 Estado 35b19 52l8 52t14 62r10 63r10 80r5
+21U17 Leer 21<23 36b17 39l11 39t15 80s12
+21f23 la_Temperatura{6|2F9} 36b23 38m10
+22U17 Escribir 22>27 40b17 43l11 43t19 62s17
+22f27 la_Potencia{6|3F9} 40b27 42r15
+23U17 Leer 23<23 44b17 47l11 47t15
+23f23 la_Potencia{6|3F9} 44b23 46m10
+24U17 Recalcular 48b17 51l11 51t21 63s17
+26f7 T{6|2F9} 38r28 50r10 50r15 50r42
+27f7 P{6|3F9} 42r10 46r25 50r33
+32t9 Centinela 54b14 66l8 66t17 73r16
+55o7 Periodo{3|46O9} 64r53
+56o7 Siguiente_Instante{3|41O9} 60r22 64m10 64r32
+57f7 Potencia{6|3F9} 61m40 62r27
+X 10 retardadores.ads
+2f4 Retardo{float} 7|10r34
+3+9 Elementos 7|11r32
+4i4 Tamaño{positive} 7|12r35
+5k9*Retardadores 7|2w6 10r20 10|9e17
+6U14*Escribir 7|75s34[9]
+7U14*Leer 7|61s34[9]
+8U14*Parar 7|72s34[9]
+X 22 s-stausa.ads
+203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
+268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
+

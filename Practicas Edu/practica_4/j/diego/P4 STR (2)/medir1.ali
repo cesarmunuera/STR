@@ -1,0 +1,113 @@
+V "GNAT Lib v4.6"
+M P W=b
+P SS ZX
+R nnnnnnnnnvnnnnnnnnvnnvnvvvnnnnnnnnnnnnnvnnnnvnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+
+U medir1%b		medir1.adb		b4dd3b16 NE OO SU IL
+W ada%s			ada.ads			ada.ali
+W ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.real_time%s	a-reatim.adb		a-reatim.ali
+W ada.real_time.delays%s  a-retide.adb		a-retide.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W ada.text_io.float_aux%s  a-tiflau.adb		a-tiflau.ali
+W ada.text_io.float_io%s
+W calefactor%s		calefactor.adb		calefactor.ali
+W sensor%s		sensor.adb		sensor.ali
+W system.fat_flt%s	s-fatflt.ads		s-fatflt.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+
+D ada.ads		20070406091342 3ffc8e18
+D a-calend.ads		20090409150019 343c83dd
+D a-caldel.ads		20090409150019 9f20b83d
+D a-except.ads		20090727140100 0c711ac9
+D a-finali.ads		20090409150019 e5e85fa4
+D a-filico.ads		20090409150019 872dc219
+D a-ioexce.ads		20091130110856 8b9de6cd
+D a-reatim.ads		20090409150019 63f07669
+D a-retide.ads		20090409150019 081cdaa4
+D a-stream.ads		20090409150019 2ca4ee37
+D a-tags.ads		20101021101406 c7695348
+D a-textio.ads		20091028140912 386df5d4
+D a-tiflau.ads		20090409150019 c0393f21
+D a-tiflio.ads		20090409150019 56fbda09
+D a-tiflio.adb		20090409150019 fd9b1cfc
+D a-unccon.ads		20070406091342 f9eb8f06
+D calefactor.ads	20180307080306 7ef44599
+D interfac.ads		20090409150019 f77d8799
+D i-c.ads		20101007125900 809c38c4
+D i-cstrea.ads		20100622165701 1bd72c32
+D medir1.adb		20180307180910 de70027d
+D sensor.ads		20180307080305 4fc4ff4f
+D system.ads		20140416172229 23e1f70b
+D s-atacco.ads		20090409150019 1dc856ad
+D s-crtl.ads		20100617122610 ac77b159
+D s-exctab.ads		20090417131547 66e51330
+D s-fatflt.ads		20090409150019 11beb392
+D s-fatgen.ads		20090409150019 9267ca45
+D s-ficobl.ads		20100909103250 443b9d66
+D s-finimp.ads		20090409150019 46853fe8
+D s-finroo.ads		20090409150019 dbb860c9
+D s-linux.ads		20090730092306 47911ab1
+D s-multip.ads		20101011073009 38ac9f73
+D s-osinte.ads		20101127183452 6e2d2e09
+D s-parame.ads		20091130110856 9c5d83fa
+D s-secsta.ads		20090707124243 eea35a36
+D s-soflin.ads		20090729085153 9414c974
+D s-stache.ads		20090417130712 596fc1b4
+D s-stausa.ads		20101018101807 bba781f7
+D s-stalib.ads		20101021102512 c4241c00
+D s-stoele.ads		20090417130712 facd7d98
+D s-stoele.adb		20100617152355 afc5dc80
+D s-stratt.ads		20100909123135 aedef97e
+D s-tasinf.ads		20090409150019 21316953
+D s-taspri.ads		20080408071349 af44aca8
+D s-taprop.ads		20090409150019 07f79e46
+D s-taskin.ads		20101021101406 b2eaee08
+D s-traent.ads		20090417130712 5221ee41
+D s-unstyp.ads		20090409150019 6ae15c76
+D s-wchcon.ads		20090417130712 bfeb2e3d
+X 1 ada.ads
+16K9*Ada 19e8 21|3r6 3r23 4r6 4r25 8r32 9r32
+X 8 a-reatim.ads
+39K13*Real_Time 139e18 21|4w10 4r29
+41O9*Time 21|15r28
+46O9*Time_Span 21|14r21
+53V13*Clock{41O9} 21|15s34
+55V13*"+"{41O9} 21|26s64
+80V13*To_Duration{duration} 21|27s41
+81V13*To_Time_Span{46O9} 21|14s32
+X 12 a-textio.ads
+49K13*Text_IO 472e16 21|3w10 3r27 8r36 9r36
+74I12*Field{integer}
+167U14*New_Line 21|20s17 47s17 49s17 51s17 55s25
+243U14*Put 21|19s17 46s17 48s17 50s17 54s25
+X 14 a-tiflio.ads
+45k21*Float_IO 88e25 21|8r44 9r44
+67U14 Put 21|19s70[9] 46s62[9] 48s48[8] 50s64[8]
+69i7 Fore{12|74I12} 21|19r77[9] 46r69[9] 48r54[8] 50r71[8]
+70i7 Aft{12|74I12} 21|19r85[9] 46r77[9] 48r62[8] 50r79[8]
+71i7 Exp{12|74I12} 21|19r92[9] 46r84[9] 48r69[8] 50r86[8]
+X 17 calefactor.ads
+1K9*Calefactor 8e15 21|2w6 12r11 21r17 61r17
+5F9*Potencias<float> 21|12r22
+7U14*Escribir 21|21s28 61s28
+X 21 medir1.adb
+6U11*medir1 6b11 65l5 65t11
+8K17 Real_Es[14|45] 48r40 50r56
+9K17 Temp_Es[14|45] 19r62 46r54
+11f9 Te{22|2F9} 18m29 19r74 24r29 44r46 46r66 53r55
+11f12 T{22|2F9} 22m29 24r41 28m37 34r41 35m37 44r37 53r44
+11f14 Taux{22|2F9} 33m29 34r29 37m37
+12f9 p{17|5F9} 21r37 44r27 53r27 60m17 61r37
+13f9 Cp{float} 44m17 50r68 53r32
+13f12 L{float} 27m25 27r31 48r52
+13f14 a{float}
+14o9 r{8|46O9} 26r66 27r53
+15o9 instante_Siguiente{8|41O9} 25r37 26m25 26r45
+X 22 sensor.ads
+1K9*Sensor 21|1w6 9r53 11r19 18r17 22r17 28r25 33r17 35r25 37r25 22|5e11
+2F9*Temperaturas<float> 21|9r60 11r26
+4U14*Leer 21|18s24 22s24 28s32 33s24 35s32 37s32
+

@@ -1,0 +1,169 @@
+V "GNAT Lib v4.6"
+M P AB W=b
+P SS ZX
+R nnnvnnnnnnnnnnnvnnvnnvnvvvvnnvnvnnnnnvnnnnnnvnnnnnnnnnnnnnvnvnnnnnnnnnnnnnnnnnnn
+
+U p1%b			p1.adb			efac8510 NE OO SU IL
+W ada%s			ada.ads			ada.ali
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W ada.text_io.enumeration_aux%s  a-tienau.adb	a-tienau.ali
+W ada.text_io.enumeration_io%s
+W ada.text_io.fixed_io%s
+W ada.text_io.float_aux%s  a-tiflau.adb		a-tiflau.ali
+W ada.text_io.generic_aux%s  a-tigeau.adb	a-tigeau.ali
+W ada.text_io.integer_aux%s  a-tiinau.adb	a-tiinau.ali
+W ada.text_io.integer_io%s
+W interfaces%s		interfac.ads		interfac.ali
+W system%s		system.ads		system.ali
+W system.arith_64%s	s-arit64.adb		s-arit64.ali
+W system.exn_lli%s	s-exnlli.adb		s-exnlli.ali
+W system.img_enum_new%s	s-imenne.adb		s-imenne.ali
+W system.img_real%s	s-imgrea.adb		s-imgrea.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.val_enum%s	s-valenu.adb		s-valenu.ali
+
+D ada.ads		20070406091342 3ffc8e18
+D a-except.ads		20090727140100 0c711ac9
+D a-finali.ads		20090409150019 e5e85fa4
+D a-filico.ads		20090409150019 872dc219
+D a-ioexce.ads		20091130110856 8b9de6cd
+D a-stream.ads		20090409150019 2ca4ee37
+D a-tags.ads		20101021101406 c7695348
+D a-textio.ads		20091028140912 386df5d4
+D a-tienau.ads		20090409150019 6a9c157b
+D a-tienio.ads		20090409150019 fc618ae6
+D a-tienio.adb		20090409150019 847b34a6
+D a-tifiio.ads		20090409150019 6ed4936c
+D a-tifiio.adb		20100621133558 60891011
+D a-tiflau.ads		20090409150019 c0393f21
+D a-tigeau.ads		20090409150019 9eaed207
+D a-tiinau.ads		20090409150019 8114c8e4
+D a-tiinio.ads		20090409150019 aa04e5d6
+D a-tiinio.adb		20091130162119 df9cd7af
+D a-unccon.ads		20070406091342 f9eb8f06
+D interfac.ads		20090409150019 f77d8799
+D i-cstrea.ads		20100622165701 1bd72c32
+D p1.adb		20180211183300 d7c170c4
+D system.ads		20140416172229 23e1f70b
+D s-arit64.ads		20090409150019 a011a169
+D s-crtl.ads		20100617122610 ac77b159
+D s-exctab.ads		20090417131547 66e51330
+D s-exnlli.ads		20090409150019 81977baf
+D s-ficobl.ads		20100909103250 443b9d66
+D s-finimp.ads		20090409150019 46853fe8
+D s-finroo.ads		20090409150019 dbb860c9
+D s-imenne.ads		20090417131547 8707cbf0
+D s-imgrea.ads		20090409150019 c7a851e2
+D s-parame.ads		20091130110856 9c5d83fa
+D s-secsta.ads		20090707124243 eea35a36
+D s-soflin.ads		20090729085153 9414c974
+D s-stache.ads		20090417130712 596fc1b4
+D s-stalib.ads		20101021102512 c4241c00
+D s-stoele.ads		20090417130712 facd7d98
+D s-stoele.adb		20100617152355 afc5dc80
+D s-stratt.ads		20100909123135 aedef97e
+D s-traent.ads		20090417130712 5221ee41
+D s-unstyp.ads		20090409150019 6ae15c76
+D s-valenu.ads		20090409150019 bb1a4295
+D s-wchcon.ads		20090417130712 bfeb2e3d
+X 1 ada.ads
+16K9*Ada 19e8 22|1r6 2r5 11r39 12r32 13r31 14r31 15r37
+X 8 a-textio.ads
+49K13*Text_IO 472e16 22|1w10 2r9 11r43 12r36 13r35 14r35 15r41
+167U14*New_Line 22|183s25 186s25 189s25 192s25 195s25 196s25 218s17 219s17
+. 232s17 233s17
+243U14*Put 22|207s17 210s17 212s17 214s17 216s17 221s17 224s17 226s17 228s17
+. 230s17 240s17 242s17 244s17 246s17 248s17 250s17 256s17
+264U14*Put_Line 22|176s17 182s25 184s25 187s25 190s25 193s25 252s17
+X 10 a-tienio.ads
+46k21*Enumeration_IO 75e31 22|13r43
+52U14 Get 22|188s32[13]
+60U14 Put 22|211s24[13] 225s24[13] 243s24[13] 249s24[13]
+X 12 a-tifiio.ads
+45k21*Fixed_IO 88e25 22|11r51
+56U14 Get 22|194s40[11]
+67U14 Put 22|215s32[11] 229s32[11] 255s32[11]
+X 17 a-tiinio.ads
+45k21*Integer_IO 84e27 22|12r44 14r43 15r49
+55U14 Get 22|177s30[15] 185s33[12] 191s32[14]
+65U14 Put 22|209s25[12] 213s24[14] 223s25[12] 227s24[14] 241s25[12] 245s24[14]
+. 247s25[12] 251s24[14]
+X 22 p1.adb
+4U11*p1 4b11 258l5 258t7
+6O14 temperatura_t 11r60 27r30 32r22 39r27 90r74 92r25 201r50
+7I17 dia_t{integer} 12r55 20r22 33r14 200r54
+8I17 ano_t{integer} 14r54 22r22 35r14 200r76
+9E14 mes_t 9e113 13r58 21r22 34r14 200r65
+9n24 enero{9E14}
+9n30 febrero{9E14}
+9n38 marzo{9E14}
+9n44 abril{9E14}
+9n50 mayo{9E14}
+9n55 junio{9E14}
+9n61 julio{9E14}
+9n67 agosto{9E14}
+9n74 septiembre{9E14}
+9n85 octubre{9E14}
+9n93 noviembre{9E14}
+9n103 diciembre{9E14}
+11K17 Temperatura_Es[12|45] 194r25 215r17 229r17 255r17
+12K17 Dias_Es[17|45] 185r25 209r17 223r17 241r17 247r17
+13K17 Mes_Es[10|46] 188r25 211r17 225r17 243r17 249r17
+14K17 Ano_Es[17|45] 191r25 213r17 227r17 245r17 251r17
+15K17 NumFechas_Es[17|45] 177r17
+18R14 Fecha_t 23e19 28r24 45r38 200r45
+20i17 dia{7I17} 128r72 128r90 162r72 162r90 209r43 223r44 241r46 247r47
+21e17 mes{9E14} 122r64 122r82 126r67 126r85 155r64 155r82 160r67 160r85 211r42
+. 225r43 243r45 249r46
+22i17 ano{8I17} 116r56 116r74 120r59 120r77 149r56 149r74 153r59 153r77 213r42
+. 227r43 245r45 251r46
+25R14 Registro_t 30e19 37r18 38r19 40r21 41r22 43r55 51r75 53r24 70r75 72r24
+. 107r66 109r24 140r65 142r24
+27o17 temperatura{6O14} 61r50 61r70 80r50 80r70 95r48 100r64 215r44 229r45
+28r17 fecha{18R14} 116r50 116r68 120r53 120r71 122r58 122r76 126r61 126r79
+. 128r66 128r84 149r50 149r68 153r53 153r71 155r58 155r76 160r61 160r79 162r66
+. 162r84 209m37 211m36 213m36 223m38 225m37 227m37 241m40 243m39 245m39 247m41
+. 249m40 251m40
+32o9 temperatura{6O14} 194m44 201r64
+33i9 dia{7I17} 185m37 200r60
+34e9 mes{9E14} 188m36 200r71
+35i9 ano{8I17} 191m36 200r82
+36i9 numFechas{integer} 177m34 178r56 180r29
+37r9 diaFrio{25R14} 208m17 209r29 211r28 213r28 215r36
+38r9 diaCalor{25R14} 222m17 223r29 225r28 227r28 229r36
+39o9 temperaturaMedia{6O14} 254m17 255r36
+40r9 diaAntiguo{25R14} 236m17 241r29 243r28 245r28
+41r9 diaReciente{25R14} 237m17 247r29 249r28 251r28
+43A14 calendario(25R14)<integer> 44r43 178r42
+44P14 puntero_calendario(43A14) 47r28 51r48 70r48 90r47 107r39 140r38
+45P14 puntero_fecha(18R14) 48r23
+47p9 pointerCalendario{44P14} 178m17 201r25 208r46 222r47 236r39 237r41 254r54
+48p9 pointerFecha{45P14} 200m25 201r77
+51V18 minimaTemperatura{25R14} 51b18 51>36 67l13 67t30 208s28
+51p36 calendario{44P14} 57r34 59r37 61r36 63r50
+53r17 menor{25R14} 57m25 61r64 63m41 66r16
+59i29 i{integer} 61r47 63r61
+70V18 maximaTemperatura{25R14} 70b18 70>36 86l13 86t30 222s29
+70p36 calendario{44P14} 76r34 78r37 80r36 82r50
+72r17 mayor{25R14} 76m25 80r64 82m41 85r16
+78i29 i{integer} 80r47 82r61
+90V18 mediaTemperatura{6O14} 90b18 90>35 104l21 104t37 254s37
+90p35 calendario{44P14} 95r34 95r60 98r37 100r50 100r76
+92o17 media{6O14} 95m25 100m33 100r42 103r24
+98i29 i{integer} 100r61
+107V18 reciente{25R14} 107b18 107>27 137l13 137t21 237s32
+107p27 calendario{44P14} 112r34 114r37 116r36 118r50 120r39 122r44 124r58
+. 126r47 128r52 130r66
+109r17 joven{25R14} 112m25 116r62 118m41 120r65 122r70 124m49 126r73 128r78
+. 130m57 136r16
+114i29 i{integer} 116r47 118r61 120r50 122r55 124r69 126r58 128r63 130r77
+140V18 antiguo{25R14} 140b18 140>26 171l13 171t20 236s31
+140p26 calendario{44P14} 145r34 147r37 149r36 151r50 153r39 155r44 157r58
+. 160r47 162r52 164r66
+142r17 viejo{25R14} 145m25 149r62 151m41 153r65 155r70 157m49 160r73 162r78
+. 164m57 170r16
+147i29 i{integer} 149r47 151r61 153r50 155r55 157r69 160r58 162r63 164r77
+180i21 i{integer} 201r43
+
