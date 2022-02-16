@@ -1,0 +1,209 @@
+V "GNAT Lib v2021"
+M P W=b
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_ENUMERATION_MAPS
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTIONS
+RV NO_FIXED_POINT
+RV NO_FLOATING_POINT
+RV NO_IO
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
+RV NO_IMPLEMENTATION_ATTRIBUTES
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLICIT_LOOPS
+
+U main%b		main.adb		497b956c NE OO SU IL
+W ada%s			ada.ads			ada.ali
+Z ada.exceptions%s	a-except.adb		a-except.ali
+Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+Z ada.text_io.enumeration_aux%s  a-tienau.adb	a-tienau.ali
+Z ada.text_io.enumeration_io%s
+Z ada.text_io.fixed_aux%s
+Z ada.text_io.fixed_io%s
+Z ada.text_io.float_aux%s
+Z ada.text_io.generic_aux%s  a-tigeau.adb	a-tigeau.ali
+Z ada.text_io.integer_aux%s
+Z ada.text_io.integer_io%s
+Z interfaces%s		interfac.ads		interfac.ali
+W system%s		system.ads		system.ali
+Z system.concat_8%s	s-conca8.adb		s-conca8.ali
+Z system.img_biu%s	s-imgbiu.ads		s-imgbiu.ali
+Z system.img_fixed_128%s  s-imfi128.ads		s-imfi128.ali
+Z system.img_fixed_32%s	s-imfi32.ads		s-imfi32.ali
+Z system.img_fixed_64%s	s-imfi64.ads		s-imfi64.ali
+Z system.img_int%s	s-imgint.ads		s-imgint.ali
+Z system.img_lflt%s	s-imglfl.ads		s-imglfl.ali
+Z system.img_llb%s	s-imgllb.ads		s-imgllb.ali
+Z system.img_lli%s	s-imglli.ads		s-imglli.ali
+Z system.img_lllb%s	s-imglllb.ads		s-imglllb.ali
+Z system.img_llli%s	s-imgllli.ads		s-imgllli.ali
+Z system.img_lllw%s	s-imglllw.ads		s-imglllw.ali
+Z system.img_llw%s	s-imgllw.ads		s-imgllw.ali
+Z system.img_util%s	s-imguti.adb		s-imguti.ali
+Z system.img_wiu%s	s-imgwiu.ads		s-imgwiu.ali
+Z system.val_enum_8%s	s-vaenu8.ads		s-vaenu8.ali
+Z system.val_fixed_128%s  s-vafi128.ads		s-vafi128.ali
+Z system.val_fixed_32%s	s-vafi32.ads		s-vafi32.ali
+Z system.val_fixed_64%s	s-vafi64.ads		s-vafi64.ali
+Z system.val_int%s	s-valint.ads		s-valint.ali
+Z system.val_lflt%s	s-vallfl.ads		s-vallfl.ali
+Z system.val_lli%s	s-vallli.ads		s-vallli.ali
+Z system.val_llli%s	s-valllli.ads		s-valllli.ali
+
+D ada.ads		20210520051132 76789da1 ada%s
+D a-except.ads		20210520051128 946f3014 ada.exceptions%s
+D a-ioexce.ads		20210520051128 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20210520051130 119b8fb3 ada.streams%s
+D a-string.ads		20210520051130 90ac6797 ada.strings%s
+D a-sttebu.ads		20210520051130 18209c64 ada.strings.text_buffers%s
+D a-stuten.ads		20210520051130 808c40ad ada.strings.utf_encoding%s
+D a-tags.ads		20210520051130 9eaa38c6 ada.tags%s
+D a-textio.ads		20210520051130 aef4d56d ada.text_io%s
+D a-tienau.ads		20210520051130 6a9c157b ada.text_io.enumeration_aux%s
+D a-tienio.ads		20210520051130 2e79c9bf ada.text_io.enumeration_io%s
+D a-tienio.adb		20210520051130 c9e6b5af ada.text_io.enumeration_io%b
+D a-tifiau.ads		20210520051130 c7e1e581 ada.text_io.fixed_aux%s
+D a-tifiau.adb		20210520051130 7fa0782d ada.text_io.fixed_aux%b
+D a-tifiio.ads		20210520051130 afb79382 ada.text_io.fixed_io%s
+D a-tifiio.adb		20210520051130 326a42ab ada.text_io.fixed_io%b
+D a-tiflau.ads		20210520051130 40ab5f5e ada.text_io.float_aux%s
+D a-tiflau.adb		20210520051130 1a734a41 ada.text_io.float_aux%b
+D a-tigeau.ads		20210520051130 e643cdf3 ada.text_io.generic_aux%s
+D a-tiinau.ads		20210520051130 1c79f78d ada.text_io.integer_aux%s
+D a-tiinau.adb		20210520051130 89004916 ada.text_io.integer_aux%b
+D a-tiinio.ads		20210520051130 390edddb ada.text_io.integer_io%s
+D a-tiinio.adb		20210520051130 b79731f4 ada.text_io.integer_io%b
+D a-unccon.ads		20210520051130 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20210520051132 edec285f interfaces%s
+D i-cstrea.ads		20210520051132 e53d8b8e interfaces.c_streams%s
+D main.adb		20220216092734 e78f4001 main%b
+D system.ads		20210520051136 2ffa5114 system%s
+D s-arit128.ads		20210520051132 4add960c system.arith_128%s
+D s-arit32.ads		20210520051132 6d8c80a6 system.arith_32%s
+D s-arit64.ads		20210520051132 5f88d2b0 system.arith_64%s
+D s-conca8.ads		20210520051132 e3074dd7 system.concat_8%s
+D s-crtl.ads		20210520051132 0ebbdb71 system.crtl%s
+D s-exctab.ads		20210520051132 54135002 system.exception_table%s
+D s-ficobl.ads		20210520051132 078245e4 system.file_control_block%s
+D s-imageb.ads		20210520051134 3953e0e6 system.image_b%s
+D s-imagef.ads		20210520051134 019cdf69 system.image_f%s
+D s-imagei.ads		20210520051134 0d3f86a7 system.image_i%s
+D s-imager.ads		20210520051134 500b11a9 system.image_r%s
+D s-imageu.ads		20210520051134 525c30c6 system.image_u%s
+D s-imagew.ads		20210520051134 9d2dd267 system.image_w%s
+D s-imgbiu.ads		20210520051134 0a8e1c41 system.img_biu%s
+D s-imfi128.ads		20210520051134 4482fc8f system.img_fixed_128%s
+D s-imfi32.ads		20210520051134 eb29698b system.img_fixed_32%s
+D s-imfi64.ads		20210520051134 dbac59b3 system.img_fixed_64%s
+D s-imgint.ads		20210520051134 bdb6f5ec system.img_int%s
+D s-imglfl.ads		20210520051134 59c0865c system.img_lflt%s
+D s-imgllb.ads		20210520051134 47d0db9f system.img_llb%s
+D s-imglli.ads		20210520051134 3723d9ff system.img_lli%s
+D s-imglllb.ads		20210520051134 30212eed system.img_lllb%s
+D s-imgllli.ads		20210520051134 5cf3dc07 system.img_llli%s
+D s-imglllw.ads		20210520051134 9e2b0560 system.img_lllw%s
+D s-imgllu.ads		20210520051134 e025ba90 system.img_llu%s
+D s-imgllw.ads		20210520051134 bf9c9c15 system.img_llw%s
+D s-imguti.ads		20210520051134 6b7a7f2f system.img_util%s
+D s-imgwiu.ads		20210520051134 912a95f2 system.img_wiu%s
+D s-parame.ads		20210520051134 4752c4cb system.parameters%s
+D s-powlfl.ads		20210520051134 241b984d system.powten_lflt%s
+D s-putima.ads		20210520051134 4e095881 system.put_images%s
+D s-secsta.ads		20210520051134 9b3ab94b system.secondary_stack%s
+D s-soflin.ads		20210520051134 a7318a92 system.soft_links%s
+D s-stache.ads		20210520051134 a37c21ec system.stack_checking%s
+D s-stalib.ads		20210520051134 472fbca8 system.standard_library%s
+D s-stoele.ads		20210520051134 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20210520051134 ed88f8fb system.storage_elements%b
+D s-traent.ads		20210520051134 26a8d361 system.traceback_entries%s
+D s-unstyp.ads		20210520051134 2b077493 system.unsigned_types%s
+D s-vaenu8.ads		20210520051134 b7b91426 system.val_enum_8%s
+D s-vafi128.ads		20210520051134 41ba1fd5 system.val_fixed_128%s
+D s-vafi32.ads		20210520051134 ea663670 system.val_fixed_32%s
+D s-vafi64.ads		20210520051134 2ff3dc11 system.val_fixed_64%s
+D s-valint.ads		20210520051134 e7fcadb7 system.val_int%s
+D s-vallfl.ads		20210520051134 a92e3e95 system.val_lflt%s
+D s-vallli.ads		20210520051134 0767e6f3 system.val_lli%s
+D s-valllli.ads		20210520051134 f758e795 system.val_llli%s
+D s-vallllu.ads		20210520051134 87566fa4 system.val_lllu%s
+D s-valllu.ads		20210520051134 660d930f system.val_llu%s
+D s-valrea.ads		20210520051134 8ddc6624 system.val_real%s
+D s-valuns.ads		20210520051134 dac7b45d system.val_uns%s
+D s-valuef.ads		20210520051134 44d93748 system.value_f%s
+D s-valuei.ads		20210520051134 978dd0a6 system.value_i%s
+D s-valuen.ads		20210520051134 72b74993 system.value_n%s
+D s-valueu.ads		20210520051134 7b8fccf5 system.value_u%s
+D s-wchcon.ads		20210520051136 1b7d22d2 system.wch_con%s
+D unchconv.ads		20210520051136 ca2f9e18 unchecked_conversion%s
+G a e
+G c Z b b [main standard 4 11 none]
+X 1 ada.ads
+16K9*Ada 20e8 27|1r6 2r5 10r26 11r26 12r27 13r27
+X 9 a-textio.ads
+58K13*Text_IO 725e16 27|1w10 2r9 10r30 11r30 12r31 13r31
+262U14*New_Line 27|34s7 37s7 41s7 45s7 49s7 60s6
+463U14*Put 27|33s7 35s7 39s7 43s7 47s7 61s6
+506U14*Put_Line 27|55s4 56s4
+546X4*Data_Error 27|59r9
+X 11 a-tienio.ads
+26k21*Enumeration_IO 76e31 27|11r38
+34U14 Get 27|40s14[11]
+X 15 a-tifiio.ads
+26k21*Fixed_IO 92e25 27|13r39
+40U14 Get 27|48s15[13]
+X 22 a-tiinio.ads
+46k21*Integer_IO 108e27 27|10r38 12r39
+59U14 Get 27|36s14[10] 44s15[12]
+X 25 interfac.ads
+55I9*Integer_64<long_long_integer>
+63I9*Integer_128<long_long_long_integer>
+X 27 main.adb
+4U11*main 4b11 64l5 64t9
+5I9 dia_t<short_short_integer> 10r49 16r13
+6E9 mes_t 6e125 11r53 17r13
+6n19 enero{6E9}
+6n27 febrero{6E9}
+6n37 marzo{6E9}
+6n45 abril{6E9}
+6n53 mayo{6E9}
+6n60 junio{6E9}
+6n67 julio{6E9}
+6n74 agosto{6E9}
+6n82 septiembre{6E9}
+6n94 octubre{6E9}
+6n103 noviembre{6E9}
+6n114 diciembre{6E9}
+7I9 anio_t<short_integer> 12r50 18r14
+8O9 temp_t 13r48 23r21
+10K12 ES_dia[22|46] 36r7
+11K12 ES_mes[11|26] 40r7
+12K12 ES_anio[22|46] 44r7
+13K12 ES_temp[15|26] 48r7
+15R9 fecha_r 19e15 22r15
+16i7 Dia{5I9} 36m30 56r41
+17e7 Mes{6E9} 40m30 56r80
+18i7 Anio{7I9} 44m31 56r119
+21R9 registro_t 24e15 25r12 27r37
+22r7 Fecha{15R9} 36r24 40r24 44r25 56r35 56r74 56r113
+23o7 Temperatura{8O9} 48m25 56r174
+25r4 reg_r{21R9} 36m18 36r18 40m18 40r18 44m19 44r19 48m19 48r19 52r20
+27A9 vector_t(21R9)<integer> 28r13
+28a4 vector{27A9} 52m7 56r25 56r64 56r103 56r164
+32i8 i{integer} 52r14
+X 29 s-arit128.ads
+44I12*Int128{25|63I9}
+54V13*Multiply_With_Ovflo_Check128{44I12} 55i<c,__gnat_mulv128>22
+X 31 s-arit64.ads
+44I12*Int64{25|55I9}
+54V13*Multiply_With_Ovflo_Check64{44I12} 55i<c,__gnat_mulv64>22
+
