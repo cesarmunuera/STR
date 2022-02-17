@@ -34,11 +34,10 @@ procedure main is
    n : Integer;
 
    type vectorMaxMin_t is array (1..2) of registro_t;
-   vectorTemperaturas : vectorMaxMin_t;
+   vectorTemperaturas, vectorPrimeroUltimo : vectorMaxMin_t;
 
 
-
-
+-- FUNCIONES ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
    function calculoMaxMin(vector : pArray_t) return vectorMaxMin_t is
       vectorMaxMin : vectorMaxMin_t; --La posicion 1 es el maximo, y la 2 el minimo
    begin
@@ -73,21 +72,44 @@ procedure main is
 
 
    function calculoFechas(vector : pArray_t) return vectorMaxMin_t is
-      vectorMaxMin : vectorMaxMin_t; --La posicion 1 es el maximo, y la 2 el minimo
+      vectorFechas : vectorMaxMin_t;
    begin
-      vectorMaxMin(1) := vector(1); --MAXIMO
-      vectorMaxMin(2) := vector(1); --MINIMO
+      vectorFechas(1) := vector(1); -- ULTIMA FECHA REGISTRADA
+      vectorFechas(2) := vector(1); -- PRIMERA FECHA REGISTRADA
 
+      --Calculamos la ultima fecha registrada
       for i in 2..vector'Length loop
-         if vector(i).Temperatura > vectorMaxMin(1).Temperatura then --MAXIMO
-            vectorMaxMin(1) := vector(i);
-         elsif vector(i).Temperatura < vectorMaxMin(2).Temperatura then --MINIMO
-            vectorMaxMin(2) := vector(i);
+         if vector(i).Fecha.Anio > vectorFechas(1).Fecha.Anio then
+            vectorFechas(1) := vector(i);
+         elsif vector(i).Fecha.Anio = vectorFechas(1).Fecha.Anio then
+            if vector(i).Fecha.Mes > vectorFechas(1).Fecha.Mes then
+               vectorFechas(1) := vector(i);
+            elsif vector(i).Fecha.Mes = vectorFechas(1).Fecha.Mes then
+               if vector(i).Fecha.Dia > vectorFechas(1).Fecha.Dia then
+                  vectorFechas(1) := vector(i);
+               end if;
+            end if;
          end if;
       end loop;
 
-   return vectorMaxMin;
-   end calculoMaxMin;
+      --Calculamos la primera fecha registrada
+      for i in 2..vector'Length loop
+         if vector(i).Fecha.Anio < vectorFechas(2).Fecha.Anio then
+            vectorFechas(2) := vector(i);
+         elsif vector(i).Fecha.Anio = vectorFechas(2).Fecha.Anio then
+            if vector(i).Fecha.Mes < vectorFechas(2).Fecha.Mes then
+               vectorFechas(2) := vector(i);
+            elsif vector(i).Fecha.Mes = vectorFechas(2).Fecha.Mes then
+               if vector(i).Fecha.Dia < vectorFechas(2).Fecha.Dia then
+                  vectorFechas(2) := vector(i);
+               end if;
+            end if;
+         end if;
+      end loop;
+
+   return vectorFechas;
+   end calculoFechas;
+-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 begin
 
@@ -116,7 +138,6 @@ begin
 
       --Ahora guardamos en el array
       v(i) := reg_r;
-
    end loop ;
 
 
@@ -130,27 +151,20 @@ begin
    vectorTemperaturas := calculoMaxMin(v);
    Put_Line("La temperatura maxima fue:" & vectorTemperaturas(1).Temperatura'Image & ", el dia" & vectorTemperaturas(1).Fecha.Dia'Image & " de "
             & vectorTemperaturas(1).Fecha.Mes'Image & " del año" & vectorTemperaturas(1).Fecha.Anio'Image);
-   Put_Line("La temperatura minima fue:" & vectorTemperaturas(2).Temperatura'Image & ", el dia " & vectorTemperaturas(2).Fecha.Dia'Image & " de "
+   Put_Line("La temperatura minima fue:" & vectorTemperaturas(2).Temperatura'Image & ", el dia" & vectorTemperaturas(2).Fecha.Dia'Image & " de "
             & vectorTemperaturas(2).Fecha.Mes'Image & " del año" & vectorTemperaturas(2).Fecha.Anio'Image);
-   New_Line(1);
 
    mediaTemperaturas := calculoMedia(v);
-   Put_Line("La media de las temperaturas es de:" & mediaTemperaturas'Image & " grados.");
-
-
-
-
-
-
+   vectorPrimeroUltimo := calculoFechas(v);
+   Put_Line("La media de las temperaturas es de:" & mediaTemperaturas'Image & " grados, desde el dia" & vectorPrimeroUltimo(2).Fecha.Dia'Image
+            & " de " & vectorPrimeroUltimo(2).Fecha.Mes'Image & " del" & vectorPrimeroUltimo(2).Fecha.Anio'Image & " hasta el dia" &
+              vectorPrimeroUltimo(1).Fecha.Dia'Image & " de " & vectorPrimeroUltimo(1).Fecha.Mes'Image & " del" & vectorPrimeroUltimo(1).Fecha.Anio'Image);
+   New_Line(1);
 
 
 exception
    when Data_Error =>
      New_Line(2);
-     Put("Tienes que introducir un valor válido");
-
+      Put("Tienes que introducir un valor válido");
 
 end main;
-
-
-
