@@ -1,0 +1,1 @@
+main.adb:65:32: warning: "totalTemperaturas" may be referenced before it has a value [enabled by default]

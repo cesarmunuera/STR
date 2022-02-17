@@ -25,7 +25,7 @@ RV NO_IMPLEMENTATION_ATTRIBUTES
 RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_IMPLICIT_LOOPS
 
-U main%b		main.adb		8e5b7441 NE OO SU IL
+U main%b		main.adb		cb1d7f21 NE OO SU IL
 W ada%s			ada.ads			ada.ali
 Z ada.exceptions%s	a-except.adb		a-except.ali
 Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
@@ -40,6 +40,7 @@ Z ada.text_io.integer_aux%s
 Z ada.text_io.integer_io%s
 Z interfaces%s		interfac.ads		interfac.ali
 W system%s		system.ads		system.ali
+Z system.concat_3%s	s-conca3.adb		s-conca3.ali
 Z system.concat_8%s	s-conca8.adb		s-conca8.ali
 Z system.img_biu%s	s-imgbiu.ads		s-imgbiu.ali
 Z system.img_fixed_128%s  s-imfi128.ads		s-imfi128.ali
@@ -90,11 +91,12 @@ D a-tiinio.adb		20210520051130 b79731f4 ada.text_io.integer_io%b
 D a-unccon.ads		20210520051130 0e9b276f ada.unchecked_conversion%s
 D interfac.ads		20210520051132 edec285f interfaces%s
 D i-cstrea.ads		20210520051132 e53d8b8e interfaces.c_streams%s
-D main.adb		20220216122800 20afa12c main%b
+D main.adb		20220217190740 65e9aa4c main%b
 D system.ads		20210520051136 2ffa5114 system%s
 D s-arit128.ads		20210520051132 4add960c system.arith_128%s
 D s-arit32.ads		20210520051132 6d8c80a6 system.arith_32%s
 D s-arit64.ads		20210520051132 5f88d2b0 system.arith_64%s
+D s-conca3.ads		20210520051132 0b705ca5 system.concat_3%s
 D s-conca8.ads		20210520051132 e3074dd7 system.concat_8%s
 D s-crtl.ads		20210520051132 0ebbdb71 system.crtl%s
 D s-exctab.ads		20210520051132 54135002 system.exception_table%s
@@ -152,61 +154,77 @@ D unchconv.ads		20210520051136 ca2f9e18 unchecked_conversion%s
 G a e
 G c Z b b [main standard 4 11 none]
 X 1 ada.ads
-16K9*Ada 20e8 27|1r6 2r5 10r26 11r26 12r27 13r27 14r25
+16K9*Ada 20e8 27|1r6 2r5 13r26 14r26 15r27 16r27 17r25
 X 9 a-textio.ads
-58K13*Text_IO 725e16 27|1w10 2r9 10r30 11r30 12r31 13r31 14r29
-262U14*New_Line 27|41s4 48s7 52s7 56s7 60s7 72s6
-463U14*Put 27|39s4 46s7 50s7 54s7 58s7 73s6
-506U14*Put_Line 27|45s7 67s4 68s4
-546X4*Data_Error 27|71r9
+58K13*Text_IO 725e16 27|1w10 2r9 13r30 14r30 15r31 16r31 17r29
+262U14*New_Line 27|77s4 96s7 107s4 116s4 130s6
+463U14*Put 27|75s4 82s7 86s7 90s7 94s7 131s6
+506U14*Put_Line 27|81s7 104s4 105s4 106s4 110s4 112s4 114s4 119s4
+546X4*Data_Error 27|129r9
 X 11 a-tienio.ads
-26k21*Enumeration_IO 76e31 27|11r38
-34U14 Get 27|51s14[11]
+26k21*Enumeration_IO 76e31 27|14r38
+34U14 Get 27|87s14[14]
 X 15 a-tifiio.ads
-26k21*Fixed_IO 92e25 27|13r39
-40U14 Get 27|59s15[13]
+26k21*Fixed_IO 92e25 27|16r39
+40U14 Get 27|95s15[16]
 X 22 a-tiinio.ads
-46k21*Integer_IO 108e27 27|10r38 12r39 14r37
-59U14 Get 27|40s10[14] 47s14[10] 55s15[12]
+46k21*Integer_IO 108e27 27|13r38 15r39 17r37
+59U14 Get 27|76s10[17] 83s14[13] 91s15[15]
 X 25 interfac.ads
 55I9*Integer_64<long_long_integer>
 63I9*Integer_128<long_long_long_integer>
 X 27 main.adb
-4U11*main 4b11 76l5 76t9
-5I9 dia_t<short_short_integer> 10r49 17r13
-6E9 mes_t 6e124 11r53 18r13
-6n19 enero{6E9}
-6n27 febrero{6E9}
-6n37 marzo{6E9}
-6n45 abril{6E9}
-6n53 mayo{6E9}
-6n60 junio{6E9}
-6n67 julio{6E9}
-6n74 agosto{6E9}
-6n82 septiembre{6E9}
-6n94 octubre{6E9}
-6n103 noviembre{6E9}
-6n114 diciembre{6E9}
-7I9 anio_t<short_integer> 12r50 19r14
-8O9 temp_t 13r48 24r21
-10K12 ES_dia[22|46] 47r7
-11K12 ES_mes[11|26] 51r7
-12K12 ES_anio[22|46] 55r7
-13K12 ES_temp[15|26] 59r7
-14K12 Es_IO[22|46] 40r4
-16R9 fecha_r 20e15 23r15
-17i7 Dia{5I9} 47m30 68r36
-18e7 Mes{6E9} 51m30 68r70
-19i7 Anio{7I9} 55m31 68r104
-22R9 registro_t 25e15 26r12 28r48
-23r7 Fecha{16R9} 47r24 51r24 55r25 68r30 68r64 68r98
-24o7 Temperatura{8O9} 59m25 68r154
-26r4 reg_r{22R9} 47m18 47r18 51m18 51r18 55m19 55r19 59m19 59r19 63r15
-28A9 array_t(22R9)<integer> 29r28 42r13
-29P9 pArray_t(28A9) 30r8
-30p4 v{29P9} 42m4 63r7 68r25 68r59 68r93 68r149
-31i4 n{integer} 40m14 42r25 44r16
-44i8 i{integer} 63r9
+4U11*main 4b11 134l5 134t9
+6I9 dia_t<short_short_integer> 13r49 20r13
+7E9 mes_t 7e124 14r53 21r13
+7n19 enero{7E9}
+7n27 febrero{7E9}
+7n37 marzo{7E9}
+7n45 abril{7E9}
+7n53 mayo{7E9}
+7n60 junio{7E9}
+7n67 julio{7E9}
+7n74 agosto{7E9}
+7n82 septiembre{7E9}
+7n94 octubre{7E9}
+7n103 noviembre{7E9}
+7n114 diciembre{7E9}
+8I9 anio_t<short_integer> 15r50 22r14
+9O9 temp_t 11r24 16r48 27r21 60r52 61r34
+11o4 mediaTemperaturas{9O9} 118m4 119r54
+13K12 ES_dia[22|46] 83r7
+14K12 ES_mes[11|26] 87r7
+15K12 ES_anio[22|46] 91r7
+16K12 ES_temp[15|26] 95r7
+17K12 Es_IO[22|46] 76r4
+19R9 fecha_r 23e15 26r15
+20i7 Dia{6I9} 83m30 105r36 106r36 112r127 114r128
+21e7 Mes{7E9} 87m30 105r70 106r70 113r43 115r43
+22i7 Anio{8I9} 91m31 105r104 106r104 113r96 115r96
+25R9 registro_t 28e15 29r12 31r48 36r43
+26r7 Fecha{19R9} 83r24 87r24 91r25 105r30 105r64 105r98 106r30 106r64 106r98
+. 112r121 113r37 113r90 114r122 115r37 115r90
+27o7 Temperatura{9O9} 49r23 49r53 51r26 51r56 65r62 95m25 105r154 106r154
+. 112r66 114r66
+29r4 reg_r{25R9} 83m18 83r18 87m18 87r18 91m19 91r19 95m19 95r19 99r15
+31A9 array_t(25R9)<integer> 32r28 78r13
+32P9 pArray_t(31A9) 33r8 42r36 60r35
+33p4 v{32P9} 78m4 99r7 105r25 105r59 105r93 105r149 106r25 106r59 106r93
+. 106r149 111r40 118r38
+34i4 n{integer} 76m14 78r25 80r16
+36A9 vectorMaxMin_t(25R9)<integer> 37r25 42r53 43r22
+37a4 vectorTemperaturas{36A9} 111m4 112r44 112r99 113r15 113r68 114r44 114r100
+. 115r15 115r68
+42V13 calculoMaxMin{36A9} 42b13 42>27 57l8 57t21 111s26
+42p27 vector{32P9} 45r26 46r26 48r19 49r13 50r32 51r16 52r32
+43a7 vectorMaxMin{36A9} 45m7 46m7 49r37 50m13 51r40 52m13 56r11
+48i11 i{integer} 49r20 50r39 51r23 52r39
+60V13 calculoMedia{9O9} 60b13 60>26 70l8 70t20 118s25
+60p26 vector{32P9} 64r19 65r52 68r35
+61o7 totalTemperaturas{9O9} 65m10 65r32 68r16
+61o26 media{9O9} 68m7 69r11
+64i11 i{integer} 65r59
+80i8 i{integer} 99r9
 X 29 s-arit128.ads
 44I12*Int128{25|63I9}
 54V13*Multiply_With_Ovflo_Check128{44I12} 55i<c,__gnat_mulv128>22
