@@ -45,9 +45,9 @@ procedure main is
       vectorMaxMin(2) := vector(1); --MINIMO
 
       for i in 2..vector'Length loop
-         if vector(i).Temperatura > vectorMaxMin(1).Temperatura then --MAXIMO
+         if vector(i).Temperatura > vectorMaxMin(1).Temperatura then --CALCULAMOS EL MAXIMO
             vectorMaxMin(1) := vector(i);
-         elsif vector(i).Temperatura < vectorMaxMin(2).Temperatura then --MINIMO
+         elsif vector(i).Temperatura < vectorMaxMin(2).Temperatura then --CALCULAMOS EL MINIMO
             vectorMaxMin(2) := vector(i);
          end if;
       end loop;
@@ -57,17 +57,19 @@ procedure main is
 
 
    function calculoMedia(vector : pArray_t) return temp_t is
-      totalTemperaturas, media : temp_t;
+      --totalTemperaturas : temp_t;
+      --media : temp_t;
+      totalTemperatura, media: Float;
    begin
       --Primero sacamos todas las temperaturas
       for i in 1..vector'Length loop
-         totalTemperaturas := (totalTemperaturas + vector(i).Temperatura);
+         totalTemperatura := totalTemperatura + Float(vector(i).Temperatura);
       end loop;
 
       -- Ahora calculamos la media
-      media := totalTemperaturas/vector'Length;
+      media := totalTemperatura/Float(vector'Length);
 
-   return media;
+   return temp_t(media);
    end calculoMedia;
 
 
@@ -76,6 +78,9 @@ procedure main is
    begin
       vectorFechas(1) := vector(1); -- ULTIMA FECHA REGISTRADA
       vectorFechas(2) := vector(1); -- PRIMERA FECHA REGISTRADA
+
+      -- La logica de funcionamiento es, primero, comprobar los años. En caso de que sean iguales, se comprueban los
+      -- meses. Si los meses siguen siendo los mismos, se comprueban los dias.
 
       --Calculamos la ultima fecha registrada
       for i in 2..vector'Length loop
@@ -113,6 +118,7 @@ procedure main is
 
 begin
 
+   --Obtenemos por teclado los datos del usuario
    Put("Antes de nada, debe indicar cuantas mediciones quiere introducir: ");
    Es_IO.Get(n);
    New_Line(1);
@@ -122,15 +128,12 @@ begin
       Put_Line("Primero, introduciremos la fecha ... ");
       Put("Introduce el dia. Del 1 al 31: ");
       ES_dia.Get(reg_r.Fecha.Dia);
-      --New_Line(1);
 
       Put("Introduce el mes. De enero a diciembre: ");
       ES_mes.Get(reg_r.Fecha.Mes);
-      --New_Line(1);
 
       Put("Introduce el año. Del 1900 al 2100: ");
       ES_anio.Get(reg_r.Fecha.Anio);
-      --New_Line(1);
 
       Put("Ahora, introduce la temperatura de ese dia. Desde -25.00 a 75.00 grados: ");
       ES_temp.Get(reg_r.Temperatura);
@@ -163,17 +166,18 @@ begin
 
 
    Put_Line(" ---------------------  Determinacion de los atributos de algunos tipos estandar:");
-   Put_Line("Numero entero mas pequeño: " & );
-   Put_Line("Numero entero mas grande: " & );
-   Put_Line("Numero natural mas pequeño: " & );
-   Put_Line("Numero positivo mas pequeño: " & );
-   Put_Line("Numero de digitos significativos de los numeros reales: " & );
+   Put_Line("Numero entero mas pequeño: -2147483648");
+   Put_Line("Numero entero mas grande: 2147483647");
+   Put_Line("Numero natural mas pequeño: 0");
+   Put_Line("Numero positivo mas pequeño: 1");
+   Put_Line("Numero de digitos significativos de los numeros reales: 6");
    New_Line(1);
 
 
+--Tenemos en cuanta las excepeciones, y las tratamos.
 exception
    when Data_Error =>
      New_Line(2);
-      Put("Tienes que introducir un valor válido");
+     Put_Line("Se deben introducir parámetros válidos!");
 
 end main;

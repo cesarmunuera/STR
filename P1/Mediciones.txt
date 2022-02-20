@@ -1,0 +1,19 @@
+P0
+4. Cuando llamamos al procedimiento Put de la línea 26 ¿en qué paquete se encuentra este procedimiento?
+Usaremos "with Ada.Text_Io; use Ada.Text_Io". Es el genérico, no necesitamos crear un paquete en este caso.
+
+5. Si quisiéramos poder reescribir la línea 34 para que quedara Put(I+J) ¿qué deberíamos añadir en el
+código y donde? 
+Tendríamos que añadir "'Image" justo después de cada variable.
+
+6. En general ¿cómo crees que el lenguaje sabe a qué procedimiento Put tiene que llamar si no se lo
+indicamos en el código?
+Si no ponemos el paquete en concreto, y solo ponemos "Put", el sistema entiende que es el genérico, para 
+poner texto o variables. En este ultimo caso, tendremos que poner "'Image" después.
+
+P1
+Numero entero mas pequeño: -2147483648.
+Numero entero mas grande: 2147483647.
+Numero natural mas pequeño: 0.
+Numero positivo mas pequeño: 1.
+Numero de digitos significativos de los numeros reales: 6.
