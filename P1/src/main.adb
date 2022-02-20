@@ -162,6 +162,15 @@ begin
    New_Line(1);
 
 
+   Put_Line(" ---------------------  Determinacion de los atributos de algunos tipos estandar:");
+   Put_Line("Numero entero mas pequeño: " & );
+   Put_Line("Numero entero mas grande: " & );
+   Put_Line("Numero natural mas pequeño: " & );
+   Put_Line("Numero positivo mas pequeño: " & );
+   Put_Line("Numero de digitos significativos de los numeros reales: " & );
+   New_Line(1);
+
+
 exception
    when Data_Error =>
      New_Line(2);
