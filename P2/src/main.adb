@@ -85,7 +85,7 @@ begin
       raise Practica_no_Apta;
    end if;
 
-   --Esto nose
+   --Division ................................
    Put("A/P = ");
    Escribir(A/P);
    P:=A/P;
