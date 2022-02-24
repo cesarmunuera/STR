@@ -12,36 +12,11 @@ procedure main is
 
 begin
 
-   if Numerador (B) /= -1 or Denominador (B) /= 2 then
-      raise Constraint_Error;
-   end if;
-
-   Put("El valor de A = ");
-   Escribir(A);
-   Put(" El valor de B = ");
-   Escribir(B);
-   Put(" El valor de P = ");
-   Escribir(P);
-   Put_Line(" ");
-
-   --Comparacion ..............................
-   if B /= 1/(-2) then
-      raise Practica_no_Apta;
-   end if;
-
    --Suma  ....................................
    Put("A+B = ");
    Escribir(A+B);
 
    if A+B /= 1/(6) then
-      raise Practica_no_Apta;
-   end if;
-
-   --Opuesto  .................................
-   Put("-A = ");
-   Escribir(-A);
-
-   if -A /= -2/3 then
       raise Practica_no_Apta;
    end if;
 
@@ -53,11 +28,21 @@ begin
       raise Practica_no_Apta;
    end if;
 
+
    --Multiplicacion  ..........................
    Put("A*B = ");
    Escribir(A*B);
 
-   if A*B /= -1/3 then
+   if A*B /= (-1)/3 then
+      raise Practica_no_Apta;
+   end if;
+
+
+   --Opuesto  .................................
+   Put("-A = ");
+   Escribir(-A);
+
+   if -A /= -2/3 then
       raise Practica_no_Apta;
    end if;
 
@@ -65,42 +50,9 @@ begin
    Put("A/B = ");
    Escribir(A/B);
 
-   if A/B /= -4/3 then
-      raise Practica_no_Apta;
-   end if;
-
-   -- Resta???????????????  ..................................
-   Put("A-B = ");
-   Escribir(A-B);
-
-   if A-B /= 7/6 then
-      raise Practica_no_Apta;
-   end if;
-
-   -- Restar a si mismo  ......................
-   Put("A-A = ");
-   Escribir(A-A);
-
-   if A-A /= 0/3 then
-      raise Practica_no_Apta;
-   end if;
-
-   --Division ................................
-   Put("A/P = ");
-   Escribir(A/P);
-   P:=A/P;
-   P:=1/1;
-   --Esto es (9/18)^10
-   for I in 1..10 loop
-      P:=P*B;
-   end loop;
-   --que da 1/1024
-   if P/= 1/1024 then
-      raise Practica_no_Apta;
-   end if;
-
-   Put_Line ("Práctica apta");
-
+   --if A/B /= -4/3 then
+      --raise Practica_no_Apta;
+   --end if;
 
 exception
    when Ocurrencia : Practica_no_Apta =>

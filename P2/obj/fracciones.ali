@@ -1,0 +1,115 @@
+V "GNAT Lib v2021"
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_IO
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U fracciones%b		fracciones.adb		0efddf2f NE OO PK
+W ada%s			ada.ads			ada.ali
+Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+Z system.concat_3%s	s-conca3.adb		s-conca3.ali
+Z system.img_int%s	s-imgint.ads		s-imgint.ali
+
+U fracciones%s		fracciones.ads		725228ef EE NE OO PK
+Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+
+D ada.ads		20210520051132 76789da1 ada%s
+D a-except.ads		20210520051128 946f3014 ada.exceptions%s
+D a-ioexce.ads		20210520051128 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20210520051130 119b8fb3 ada.streams%s
+D a-string.ads		20210520051130 90ac6797 ada.strings%s
+D a-sttebu.ads		20210520051130 18209c64 ada.strings.text_buffers%s
+D a-stuten.ads		20210520051130 808c40ad ada.strings.utf_encoding%s
+D a-tags.ads		20210520051130 9eaa38c6 ada.tags%s
+D a-textio.ads		20210520051130 aef4d56d ada.text_io%s
+D a-unccon.ads		20210520051130 0e9b276f ada.unchecked_conversion%s
+D fracciones.ads	20220224181310 725228ef fracciones%s
+D fracciones.adb	20220224182420 d25b22ad fracciones%b
+D interfac.ads		20210520051132 edec285f interfaces%s
+D i-cstrea.ads		20210520051132 e53d8b8e interfaces.c_streams%s
+D system.ads		20210520051136 2ffa5114 system%s
+D s-conca3.ads		20210520051132 0b705ca5 system.concat_3%s
+D s-crtl.ads		20210520051132 0ebbdb71 system.crtl%s
+D s-exctab.ads		20210520051132 54135002 system.exception_table%s
+D s-ficobl.ads		20210520051132 078245e4 system.file_control_block%s
+D s-imagei.ads		20210520051134 0d3f86a7 system.image_i%s
+D s-imgint.ads		20210520051134 bdb6f5ec system.img_int%s
+D s-parame.ads		20210520051134 4752c4cb system.parameters%s
+D s-putima.ads		20210520051134 4e095881 system.put_images%s
+D s-secsta.ads		20210520051134 9b3ab94b system.secondary_stack%s
+D s-soflin.ads		20210520051134 a7318a92 system.soft_links%s
+D s-stache.ads		20210520051134 a37c21ec system.stack_checking%s
+D s-stalib.ads		20210520051134 472fbca8 system.standard_library%s
+D s-stoele.ads		20210520051134 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20210520051134 ed88f8fb system.storage_elements%b
+D s-traent.ads		20210520051134 26a8d361 system.traceback_entries%s
+D s-unstyp.ads		20210520051134 2b077493 system.unsigned_types%s
+D s-wchcon.ads		20210520051136 1b7d22d2 system.wch_con%s
+D unchconv.ads		20210520051136 ca2f9e18 unchecked_conversion%s
+G a e
+G c Z s b [Oadd fracciones 4 13 none]
+G c Z s b [Osubtract fracciones 5 13 none]
+G c Z s b [Osubtract fracciones 6 13 none]
+G c Z s b [Omultiply fracciones 7 13 none]
+G c Z s b [Odivide fracciones 8 13 none]
+G c Z s b [escribir fracciones 13 14 none]
+G c Z s b [Odivide fracciones 16 13 none]
+G c Z s s [fraccion_tIP fracciones 23 9 none]
+G c Z b b [reducir fracciones 35 13 none]
+X 1 ada.ads
+16K9*Ada 20e8 12|1r6 1r22
+X 9 a-textio.ads
+58K13*Text_IO 725e16 12|1w10 1r26
+506U14*Put_Line 12|28s7
+X 11 fracciones.ads
+1K9*Fracciones 23E9 27l5 27e15 12|3b14 144l5 144t15
+2R9*fraccion_t 4r24 4r43 5r21 5r40 6r24 6r43 7r24 7r43 8r24 8r43 13r27 16r40
+. 23c9 26e14 12|6r40 7r18 26r27 35r26 35r45 36r36 81r24 81r43 82r13 94r24
+. 94r43 95r13 107r24 107r43 108r13 120r21 120r40 121r13 133r24 133r43 134r13
+4V14*"+"{2R9} 4>18 4>21 12|81b14 89t7
+4r18 X{2R9} 12|81b18 85r19 85r45 86r18
+4r21 Y{2R9} 12|81b21 85r27 85r37 86r26
+5V14*"-"{2R9} 5>18 12|120b14 128t7
+5r18 X{2R9} 12|120b18 124r18 125r18
+6V14*"-"{2R9} 6>18 6>21 12|94b14 102t7
+6r18 X{2R9} 12|94b18 98r19 98r45 99r18
+6r21 Y{2R9} 12|94b21 98r27 98r37 99r26
+7V14*"*"{2R9} 7>18 7>21 12|107b14 115t7
+7r18 X{2R9} 12|107b18 111r18 112r18
+7r21 Y{2R9} 12|107b21 111r26 112r26
+8V14*"/"{2R9} 8>18 8>21 12|133b14 141t7
+8r18 X{2R9} 12|133b18 137r18 138r18
+8r21 Y{2R9} 12|133b21 137r26 138r26
+13U14*Escribir 13>24 12|26b14 29t7
+13r24 F{2R9} 12|26b24 28r16 28r36
+16V14*"/"{2R9} 16>18 16>21 12|6b14 21t7
+16i18 X{integer} 12|6b18 13r26 16r26
+16i21 Y{integer} 12|6b21 12r11 14r26 17r26
+24i7*Num{integer} 12|13m19 16m19 28r18 46m23 46r32 51r30 72m20 72r30 85m11
+. 85r21 85r39 98m11 98r21 98r39 111m11 111r20 111r28 124m11 124r20 137m11
+. 137r20 138r28
+25i7*Den{positive} 12|14m19 17m19 28r38 45r24 47m23 47r32 52r26 73m20 73r30
+. 85r29 85r47 86m11 86r20 86r28 98r29 98r47 99m11 99r20 99r28 112m11 112r20
+. 112r28 125m11 125r20 137r28 138m11 138r20
+X 12 fracciones.adb
+7r7 fraccion{11|2R9} 13m10 14m10 16m10 17m10 20r14
+35V13 reducir{11|2R9} 35b13 35>22 76t7 88s14 101s14 114s14 127s14 140s14
+35r22 X{11|2R9} 44r23 46r30 47r30 72r28 73r28
+36r7 fraccionAux1{11|2R9} 72m7 73m7 75r14
+36r22 fraccionAux2{11|2R9} 44m7 45r11 46m10 47m10 51r17 52r13
+37i7 v1{integer} 51m7 56r11 57r17 58m10 66r19 67m10 72r36 73r36
+37i11 v2{integer} 52m7 56r14 58r16 59m10 66r26 67r16 68m10
+37i15 aux{integer} 57m10 59r16
+37i20 resto{integer} 64m7 65r14 66m10 68r16
+82r7 aux{11|2R9} 85m7 86m7 88r22
+95r7 aux{11|2R9} 98m7 99m7 101r22
+108r7 aux{11|2R9} 111m7 112m7 114r22
+121r7 aux{11|2R9} 124m7 125m7 127r22
+134r7 aux{11|2R9} 137m7 138m7 140r22
+

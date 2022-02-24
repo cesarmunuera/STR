@@ -18,7 +18,7 @@ RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U main%b		main.adb		2e8f577c NE OO SU IL
+U main%b		main.adb		d7ed8725 NE OO SU IL
 W ada%s			ada.ads			ada.ali
 W ada.exceptions%s	a-except.adb		a-except.ali
 Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
@@ -59,10 +59,10 @@ D a-tiinau.adb		20210520051130 89004916 ada.text_io.integer_aux%b
 D a-tiinio.ads		20210520051130 390edddb ada.text_io.integer_io%s
 D a-tiinio.adb		20210520051130 b79731f4 ada.text_io.integer_io%b
 D a-unccon.ads		20210520051130 0e9b276f ada.unchecked_conversion%s
-D fracciones.ads	20220224094952 0340707f fracciones%s
+D fracciones.ads	20220224181310 725228ef fracciones%s
 D interfac.ads		20210520051132 edec285f interfaces%s
 D i-cstrea.ads		20210520051132 e53d8b8e interfaces.c_streams%s
-D main.adb		20220224100424 1754c27a main%b
+D main.adb		20220224182310 9f244ab3 main%b
 D system.ads		20210520051136 2ffa5114 system%s
 D s-crtl.ads		20210520051132 0ebbdb71 system.crtl%s
 D s-exctab.ads		20210520051132 54135002 system.exception_table%s
@@ -102,51 +102,40 @@ D unchconv.ads		20210520051136 ca2f9e18 unchecked_conversion%s
 G a e
 G c Z b b [main standard 5 11 none]
 G r c none [main standard 5 11 none] [Odivide fracciones 16 13 none]
-G r c none [main standard 5 11 none] [numerador fracciones 19 13 none]
-G r c none [main standard 5 11 none] [denominador fracciones 20 13 none]
-G r c none [main standard 5 11 none] [escribir fracciones 13 14 none]
-G r c none [main standard 5 11 none] [Oeq fracciones 9 13 none]
 G r c none [main standard 5 11 none] [Oadd fracciones 4 13 none]
-G r c none [main standard 5 11 none] [Osubtract fracciones 5 13 none]
+G r c none [main standard 5 11 none] [escribir fracciones 13 14 none]
 G r c none [main standard 5 11 none] [Osubtract fracciones 6 13 none]
 G r c none [main standard 5 11 none] [Omultiply fracciones 7 13 none]
+G r c none [main standard 5 11 none] [Osubtract fracciones 5 13 none]
 G r c none [main standard 5 11 none] [Odivide fracciones 8 13 none]
 X 1 ada.ads
-16K9*Ada 20e8 19|1r6 2r6 3r5 108r12 115r17
+16K9*Ada 20e8 19|1r6 2r6 3r5 60r12 67r17
 X 2 a-except.ads
-44K13*Exceptions 289e19 19|2w10 108r16 115r21
-94V13*Exception_Information{string} 19|108s27 115s32
+44K13*Exceptions 289e19 19|2w10 60r16 67r21
+94V13*Exception_Information{string} 19|60s27 67s32
 X 9 a-textio.ads
 58K13*Text_IO 725e16 19|1w10 3r9
-463U14*Put 19|19s4 21s4 23s4 33s4 41s4 49s4 57s4 65s4 73s4 81s4 89s4 108s7
-506U14*Put_Line 19|25s4 102s4 107s7 111s7 112s7 113s7 114s7 115s7
+463U14*Put 19|16s4 24s4 33s4 42s4 50s4 60s7
+506U14*Put_Line 19|59s7 63s7 64s7 65s7 66s7 67s7
 X 13 a-tiinio.ads
 46k21*Integer_IO 108e27 19|6r30
 X 16 fracciones.ads
 1K9*Fracciones 27e15 19|1w19 3r18
 2R9*fraccion_t 26e14 19|9r7 10r7 11r7
-4V14*"+"{2R9} 19|34s14 36s8
-5V14*"-"{2R9} 19|42s13 44s7 44s13 60s14 68s14
-6V14*"-"{2R9} 19|50s14 52s8 74s14 76s8 82s14 84s8
-7V14*"*"{2R9} 19|58s14 60s8 95s11
-8V14*"/"{2R9} 19|66s14 68s8 90s14 91s8
-9V14*"="{boolean} 19|28s9 36s11 44s10 52s11 60s11 68s11 76s11 84s11 98s8
-13U14*Escribir 19|20s4 22s4 24s4 34s4 42s4 50s4 58s4 66s4 74s4 82s4 90s4
-16V14*"/"{2R9} 19|9s22 10s25 11s22 28s13 36s15 44s15 52s15 60s16 68s16 76s15
-. 84s15 92s8 98s12
-19V13*Numerador{integer} 19|15s7
-20V13*Denominador{positive} 19|15s30
+4V14*"+"{2R9} 19|17s14 19s8
+5V14*"-"{2R9} 19|43s13 45s7 45s13
+6V14*"-"{2R9} 19|25s14 27s8
+7V14*"*"{2R9} 19|34s14 36s8
+8V14*"/"{2R9} 19|51s14
+13U14*Escribir 19|17s4 25s4 34s4 43s4 51s4
+16V14*"/"{2R9} 19|9s22 10s25 11s22 19s15 27s15 36s18 45s15
 X 19 main.adb
-5U11*main 5b11 116l5 116t9
+5U11*main 5b11 68l5 68t9
 6K12 Integer_Es[13|46] 7r8
-8X4 Practica_no_Apta 29r13 37r13 45r13 53r13 61r13 69r13 77r13 85r13 99r13
-. 106r22
-9r4 A{16|2R9} 20r13 34r13 36r7 42r14 44r8 50r13 52r7 58r13 60r7 66r13 68r7
-. 74r13 76r7 82r13 82r15 84r7 84r9 90r13 91r7
-10r4 B{16|2R9} 15r18 15r43 22r13 28r7 34r15 36r9 50r15 52r9 58r15 60r9 66r15
-. 68r9 74r15 76r9 95r12
-11r4 P{16|2R9} 24r13 90r15 91m4 91r9 92m4 95m7 95r10 98r7
-94i8 I{integer}
-106r9 Ocurrencia{2|53R9} 108r50
-110r9 Ocurrencia{2|53R9} 115r55
+8X4 Practica_no_Apta 20r13 28r13 37r13 46r13 58r22
+9r4 A{16|2R9} 17r13 19r7 25r13 27r7 34r13 36r7 43r14 45r8 51r13
+10r4 B{16|2R9} 17r15 19r9 25r15 27r9 34r15 36r9 51r15
+11r4 P{16|2R9}
+58r9 Ocurrencia{2|53R9} 60r50
+62r9 Ocurrencia{2|53R9} 67r55
 

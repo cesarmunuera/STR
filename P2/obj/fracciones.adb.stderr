@@ -1,12 +1,2 @@
-fracciones.adb:1:14: error: missing body for "-" declared at fracciones.ads:5
-fracciones.adb:1:14: error: missing body for "-" declared at fracciones.ads:6
-fracciones.adb:1:14: error: missing body for "*" declared at fracciones.ads:7
-fracciones.adb:1:14: error: missing body for "/" declared at fracciones.ads:8
-fracciones.adb:1:14: error: missing body for "=" declared at fracciones.ads:9
-fracciones.adb:1:14: error: missing body for "Leer" declared at fracciones.ads:12
-fracciones.adb:1:14: error: missing body for "Escribir" declared at fracciones.ads:13
-fracciones.adb:1:14: error: missing body for "/" declared at fracciones.ads:16
-fracciones.adb:1:14: error: missing body for "Numerador" declared at fracciones.ads:19
-fracciones.adb:1:14: error: missing body for "Denominador" declared at fracciones.ads:20
-fracciones.adb:15:07: error: assignment to "in" mode parameter not allowed
-fracciones.adb:16:07: error: assignment to "in" mode parameter not allowed
+fracciones.adb:47:36: warning: value not in range of type "Standard.Positive" [enabled by default]
+fracciones.adb:47:36: warning: "Constraint_Error" will be raised at run time [enabled by default]
