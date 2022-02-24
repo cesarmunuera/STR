@@ -1,0 +1,152 @@
+V "GNAT Lib v2021"
+M P W=b
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P SS ZX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTION_PROPAGATION
+RV NO_EXCEPTIONS
+RV NO_IO
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U main%b		main.adb		2e8f577c NE OO SU IL
+W ada%s			ada.ads			ada.ali
+W ada.exceptions%s	a-except.adb		a-except.ali
+Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+Z ada.text_io.generic_aux%s  a-tigeau.adb	a-tigeau.ali
+Z ada.text_io.integer_aux%s
+Z ada.text_io.integer_io%s
+W fracciones%s		fracciones.adb		fracciones.ali
+Z system%s		system.ads		system.ali
+Z system.exception_table%s  s-exctab.adb	s-exctab.ali
+Z system.img_biu%s	s-imgbiu.ads		s-imgbiu.ali
+Z system.img_int%s	s-imgint.ads		s-imgint.ali
+Z system.img_llb%s	s-imgllb.ads		s-imgllb.ali
+Z system.img_lli%s	s-imglli.ads		s-imglli.ali
+Z system.img_lllb%s	s-imglllb.ads		s-imglllb.ali
+Z system.img_llli%s	s-imgllli.ads		s-imgllli.ali
+Z system.img_lllw%s	s-imglllw.ads		s-imglllw.ali
+Z system.img_llw%s	s-imgllw.ads		s-imgllw.ali
+Z system.img_wiu%s	s-imgwiu.ads		s-imgwiu.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+Z system.standard_library%s  s-stalib.adb	s-stalib.ali
+Z system.val_int%s	s-valint.ads		s-valint.ali
+Z system.val_lli%s	s-vallli.ads		s-vallli.ali
+Z system.val_llli%s	s-valllli.ads		s-valllli.ali
+
+D ada.ads		20210520051132 76789da1 ada%s
+D a-except.ads		20210520051128 946f3014 ada.exceptions%s
+D a-ioexce.ads		20210520051128 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20210520051130 119b8fb3 ada.streams%s
+D a-string.ads		20210520051130 90ac6797 ada.strings%s
+D a-sttebu.ads		20210520051130 18209c64 ada.strings.text_buffers%s
+D a-stuten.ads		20210520051130 808c40ad ada.strings.utf_encoding%s
+D a-tags.ads		20210520051130 9eaa38c6 ada.tags%s
+D a-textio.ads		20210520051130 aef4d56d ada.text_io%s
+D a-tigeau.ads		20210520051130 e643cdf3 ada.text_io.generic_aux%s
+D a-tiinau.ads		20210520051130 1c79f78d ada.text_io.integer_aux%s
+D a-tiinau.adb		20210520051130 89004916 ada.text_io.integer_aux%b
+D a-tiinio.ads		20210520051130 390edddb ada.text_io.integer_io%s
+D a-tiinio.adb		20210520051130 b79731f4 ada.text_io.integer_io%b
+D a-unccon.ads		20210520051130 0e9b276f ada.unchecked_conversion%s
+D fracciones.ads	20220224094952 0340707f fracciones%s
+D interfac.ads		20210520051132 edec285f interfaces%s
+D i-cstrea.ads		20210520051132 e53d8b8e interfaces.c_streams%s
+D main.adb		20220224100424 1754c27a main%b
+D system.ads		20210520051136 2ffa5114 system%s
+D s-crtl.ads		20210520051132 0ebbdb71 system.crtl%s
+D s-exctab.ads		20210520051132 54135002 system.exception_table%s
+D s-ficobl.ads		20210520051132 078245e4 system.file_control_block%s
+D s-imageb.ads		20210520051134 3953e0e6 system.image_b%s
+D s-imagei.ads		20210520051134 0d3f86a7 system.image_i%s
+D s-imagew.ads		20210520051134 9d2dd267 system.image_w%s
+D s-imgbiu.ads		20210520051134 0a8e1c41 system.img_biu%s
+D s-imgint.ads		20210520051134 bdb6f5ec system.img_int%s
+D s-imgllb.ads		20210520051134 47d0db9f system.img_llb%s
+D s-imglli.ads		20210520051134 3723d9ff system.img_lli%s
+D s-imglllb.ads		20210520051134 30212eed system.img_lllb%s
+D s-imgllli.ads		20210520051134 5cf3dc07 system.img_llli%s
+D s-imglllw.ads		20210520051134 9e2b0560 system.img_lllw%s
+D s-imgllw.ads		20210520051134 bf9c9c15 system.img_llw%s
+D s-imgwiu.ads		20210520051134 912a95f2 system.img_wiu%s
+D s-parame.ads		20210520051134 4752c4cb system.parameters%s
+D s-putima.ads		20210520051134 4e095881 system.put_images%s
+D s-secsta.ads		20210520051134 9b3ab94b system.secondary_stack%s
+D s-soflin.ads		20210520051134 a7318a92 system.soft_links%s
+D s-stache.ads		20210520051134 a37c21ec system.stack_checking%s
+D s-stalib.ads		20210520051134 472fbca8 system.standard_library%s
+D s-stoele.ads		20210520051134 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20210520051134 ed88f8fb system.storage_elements%b
+D s-traent.ads		20210520051134 26a8d361 system.traceback_entries%s
+D s-unstyp.ads		20210520051134 2b077493 system.unsigned_types%s
+D s-valint.ads		20210520051134 e7fcadb7 system.val_int%s
+D s-vallli.ads		20210520051134 0767e6f3 system.val_lli%s
+D s-valllli.ads		20210520051134 f758e795 system.val_llli%s
+D s-vallllu.ads		20210520051134 87566fa4 system.val_lllu%s
+D s-valllu.ads		20210520051134 660d930f system.val_llu%s
+D s-valuns.ads		20210520051134 dac7b45d system.val_uns%s
+D s-valuei.ads		20210520051134 978dd0a6 system.value_i%s
+D s-valueu.ads		20210520051134 7b8fccf5 system.value_u%s
+D s-wchcon.ads		20210520051136 1b7d22d2 system.wch_con%s
+D unchconv.ads		20210520051136 ca2f9e18 unchecked_conversion%s
+G a e
+G c Z b b [main standard 5 11 none]
+G r c none [main standard 5 11 none] [Odivide fracciones 16 13 none]
+G r c none [main standard 5 11 none] [numerador fracciones 19 13 none]
+G r c none [main standard 5 11 none] [denominador fracciones 20 13 none]
+G r c none [main standard 5 11 none] [escribir fracciones 13 14 none]
+G r c none [main standard 5 11 none] [Oeq fracciones 9 13 none]
+G r c none [main standard 5 11 none] [Oadd fracciones 4 13 none]
+G r c none [main standard 5 11 none] [Osubtract fracciones 5 13 none]
+G r c none [main standard 5 11 none] [Osubtract fracciones 6 13 none]
+G r c none [main standard 5 11 none] [Omultiply fracciones 7 13 none]
+G r c none [main standard 5 11 none] [Odivide fracciones 8 13 none]
+X 1 ada.ads
+16K9*Ada 20e8 19|1r6 2r6 3r5 108r12 115r17
+X 2 a-except.ads
+44K13*Exceptions 289e19 19|2w10 108r16 115r21
+94V13*Exception_Information{string} 19|108s27 115s32
+X 9 a-textio.ads
+58K13*Text_IO 725e16 19|1w10 3r9
+463U14*Put 19|19s4 21s4 23s4 33s4 41s4 49s4 57s4 65s4 73s4 81s4 89s4 108s7
+506U14*Put_Line 19|25s4 102s4 107s7 111s7 112s7 113s7 114s7 115s7
+X 13 a-tiinio.ads
+46k21*Integer_IO 108e27 19|6r30
+X 16 fracciones.ads
+1K9*Fracciones 27e15 19|1w19 3r18
+2R9*fraccion_t 26e14 19|9r7 10r7 11r7
+4V14*"+"{2R9} 19|34s14 36s8
+5V14*"-"{2R9} 19|42s13 44s7 44s13 60s14 68s14
+6V14*"-"{2R9} 19|50s14 52s8 74s14 76s8 82s14 84s8
+7V14*"*"{2R9} 19|58s14 60s8 95s11
+8V14*"/"{2R9} 19|66s14 68s8 90s14 91s8
+9V14*"="{boolean} 19|28s9 36s11 44s10 52s11 60s11 68s11 76s11 84s11 98s8
+13U14*Escribir 19|20s4 22s4 24s4 34s4 42s4 50s4 58s4 66s4 74s4 82s4 90s4
+16V14*"/"{2R9} 19|9s22 10s25 11s22 28s13 36s15 44s15 52s15 60s16 68s16 76s15
+. 84s15 92s8 98s12
+19V13*Numerador{integer} 19|15s7
+20V13*Denominador{positive} 19|15s30
+X 19 main.adb
+5U11*main 5b11 116l5 116t9
+6K12 Integer_Es[13|46] 7r8
+8X4 Practica_no_Apta 29r13 37r13 45r13 53r13 61r13 69r13 77r13 85r13 99r13
+. 106r22
+9r4 A{16|2R9} 20r13 34r13 36r7 42r14 44r8 50r13 52r7 58r13 60r7 66r13 68r7
+. 74r13 76r7 82r13 82r15 84r7 84r9 90r13 91r7
+10r4 B{16|2R9} 15r18 15r43 22r13 28r7 34r15 36r9 50r15 52r9 58r15 60r9 66r15
+. 68r9 74r15 76r9 95r12
+11r4 P{16|2R9} 24r13 90r15 91m4 91r9 92m4 95m7 95r10 98r7
+94i8 I{integer}
+106r9 Ocurrencia{2|53R9} 108r50
+110r9 Ocurrencia{2|53R9} 115r55
+

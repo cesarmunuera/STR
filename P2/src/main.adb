@@ -2,7 +2,7 @@ with Ada.Text_Io, Fracciones;
 with Ada.Exceptions;
 use Ada.Text_Io, Fracciones;
 
-procedure Prueba is
+procedure main is
    package Integer_Es is new Integer_Io (Integer);
    use Integer_es;
    Practica_no_Apta: exception;
@@ -113,4 +113,4 @@ exception
       Put_Line ("fracciones irreducibles");
       Put_Line ("Es necesario reducir las fracciones");
       Put_Line (Ada.Exceptions.Exception_Information (Ocurrencia));
-end Prueba;
+end main;
