@@ -1,2 +1,0 @@
-fracciones.adb:47:36: warning: value not in range of type "Standard.Positive" [enabled by default]
-fracciones.adb:47:36: warning: "Constraint_Error" will be raised at run time [enabled by default]

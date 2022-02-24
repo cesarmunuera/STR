@@ -16,8 +16,8 @@ package Fracciones is
    function "/" (X, Y: Integer) return fraccion_t;
 
    -- Operaciones para obtener las partes de una fracción
-   --function Numerador (F: fraccion_t) return Integer;
-   --function Denominador(F:fraccion_t) return Positive;
+   function Numerador (F: fraccion_t) return Integer;
+   function Denominador(F:fraccion_t) return Positive;
 
 private
    type fraccion_t is record
