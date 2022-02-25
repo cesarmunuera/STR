@@ -56,8 +56,8 @@ D a-tiinau.adb		20210520051130 89004916 ada.text_io.integer_aux%b
 D a-tiinio.ads		20210520051130 390edddb ada.text_io.integer_io%s
 D a-tiinio.adb		20210520051130 b79731f4 ada.text_io.integer_io%b
 D a-unccon.ads		20210520051130 0e9b276f ada.unchecked_conversion%s
-D fracciones.ads	20220225145734 0340707f fracciones%s
-D fracciones.adb	20220225145746 4fff26db fracciones%b
+D fracciones.ads	20220225174122 0340707f fracciones%s
+D fracciones.adb	20220225180200 4fff26db fracciones%b
 D interfac.ads		20210520051132 edec285f interfaces%s
 D i-cstrea.ads		20210520051132 e53d8b8e interfaces.c_streams%s
 D system.ads		20210520051136 2ffa5114 system%s

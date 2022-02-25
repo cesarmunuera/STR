@@ -12,15 +12,15 @@ procedure main is
 
 begin
 
-   if Numerador (B) /= -1 or Denominador (B) /= 2 then
+if Numerador (B) /= -1 or Denominador (B) /= 2 then
       raise Constraint_Error;
    end if;
 
    Put("El valor de A = ");
    Escribir(A);
-   Put("El valor de B = ");
+   Put(" El valor de B = ");
    Escribir(B);
-   Put("El valor de P = ");
+   Put(" El valor de P = ");
    Escribir(P);
    Put_Line(" ");
 
@@ -28,7 +28,6 @@ begin
    if B /= 1/(-2) then
       raise Practica_no_Apta;
    end if;
-
 
    --Suma  ....................................
    Put("A+B = ");
@@ -58,7 +57,7 @@ begin
    Put("A*B = ");
    Escribir(A*B);
 
-   if A*B /= -1/3 then
+   if A*B /= (-1)/3 then
       raise Practica_no_Apta;
    end if;
 
@@ -70,15 +69,25 @@ begin
       raise Practica_no_Apta;
    end if;
 
+   -- Resta???????????????  ..................................
+   Put("A-B = ");
+   Escribir(A-B);
+
+   if A-B /= 7/6 then
+      raise Practica_no_Apta;
+   end if;
+
    -- Restar a si mismo  ......................
    Put("A-A = ");
    Escribir(A-A);
 
    --if A-A /= 0/3 then
       --raise Practica_no_Apta;
-      --end if;
+   --end if;
 
-
+   --Division ................................
+   Put("A/P = ");
+   Escribir(A/P);
 
    Put_Line ("Práctica apta");
 

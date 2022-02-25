@@ -18,7 +18,7 @@ RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U main%b		main.adb		04af95c9 NE OO SU IL
+U main%b		main.adb		30bf5b4c NE OO SU IL
 W ada%s			ada.ads			ada.ali
 W ada.exceptions%s	a-except.adb		a-except.ali
 Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
@@ -59,10 +59,10 @@ D a-tiinau.adb		20210520051130 89004916 ada.text_io.integer_aux%b
 D a-tiinio.ads		20210520051130 390edddb ada.text_io.integer_io%s
 D a-tiinio.adb		20210520051130 b79731f4 ada.text_io.integer_io%b
 D a-unccon.ads		20210520051130 0e9b276f ada.unchecked_conversion%s
-D fracciones.ads	20220225145734 0340707f fracciones%s
+D fracciones.ads	20220225174122 0340707f fracciones%s
 D interfac.ads		20210520051132 edec285f interfaces%s
 D i-cstrea.ads		20210520051132 e53d8b8e interfaces.c_streams%s
-D main.adb		20220224225714 3d7400cf main%b
+D main.adb		20220225180158 0964ce4a main%b
 D system.ads		20210520051136 2ffa5114 system%s
 D s-crtl.ads		20210520051132 0ebbdb71 system.crtl%s
 D s-exctab.ads		20210520051132 54135002 system.exception_table%s
@@ -112,38 +112,38 @@ G r c none [main standard 5 11 none] [Osubtract fracciones 6 13 none]
 G r c none [main standard 5 11 none] [Omultiply fracciones 7 13 none]
 G r c none [main standard 5 11 none] [Odivide fracciones 8 13 none]
 X 1 ada.ads
-16K9*Ada 20e8 19|1r6 2r6 3r5 84r12 91r17
+16K9*Ada 20e8 19|1r6 2r6 3r5 97r12 104r17
 X 2 a-except.ads
-44K13*Exceptions 289e19 19|2w10 84r16 91r21
-94V13*Exception_Information{string} 19|84s27 91s32
+44K13*Exceptions 289e19 19|2w10 97r16 104r21
+94V13*Exception_Information{string} 19|97s27 104s32
 X 9 a-textio.ads
 58K13*Text_IO 725e16 19|1w10 3r9
-463U14*Put 19|19s4 21s4 23s4 34s4 42s4 50s4 58s4 66s4 74s4 84s7
-506U14*Put_Line 19|25s4 83s7 87s7 88s7 89s7 90s7 91s7
+463U14*Put 19|19s4 21s4 23s4 33s4 41s4 49s4 57s4 65s4 73s4 81s4 89s4 97s7
+506U14*Put_Line 19|25s4 92s4 96s7 100s7 101s7 102s7 103s7 104s7
 X 13 a-tiinio.ads
 46k21*Integer_IO 108e27 19|6r30
 X 16 fracciones.ads
 1K9*Fracciones 27e15 19|1w19 3r18
 2R9*fraccion_t 26e14 19|9r7 10r7 11r7
-4V14*"+"{2R9} 19|35s14 37s8
-5V14*"-"{2R9} 19|43s13 45s7 45s13 61s14 69s14
-6V14*"-"{2R9} 19|51s14 53s8 75s14
-7V14*"*"{2R9} 19|59s14 61s8
-8V14*"/"{2R9} 19|67s14 69s8
-9V14*"="{boolean} 19|28s9 37s11 45s10 53s11 61s11 69s11
-13U14*Escribir 19|20s4 22s4 24s4 35s4 43s4 51s4 59s4 67s4 75s4
-16V14*"/"{2R9} 19|9s22 10s25 11s22 28s13 37s15 45s15 53s15 61s16 69s16
-19V13*Numerador{integer} 19|15s7
-20V13*Denominador{positive} 19|15s30
+4V14*"+"{2R9} 19|34s14 36s8
+5V14*"-"{2R9} 19|42s13 44s7 44s13 68s14
+6V14*"-"{2R9} 19|50s14 52s8 74s14 76s8 82s14
+7V14*"*"{2R9} 19|58s14 60s8
+8V14*"/"{2R9} 19|66s14 68s8 90s14
+9V14*"="{boolean} 19|28s9 36s11 44s10 52s11 60s11 68s11 76s11
+13U14*Escribir 19|20s4 22s4 24s4 34s4 42s4 50s4 58s4 66s4 74s4 82s4 90s4
+16V14*"/"{2R9} 19|9s22 10s25 11s22 28s13 36s15 44s15 52s15 60s18 68s16 76s15
+19V13*Numerador{integer} 19|15s4
+20V13*Denominador{positive} 19|15s27
 X 19 main.adb
-5U11*main 5b11 92l5 92t9
+5U11*main 5b11 105l5 105t9
 6K12 Integer_Es[13|46] 7r8
-8X4 Practica_no_Apta 29r13 38r13 46r13 54r13 62r13 70r13 82r22
-9r4 A{16|2R9} 20r13 35r13 37r7 43r14 45r8 51r13 53r7 59r13 61r7 67r13 69r7
-. 75r13 75r15
-10r4 B{16|2R9} 15r18 15r43 22r13 28r7 35r15 37r9 51r15 53r9 59r15 61r9 67r15
-. 69r9
-11r4 P{16|2R9} 24r13
-82r9 Ocurrencia{2|53R9} 84r50
-86r9 Ocurrencia{2|53R9} 91r55
+8X4 Practica_no_Apta 29r13 37r13 45r13 53r13 61r13 69r13 77r13 95r22
+9r4 A{16|2R9} 20r13 34r13 36r7 42r14 44r8 50r13 52r7 58r13 60r7 66r13 68r7
+. 74r13 76r7 82r13 82r15 90r13
+10r4 B{16|2R9} 15r15 15r40 22r13 28r7 34r15 36r9 50r15 52r9 58r15 60r9 66r15
+. 68r9 74r15 76r9
+11r4 P{16|2R9} 24r13 90r15
+95r9 Ocurrencia{2|53R9} 97r50
+99r9 Ocurrencia{2|53R9} 104r55
 

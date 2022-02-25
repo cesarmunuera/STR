@@ -1,117 +1,14 @@
 <?xml version="1.0"?>
 <Locations >
-  <Project >
-    <file_marker column=" 9" line=" 18" >
+  <Project>
+    <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\P2\default.gpr</vfs_file>
+    <file_marker column=" 9" line=" 71" >
       <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\P2\default.gpr</vfs_project>
       <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\P2\src\fracciones.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 4" line=" 8" >
+    <file_marker current="true" column=" 38" line=" 12" >
       <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\P2\default.gpr</vfs_project>
       <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\P2\src\fracciones.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 12" >
-      <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\P2\default.gpr</vfs_project>
-      <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\P2\src\fracciones.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 10" >
-      <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\P2\default.gpr</vfs_project>
-      <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\P2\src\fracciones.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 27" line=" 185" >
-      <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\P2\default.gpr</vfs_project>
-      <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\P2\src\fracciones.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 10" >
-      <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\P2\default.gpr</vfs_project>
-      <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\P2\src\fracciones.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 17" line=" 182" >
-      <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\P2\default.gpr</vfs_project>
-      <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\P2\src\fracciones.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 10" >
-      <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\P2\default.gpr</vfs_project>
-      <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\P2\src\fracciones.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 17" line=" 182" >
-      <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\P2\default.gpr</vfs_project>
-      <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\P2\src\fracciones.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 10" >
-      <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\P2\default.gpr</vfs_project>
-      <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\P2\src\fracciones.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 10" >
-      <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\P2\default.gpr</vfs_project>
-      <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\P2\src\fracciones.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 23" line=" 174" >
-      <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\P2\default.gpr</vfs_project>
-      <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\P2\src\fracciones.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 4" line=" 27" >
-      <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\P2\default.gpr</vfs_project>
-      <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\P2\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 23" line=" 174" >
-      <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\P2\default.gpr</vfs_project>
-      <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\P2\src\fracciones.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 27" line=" 3" >
-      <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\P2\default.gpr</vfs_project>
-      <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\P2\src\fracciones.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 119" >
-      <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\P2\default.gpr</vfs_project>
-      <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\P2\src\fracciones.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 23" line=" 174" >
-      <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\P2\default.gpr</vfs_project>
-      <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\P2\src\fracciones.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 54" line=" 21" >
-      <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\P2\default.gpr</vfs_project>
-      <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\P2\src\fracciones.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 23" line=" 174" >
-      <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\P2\default.gpr</vfs_project>
-      <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\P2\src\fracciones.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 15" >
-      <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\P2\default.gpr</vfs_project>
-      <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\P2\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 15" >
-      <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\P2\default.gpr</vfs_project>
-      <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\P2\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 44" line=" 200" >
-      <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\P2\default.gpr</vfs_project>
-      <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\P2\src\fracciones.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 23" line=" 174" >
-      <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\P2\default.gpr</vfs_project>
-      <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\P2\src\fracciones.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 13" line=" 201" >
-      <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\P2\default.gpr</vfs_project>
-      <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\P2\src\fracciones.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 21" line=" 202" >
-      <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\P2\default.gpr</vfs_project>
-      <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\P2\src\fracciones.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 23" line=" 174" >
-      <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\P2\default.gpr</vfs_project>
-      <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\P2\src\fracciones.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 12" >
-      <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\P2\default.gpr</vfs_project>
-      <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\P2\src\fracciones.adb</vfs_file>
-    </file_marker>
-    <file_marker current="true" column=" 7" line=" 78" >
-      <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\P2\default.gpr</vfs_project>
-      <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\P2\src\fracciones.adb</vfs_file>
     </file_marker>
   </Project>
 </Locations>
