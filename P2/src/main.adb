@@ -76,7 +76,11 @@ begin
 
    --if A-A /= 0/3 then
       --raise Practica_no_Apta;
-   --end if;
+      --end if;
+
+
+
+   Put_Line ("Práctica apta");
 
 exception
    when Ocurrencia : Practica_no_Apta =>

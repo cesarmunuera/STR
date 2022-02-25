@@ -5,18 +5,40 @@ A -march=x86-64
 P ZX
 
 RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTIONS
 RV NO_IO
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_STANDARD_STORAGE_POOLS
 RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U fracciones%b		fracciones.adb		6ba07ee1 NE OO PK
+U fracciones%b		fracciones.adb		e24b83c9 NE OO PK
 W ada%s			ada.ads			ada.ali
+Z ada.exceptions%s	a-except.adb		a-except.ali
 Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
+Z ada.text_io.generic_aux%s  a-tigeau.adb	a-tigeau.ali
+Z ada.text_io.integer_aux%s
+Z ada.text_io.integer_io%s
+W system%s		system.ads		system.ali
 Z system.concat_3%s	s-conca3.adb		s-conca3.ali
+Z system.img_biu%s	s-imgbiu.ads		s-imgbiu.ali
 Z system.img_int%s	s-imgint.ads		s-imgint.ali
+Z system.img_llb%s	s-imgllb.ads		s-imgllb.ali
+Z system.img_lli%s	s-imglli.ads		s-imglli.ali
+Z system.img_lllb%s	s-imglllb.ads		s-imglllb.ali
+Z system.img_llli%s	s-imgllli.ads		s-imgllli.ali
+Z system.img_lllw%s	s-imglllw.ads		s-imglllw.ali
+Z system.img_llw%s	s-imgllw.ads		s-imgllw.ali
+Z system.img_wiu%s	s-imgwiu.ads		s-imgwiu.ali
+Z system.val_int%s	s-valint.ads		s-valint.ali
+Z system.val_lli%s	s-vallli.ads		s-vallli.ali
+Z system.val_llli%s	s-valllli.ads		s-valllli.ali
 
-U fracciones%s		fracciones.ads		0e6d0124 EE NE OO PK
+U fracciones%s		fracciones.ads		0340707f EE NE OO PK
 Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
 
 D ada.ads		20210520051132 76789da1 ada%s
@@ -28,9 +50,14 @@ D a-sttebu.ads		20210520051130 18209c64 ada.strings.text_buffers%s
 D a-stuten.ads		20210520051130 808c40ad ada.strings.utf_encoding%s
 D a-tags.ads		20210520051130 9eaa38c6 ada.tags%s
 D a-textio.ads		20210520051130 aef4d56d ada.text_io%s
+D a-tigeau.ads		20210520051130 e643cdf3 ada.text_io.generic_aux%s
+D a-tiinau.ads		20210520051130 1c79f78d ada.text_io.integer_aux%s
+D a-tiinau.adb		20210520051130 89004916 ada.text_io.integer_aux%b
+D a-tiinio.ads		20210520051130 390edddb ada.text_io.integer_io%s
+D a-tiinio.adb		20210520051130 b79731f4 ada.text_io.integer_io%b
 D a-unccon.ads		20210520051130 0e9b276f ada.unchecked_conversion%s
-D fracciones.ads	20220224225118 0e6d0124 fracciones%s
-D fracciones.adb	20220224225236 cb39aaa8 fracciones%b
+D fracciones.ads	20220225145734 0340707f fracciones%s
+D fracciones.adb	20220225145746 4fff26db fracciones%b
 D interfac.ads		20210520051132 edec285f interfaces%s
 D i-cstrea.ads		20210520051132 e53d8b8e interfaces.c_streams%s
 D system.ads		20210520051136 2ffa5114 system%s
@@ -38,8 +65,18 @@ D s-conca3.ads		20210520051132 0b705ca5 system.concat_3%s
 D s-crtl.ads		20210520051132 0ebbdb71 system.crtl%s
 D s-exctab.ads		20210520051132 54135002 system.exception_table%s
 D s-ficobl.ads		20210520051132 078245e4 system.file_control_block%s
+D s-imageb.ads		20210520051134 3953e0e6 system.image_b%s
 D s-imagei.ads		20210520051134 0d3f86a7 system.image_i%s
+D s-imagew.ads		20210520051134 9d2dd267 system.image_w%s
+D s-imgbiu.ads		20210520051134 0a8e1c41 system.img_biu%s
 D s-imgint.ads		20210520051134 bdb6f5ec system.img_int%s
+D s-imgllb.ads		20210520051134 47d0db9f system.img_llb%s
+D s-imglli.ads		20210520051134 3723d9ff system.img_lli%s
+D s-imglllb.ads		20210520051134 30212eed system.img_lllb%s
+D s-imgllli.ads		20210520051134 5cf3dc07 system.img_llli%s
+D s-imglllw.ads		20210520051134 9e2b0560 system.img_lllw%s
+D s-imgllw.ads		20210520051134 bf9c9c15 system.img_llw%s
+D s-imgwiu.ads		20210520051134 912a95f2 system.img_wiu%s
 D s-parame.ads		20210520051134 4752c4cb system.parameters%s
 D s-putima.ads		20210520051134 4e095881 system.put_images%s
 D s-secsta.ads		20210520051134 9b3ab94b system.secondary_stack%s
@@ -50,6 +87,14 @@ D s-stoele.ads		20210520051134 2dc34a04 system.storage_elements%s
 D s-stoele.adb		20210520051134 ed88f8fb system.storage_elements%b
 D s-traent.ads		20210520051134 26a8d361 system.traceback_entries%s
 D s-unstyp.ads		20210520051134 2b077493 system.unsigned_types%s
+D s-valint.ads		20210520051134 e7fcadb7 system.val_int%s
+D s-vallli.ads		20210520051134 0767e6f3 system.val_lli%s
+D s-valllli.ads		20210520051134 f758e795 system.val_llli%s
+D s-vallllu.ads		20210520051134 87566fa4 system.val_lllu%s
+D s-valllu.ads		20210520051134 660d930f system.val_llu%s
+D s-valuns.ads		20210520051134 dac7b45d system.val_uns%s
+D s-valuei.ads		20210520051134 978dd0a6 system.value_i%s
+D s-valueu.ads		20210520051134 7b8fccf5 system.value_u%s
 D s-wchcon.ads		20210520051136 1b7d22d2 system.wch_con%s
 D unchconv.ads		20210520051136 ca2f9e18 unchecked_conversion%s
 G a e
@@ -58,70 +103,91 @@ G c Z s b [Osubtract fracciones 5 13 none]
 G c Z s b [Osubtract fracciones 6 13 none]
 G c Z s b [Omultiply fracciones 7 13 none]
 G c Z s b [Odivide fracciones 8 13 none]
+G c Z s b [Oeq fracciones 9 13 none]
+G c Z s b [leer fracciones 12 14 none]
 G c Z s b [escribir fracciones 13 14 none]
 G c Z s b [Odivide fracciones 16 13 none]
 G c Z s b [numerador fracciones 19 13 none]
 G c Z s b [denominador fracciones 20 13 none]
 G c Z s s [fraccion_tIP fracciones 23 9 none]
-G c Z b b [colocarsigno fracciones 15 13 none]
-G c Z b b [reducir fracciones 27 13 none]
+G c Z b b [reducir fracciones 15 13 none]
+G c Z b b [colocarsigno fracciones 55 13 none]
 X 1 ada.ads
-16K9*Ada 20e8 12|1r6 1r22
+16K9*Ada 20e8 17|1r6 1r22 70r36
 X 9 a-textio.ads
-58K13*Text_IO 725e16 12|1w10 1r26
-506U14*Put_Line 12|8s7
-X 11 fracciones.ads
-1K9*Fracciones 23E9 27l5 27e15 12|3b14 176l5 176t15
-2R9*fraccion_t 4r24 4r43 5r21 5r40 6r24 6r43 7r24 7r43 8r24 8r43 13r27 16r40
-. 19r27 20r27 23c9 26e14 12|6r27 15r31 15r50 16r20 27r26 27r45 28r20 67r40
-. 68r18 87r24 87r43 88r13 100r24 100r43 101r13 113r24 113r43 114r13 126r21
-. 126r40 127r13 139r24 139r43 140r12 157r27 167r29
-4V14*"+"{2R9} 4>18 4>21 12|87b14 95t7
-4r18 X{2R9} 12|87b18 91r19 91r45 92r18
-4r21 Y{2R9} 12|87b21 91r27 91r37 92r26
-5V14*"-"{2R9} 5>18 12|126b14 134t7
-5r18 X{2R9} 12|126b18 130r18 131r18
-6V14*"-"{2R9} 6>18 6>21 12|100b14 108t7
-6r18 X{2R9} 12|100b18 104r19 104r45 105r18
-6r21 Y{2R9} 12|100b21 104r27 104r37 105r26
-7V14*"*"{2R9} 7>18 7>21 12|113b14 121t7
-7r18 X{2R9} 12|113b18 117r18 118r18
-7r21 Y{2R9} 12|113b21 117r26 118r26
-8V14*"/"{2R9} 8>18 8>21 12|139b14 152t7
-8r18 X{2R9} 12|139b18 143r18 144r23 147r12
-8r21 Y{2R9} 12|139b21 143r26 144r31 147r20
-13U14*Escribir 13>24 12|6b14 9t7
-13r24 F{2R9} 12|6b24 8r16 8r36
-16V14*"/"{2R9} 16>18 16>21 12|67b14 82t7
-16i18 X{integer} 12|67b18 74r26 77r26
-16i21 Y{integer} 12|67b21 73r11 75r26 78r26
-19V13*Numerador{integer} 19>24 12|157b13 162t7
-19r24 F{2R9} 12|157b24 160r14
-20V13*Denominador{positive} 20>25 12|167b13 172t7
-20r25 F{2R9} 12|167b26 170r14
-24i7*Num{integer} 12|8r18 19m19 19r28 34r13 36r22 57m22 57r32 74m19 77m19
-. 91m11 91r21 91r39 104m11 104r21 104r39 117m11 117r20 117r28 130m11 130r20
-. 143m11 143r20 144r33 147r22 160r16
-25i7*Den{positive} 12|8r38 37r18 58m22 58r32 75m19 78m19 91r29 91r47 92m11
-. 92r20 92r28 104r29 104r47 105m11 105r20 105r28 118m11 118r20 118r28 131m11
-. 131r20 143r28 144m11 144r25 147r14 170r16
-X 12 fracciones.adb
-15V13 colocarSigno{11|2R9} 15b13 15>27 21t7 148s17
-15r27 X{11|2R9} 18r22 19r26
-16r7 fraccionAux{11|2R9} 18m7 19m7 20r14
-27V13 reducir{11|2R9} 27b13 27>22 62t7 81s14 94s14 107s14 120s14 133s14 151s14
-27r22 X{11|2R9} 32r22 34r11 36r20 37r16 57r30 58r30
-28r7 fraccionAux{11|2R9} 32m7 57m10 58m10 61r14
-29i7 v1{integer} 36m10 41r14 42r20 43m13 51r22 52m13 57r38 58r38
-29i11 v2{integer} 37m10 41r17 43r19 44m13 51r29 52r19 53m13
-29i15 aux{integer} 42m13 44r19
-29i20 resto{integer} 49m10 50r17 51m13 53r19
-68r7 fraccion{11|2R9} 74m10 75m10 77m10 78m10 81r22
-88r7 aux{11|2R9} 91m7 92m7 94r22
-101r7 aux{11|2R9} 104m7 105m7 107r22
-114r7 aux{11|2R9} 117m7 118m7 120r22
-127r7 aux{11|2R9} 130m7 131m7 133r22
-140r7 aux{11|2R9} 143m7 144m7 148m10 148r30 151r22
-158i7 aux{integer} 160m7 161r14
-168i7 aux{positive} 170m7 171r14
+58K13*Text_IO 725e16 17|1w10 1r26 70r40
+463U14*Put 17|73s7 81s10 84s13
+506U14*Put_Line 17|8s7
+X 13 a-tiinio.ads
+46k21*Integer_IO 108e27 17|70r48
+59U14 Get 17|74s21[70] 82s24[70]
+X 16 fracciones.ads
+1K9*Fracciones 23E9 27l5 27e15 17|3b14 235l5 235t15
+2R9*fraccion_t 4r24 4r43 5r21 5r40 6r24 6r43 7r24 7r43 8r24 8r43 9r24 12r27
+. 13r27 16r40 19r27 20r27 23c9 26e14 17|6r27 15r26 15r45 16r20 55r31 55r50
+. 56r20 65r27 68r13 101r40 102r18 121r24 121r43 122r13 134r24 134r43 135r13
+. 147r24 147r43 148r13 160r21 160r40 161r13 173r24 173r43 174r12 191r27 201r29
+. 211r24 212r20
+4V14*"+"{2R9} 4>18 4>21 17|121b14 129t7
+4r18 X{2R9} 17|121b18 125r19 125r45 126r18
+4r21 Y{2R9} 17|121b21 125r27 125r37 126r26
+5V14*"-"{2R9} 5>18 17|160b14 168t7
+5r18 X{2R9} 17|160b18 164r18 165r18
+6V14*"-"{2R9} 6>18 6>21 17|134b14 142t7
+6r18 X{2R9} 17|134b18 138r19 138r45 139r18
+6r21 Y{2R9} 17|134b21 138r27 138r37 139r26
+7V14*"*"{2R9} 7>18 7>21 17|147b14 155t7
+7r18 X{2R9} 17|147b18 151r18 152r18
+7r21 Y{2R9} 17|147b21 151r26 152r26
+8V14*"/"{2R9} 8>18 8>21 17|173b14 186t7
+8r18 X{2R9} 17|173b18 177r18 178r23 181r12
+8r21 Y{2R9} 17|173b21 177r26 178r31 181r20
+9V14*"="{boolean} 9>18 9>21 17|211b14 232t7
+9r18 X{2R9} 17|211b18 217r23
+9r21 Y{2R9} 17|211b21 218r23
+12U14*Leer 12<20 17|65b14 97t7
+12r20 F{2R9} 17|65b20 96m7
+13U14*Escribir 13>24 17|6b14 9t7
+13r24 F{2R9} 17|6b24 8r16 8r36
+16V14*"/"{2R9} 16>18 16>21 17|101b14 116t7
+16i18 X{integer} 17|101b18 108r26 111r26
+16i21 Y{integer} 17|101b21 107r11 109r26 112r26
+19V13*Numerador{integer} 19>24 17|191b13 196t7
+19r24 F{2R9} 17|191b24 194r14
+20V13*Denominador{positive} 20>25 17|201b13 206t7
+20r25 F{2R9} 17|201b26 204r14
+24i7*Num{integer} 17|8r18 22r13 24r22 45m22 45r32 59m19 59r28 75m11 108m19
+. 111m19 125m11 125r21 125r39 138m11 138r21 138r39 151m11 151r20 151r28 164m11
+. 164r20 177m11 177r20 178r33 181r22 194r16 222r19 222r30
+25i7*Den{positive} 17|8r38 25r18 46m22 46r32 87m17 91m17 109m19 112m19 125r29
+. 125r47 126m11 126r20 126r28 138r29 138r47 139m11 139r20 139r28 152m11 152r20
+. 152r28 165m11 165r20 177r28 178m11 178r25 181r14 204r16 221r16 221r27
+X 17 fracciones.adb
+15V13 reducir{16|2R9} 15b13 15>22 50t7 96s12 115s14 128s14 141s14 154s14
+. 167s14 185s14 217s15 218s15
+15r22 X{16|2R9} 20r22 22r11 24r20 25r16 45r30 46r30
+16r7 fraccionAux{16|2R9} 20m7 45m10 46m10 49r14
+17i7 v1{integer} 24m10 29r14 30r20 31m13 39r22 40m13 45r38 46r38
+17i11 v2{integer} 25m10 29r17 31r19 32m13 39r29 40r19 41m13
+17i15 aux{integer} 30m13 32r19
+17i20 resto{integer} 37m10 38r17 39m13 41r19
+55V13 colocarSigno{16|2R9} 55b13 55>27 61t7 88s20 182s17
+55r27 X{16|2R9} 58r22 59r26
+56r7 fraccionAux{16|2R9} 58m7 59m7 60r14
+66i7 numerador{integer} 74m25 75r18
+66i18 denominador{integer} 82m28 83r14 85r17 87r28 91r24
+67b7 invalido{boolean} 78m7 80r14 86m13 90m13
+68r7 aux{16|2R9} 75m7 87m13 88m13 88r33 91m13 96r20
+70K15 Fracciones_ES[13|46] 74r7 82r10
+102r7 fraccion{16|2R9} 108m10 109m10 111m10 112m10 115r22
+122r7 aux{16|2R9} 125m7 126m7 128r22
+135r7 aux{16|2R9} 138m7 139m7 141r22
+148r7 aux{16|2R9} 151m7 152m7 154r22
+161r7 aux{16|2R9} 164m7 165m7 167r22
+174r7 aux{16|2R9} 177m7 178m7 182m10 182r30 185r22
+192i7 aux{integer} 194m7 195r14
+202i7 aux{positive} 204m7 205r14
+212r7 aux1{16|2R9} 217m7 221r11 222r14
+212r13 aux2{16|2R9} 218m7 221r22 222r25
+213b7 igual{boolean} 223m13 225m13 228m10 231r14
 

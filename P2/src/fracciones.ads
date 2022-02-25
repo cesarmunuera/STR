@@ -6,10 +6,10 @@ package Fracciones is
    function "-" (X, Y: fraccion_t) return fraccion_t;
    function "*" (X, Y: fraccion_t) return fraccion_t;
    function "/" (X, Y: fraccion_t) return fraccion_t;
-   --function "=" (X, Y: fraccion_t) return Boolean;
+   function "=" (X, Y: fraccion_t) return Boolean;
 
    -- Operaciones de entrada/salida con la consola
-   --procedure Leer (F: out fraccion_t);
+   procedure Leer (F: out fraccion_t);
    procedure Escribir (F: fraccion_t);
 
    -- Constructor de números fraccionarios a partir de números enteros

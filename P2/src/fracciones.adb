@@ -10,18 +10,6 @@ package body Fracciones is
 
 
 
-   --Funcion para colocar el - en el numerador. Modularizado por si se le da
-   --un uso posterior. Solo se usa, de momento, en la division.
-   function colocarSigno (X : fraccion_t) return fraccion_t is
-      fraccionAux: fraccion_t;
-   begin
-      fraccionAux := X;
-      fraccionAux.Num := X.Num * (-1);
-      return fraccionAux;
-   end;
-
-
-
    --Esta funcion calcula el mcd del numerador y denominador, para poder
    --dividirlos, y dejar la funcion reducida
    function reducir (X : fraccion_t) return fraccion_t is
@@ -61,6 +49,52 @@ package body Fracciones is
       return fraccionAux;
    end;
 
+
+
+   --Funcion para colocar el - en el numerador.
+   function colocarSigno (X : fraccion_t) return fraccion_t is
+      fraccionAux: fraccion_t;
+   begin
+      fraccionAux := X;
+      fraccionAux.Num := X.Num * (-1);
+      return fraccionAux;
+   end;
+
+
+   --Funcion que nos permite introducir nuevas fracciones por teclado
+   procedure Leer (F: out fraccion_t) is
+      numerador, denominador : integer;
+      invalido : boolean;
+      aux : fraccion_t;
+      --Nos creamos un paquete para recoger los datos metidos por el usuario
+      package Fracciones_ES is new Ada.Text_Io.Integer_Io(Integer);
+   begin
+
+      Put("Introduzca el numerador de la fraccion:");
+      Fracciones_ES.Get(numerador);
+      aux.Num := numerador;
+
+      --Ahora debemos comprobar que el denominador no sea 0
+      invalido := true;
+
+      while (invalido) loop
+         Put("Introduzca el denominador de la fraccion (NO PUEDE SER 0):");
+         Fracciones_ES.Get(denominador);
+         if (denominador = 0) then
+            Put("Error. Introduzca el denominador de la fraccion (NO PUEDE SER 0):");
+         elsif (denominador < 0) then
+            invalido := false;
+            aux.Den := abs(denominador);
+            aux := colocarSigno(aux);
+         else
+            invalido := false;
+            aux.Den := denominador;
+         end if;
+      end loop;
+
+      --Ahora procedemos a reducir la fraccion
+      F := reducir(aux);
+   end;
 
 
    --Esta es la funcion del constructor
@@ -171,6 +205,31 @@ package body Fracciones is
       return aux;
    end;
 
+
+
+   --Funcion que compara dos fracciones
+   function "=" (X, Y: fraccion_t) return Boolean is
+      aux1, aux2 : fraccion_t;
+      igual : Boolean;
+   begin
+
+      --Primero las dejamos reducidas
+      aux1 := reducir(X);
+      aux2 := reducir(Y);
+
+      --Luego, comparamos primero un elemento, el denominador por ejemplo.
+      if (aux1.Den = aux2.Den) then
+         if (aux1.Num = aux2.Num) then
+            igual := true;  --Mismo numerador y denominador
+         else
+            igual := false; --Solo mismo denominador
+         end if;
+      else
+         igual := false;    --Solo mismo numerador
+      end if;
+
+      return igual;
+   end;
 
 
 end Fracciones;
