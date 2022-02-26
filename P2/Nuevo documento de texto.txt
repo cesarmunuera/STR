@@ -4,9 +4,9 @@ if Numerador (B) /= -1 or Denominador (B) /= 2 then
 
    Put("El valor de A = ");
    Escribir(A);
-   Put(" El valor de B = ");
+   Put("El valor de B = ");
    Escribir(B);
-   Put(" El valor de P = ");
+   Put("El valor de P = ");
    Escribir(P);
    Put_Line(" ");
 
@@ -52,14 +52,6 @@ if Numerador (B) /= -1 or Denominador (B) /= 2 then
    Escribir(A/B);
 
    if A/B /= -4/3 then
-      raise Practica_no_Apta;
-   end if;
-
-   -- Resta???????????????  ..................................
-   Put("A-B = ");
-   Escribir(A-B);
-
-   if A-B /= 7/6 then
       raise Practica_no_Apta;
    end if;
 

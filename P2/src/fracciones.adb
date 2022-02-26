@@ -135,8 +135,16 @@ package body Fracciones is
       aux : fraccion_t;
    begin
 
-      aux.Num := (X.Num * Y.Den) - (Y.Num * X.Den);
-      aux.Den := X.Den * Y.Den;
+      --Primero debemos comprobar si tienen el mismo denominador. Si lo tienen,
+      --solo restamos los numeradores. Soluciona simplificaciones cuando hay
+      --un 0 en el numerador.
+      if (X.Den = Y.Den) then
+         aux.Num := X.Num - Y.Num;
+         aux.Den := X.Den;
+      else
+         aux.Num := (X.Num * Y.Den) - (Y.Num * X.Den);
+         aux.Den := X.Den * Y.Den;
+      end if;
 
       return reducir(aux);
    end;
@@ -148,9 +156,16 @@ package body Fracciones is
       aux : fraccion_t;
    begin
 
-      aux.Num := X.Num * Y.Num;
-      aux.Den := X.Den * Y.Den;
-
+      --Ahora debemos comporbar que el denominado no sea 0, ya que su tipo
+      --no lo permite (positive).
+      if (X.Den * Y.Den = 0) then
+         --Lanzamos una excepcion y retornamos 1/1. . ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+         aux.Den := 1;
+         aux.Num := 1;
+      else
+         aux.Num := X.Num * Y.Num;
+         aux.Den := X.Den * Y.Den;
+      end if;
       return reducir(aux);
    end;
 
@@ -175,12 +190,21 @@ package body Fracciones is
    begin
 
       aux.Num := X.Num * Y.Den;
-      aux.Den := abs (X.Den * Y.Num);
       --El denominador en positivo. Si es negativo, llamamos a una funcion que
       --pone el signo - en el numerador.
       if ((X.Den * Y.Num) < 0) then
+         aux.Den := abs (X.Den * Y.Num);
+         --El denominador lo colocamos aqui arriba, para cerciorarnos de que NO
+         --es 0, ya que NO puede serlo por el tipo.
          aux := colocarSigno(aux);
+      elsif ((X.Den * Y.Num) = 0) then
+         --Este es el caso de una indeterminacion, tener un 0 en el denominador.
+         --Retornamos esto, en forma de muestra de una indeterminacion.
+         --Tambien lanzamos una excepcion. ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+         aux.Num := 1;
+         aux.Den := 1;
       end if;
+
 
       return reducir(aux);
    end;
