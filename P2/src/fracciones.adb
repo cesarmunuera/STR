@@ -1,6 +1,9 @@
-with Ada.Text_Io;use Ada.Text_Io;
+with Ada.Text_Io; use Ada.Text_Io;
+with Ada.Exceptions;
 
 package body Fracciones is
+
+   Indeterminacion: exception;
 
    --Esta es la funcion para mostrar los datos por pantalla
    procedure Escribir (F: fraccion_t) is
@@ -61,6 +64,7 @@ package body Fracciones is
    end;
 
 
+
    --Funcion que nos permite introducir nuevas fracciones por teclado
    procedure Leer (F: out fraccion_t) is
       numerador, denominador : integer;
@@ -95,6 +99,7 @@ package body Fracciones is
       --Ahora procedemos a reducir la fraccion
       F := reducir(aux);
    end;
+
 
 
    --Esta es la funcion del constructor
@@ -203,6 +208,7 @@ package body Fracciones is
          --Tambien lanzamos una excepcion. ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
          aux.Num := 1;
          aux.Den := 1;
+         raise Indeterminacion;
       end if;
 
 

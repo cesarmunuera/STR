@@ -6,6 +6,7 @@ procedure main is
    package Integer_Es is new Integer_Io (Integer);
    use Integer_es;
    Practica_no_Apta: exception;
+   Indeterminacion: exception;
    A: fraccion_t := 2/3;
    B: fraccion_t := (-9)/18;
    P: fraccion_t := 0/5;
@@ -94,6 +95,10 @@ begin
    Put_Line ("Práctica apta");
 
 exception
+   --when Ocurrencia : Indeterminacion =>
+      --Put_line ("Indeterminacion, 0 en el denominador.");
+      --Put (Ada.Exceptions.Exception_Information (Ocurrencia));
+
    when Ocurrencia : Practica_no_Apta =>
       Put_line ("Práctica no apta.");
       Put (Ada.Exceptions.Exception_Information (Ocurrencia));

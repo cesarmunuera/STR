@@ -209,6 +209,7 @@ package body ada_main is
       Ada.Text_Io'Elab_Spec;
       Ada.Text_Io'Elab_Body;
       E106 := E106 + 1;
+      Fracciones'Elab_Body;
       E124 := E124 + 1;
    end adainit;
 
