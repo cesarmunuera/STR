@@ -6,10 +6,10 @@ procedure main is
    package Integer_Es is new Integer_Io (Integer);
    use Integer_es;
    Practica_no_Apta: exception;
-   Indeterminacion: exception;
    A: fraccion_t := 2/3;
-   B: fraccion_t := (-9)/18;
+   B: fraccion_t := -9/18;
    P: fraccion_t := 0/5;
+   Q: fraccion_t := 5/0;
 
 begin
 
@@ -23,6 +23,8 @@ begin
    Escribir(B);
    Put("El valor de P = ");
    Escribir(P);
+   Put("El valor de Q = ");
+   Escribir(Q);
    Put_Line(" ");
 
    --Comparacion ..............................
@@ -95,10 +97,6 @@ begin
    Put_Line ("Práctica apta");
 
 exception
-   --when Ocurrencia : Indeterminacion =>
-      --Put_line ("Indeterminacion, 0 en el denominador.");
-      --Put (Ada.Exceptions.Exception_Information (Ocurrencia));
-
    when Ocurrencia : Practica_no_Apta =>
       Put_line ("Práctica no apta.");
       Put (Ada.Exceptions.Exception_Information (Ocurrencia));

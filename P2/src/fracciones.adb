@@ -3,7 +3,6 @@ with Ada.Exceptions;
 
 package body Fracciones is
 
-   Indeterminacion: exception;
 
    --Esta es la funcion para mostrar los datos por pantalla
    procedure Escribir (F: fraccion_t) is
@@ -107,6 +106,7 @@ package body Fracciones is
    --Esta es la funcion del constructor
    function "/" (X, Y: Integer) return fraccion_t is
       fraccion : fraccion_t;
+      Indeterminacion: exception;
    begin
 
       --Primero debemos comprobar si el denominador es negativo. Si lo es,
@@ -115,15 +115,20 @@ package body Fracciones is
          fraccion.Num := X * (-1);
          fraccion.Den := Y * (-1);
       elsif (Y = 0) then --El denominador no puede ser 0, retornamos excepcion
-         --EXCEPCION
          fraccion.Num := 1;
          fraccion.Den := 1;
+         raise Indeterminacion;
       else
          fraccion.Num := X;
          fraccion.Den := Y;
       end if;
 
       return reducir(fraccion);
+   exception
+      when Ocurrencia : Indeterminacion =>
+         Put_line ("Indeterminacion, 0 en el denominador. Problema en constructor.");
+         --Put (Ada.Exceptions.Exception_Information (Ocurrencia));
+         return reducir(fraccion);
    end;
 
 
@@ -164,17 +169,9 @@ package body Fracciones is
    function "*" (X, Y: fraccion_t) return fraccion_t is
       aux : fraccion_t;
    begin
+      aux.Num := X.Num * Y.Num;
+      aux.Den := X.Den * Y.Den;
 
-      --Ahora debemos comporbar que el denominado no sea 0, ya que su tipo
-      --no lo permite (positive).
-      if (X.Den * Y.Den = 0) then
-         --Lanzamos una excepcion y retornamos 1/1. . ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-         aux.Den := 1;
-         aux.Num := 1;
-      else
-         aux.Num := X.Num * Y.Num;
-         aux.Den := X.Den * Y.Den;
-      end if;
       return reducir(aux);
    end;
 
@@ -183,6 +180,7 @@ package body Fracciones is
    --Esta es la funcion de la division
    function "/" (X, Y: fraccion_t) return fraccion_t is
       aux: fraccion_t;
+      Indeterminacion: exception;
    begin
 
       aux.Num := X.Num * Y.Den;
@@ -194,13 +192,19 @@ package body Fracciones is
       elsif ((X.Den * Y.Num) = 0) then
          --Este es el caso de una indeterminacion, tener un 0 en el denominador.
          --Retornamos esto, en forma de muestra de una indeterminacion.
-         --Tambien lanzamos una excepcion. ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+         --Tambien lanzamos una excepcion.
          aux.Num := 1;
          aux.Den := 1;
-         --raise Indeterminacion;
+         raise Indeterminacion;
       end if;
 
       return reducir(aux);
+
+   exception
+      when Ocurrencia : Indeterminacion =>
+         Put_line ("Indeterminacion, 0 en el denominador. Problema en division.");
+         --Put (Ada.Exceptions.Exception_Information (Ocurrencia));
+         return reducir(aux);
    end;
 
 
@@ -248,6 +252,5 @@ package body Fracciones is
 
       return igual;
    end;
-
 
 end Fracciones;
