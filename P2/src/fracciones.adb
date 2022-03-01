@@ -54,13 +54,13 @@ package body Fracciones is
 
 
 
-   --Funcion para colocar el - en el numerador.
-   function colocarSigno (X : fraccion_t) return fraccion_t is
-      fraccionAux: fraccion_t;
+   --Esta es la funcion del opuesto. Coloca el signo en el numerador.
+   function "-" (X: fraccion_t) return fraccion_t is
+      aux : fraccion_t;
    begin
-      fraccionAux := X;
-      fraccionAux.Num := X.Num * (-1);
-      return fraccionAux;
+      aux.Num := X.Num * (-1);
+      aux.Den := X.Den;
+      return reducir(aux);
    end;
 
 
@@ -89,7 +89,9 @@ package body Fracciones is
          elsif (denominador < 0) then
             invalido := false;
             aux.Den := abs(denominador);
-            aux := colocarSigno(aux);
+            --Si el denominador es 0, llamamos a "-", que nos pone signo en
+            --el numerador
+            aux := -(aux);
          else
             invalido := false;
             aux.Den := denominador;
@@ -112,7 +114,11 @@ package body Fracciones is
       if (Y < 0) then
          fraccion.Num := X * (-1);
          fraccion.Den := Y * (-1);
-      else --Si el numerador es negativo pero el denominador no, lo dejamos asi.
+      elsif (Y = 0) then --El denominador no puede ser 0, retornamos excepcion
+         --EXCEPCION
+         fraccion.Num := 1;
+         fraccion.Den := 1;
+      else
          fraccion.Num := X;
          fraccion.Den := Y;
       end if;
@@ -126,10 +132,8 @@ package body Fracciones is
    function "+" (X, Y: fraccion_t) return fraccion_t is
       aux : fraccion_t;
    begin
-
       aux.Num := (X.Num * Y.Den) + (Y.Num * X.Den);
       aux.Den := X.Den * Y.Den;
-
       return reducir(aux);
    end;
 
@@ -176,41 +180,25 @@ package body Fracciones is
 
 
 
-   --Esta es la funcion del opuesto
-   function "-" (X: fraccion_t) return fraccion_t is
-      aux : fraccion_t;
-   begin
-
-      aux.Num := X.Num * (-1);
-      aux.Den := X.Den;
-
-      return reducir(aux);
-   end;
-
-
-
    --Esta es la funcion de la division
    function "/" (X, Y: fraccion_t) return fraccion_t is
       aux: fraccion_t;
    begin
 
       aux.Num := X.Num * Y.Den;
-      --El denominador en positivo. Si es negativo, llamamos a una funcion que
-      --pone el signo - en el numerador.
       if ((X.Den * Y.Num) < 0) then
          aux.Den := abs (X.Den * Y.Num);
-         --El denominador lo colocamos aqui arriba, para cerciorarnos de que NO
-         --es 0, ya que NO puede serlo por el tipo.
-         aux := colocarSigno(aux);
+         --El denominador en positivo. Si es negativo, llamamos a una funcion que
+         --pone el signo - en el numerador.
+         aux := -(aux);
       elsif ((X.Den * Y.Num) = 0) then
          --Este es el caso de una indeterminacion, tener un 0 en el denominador.
          --Retornamos esto, en forma de muestra de una indeterminacion.
          --Tambien lanzamos una excepcion. ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
          aux.Num := 1;
          aux.Den := 1;
-         raise Indeterminacion;
+         --raise Indeterminacion;
       end if;
-
 
       return reducir(aux);
    end;

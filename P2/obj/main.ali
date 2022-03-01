@@ -18,7 +18,7 @@ RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U main%b		main.adb		b4f95c5f NE OO SU IL
+U main%b		main.adb		6a5a46ca NE OO SU IL
 W ada%s			ada.ads			ada.ali
 W ada.exceptions%s	a-except.adb		a-except.ali
 Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
@@ -62,7 +62,7 @@ D a-unccon.ads		20210520051130 0e9b276f ada.unchecked_conversion%s
 D fracciones.ads	20220225174122 0340707f fracciones%s
 D interfac.ads		20210520051132 edec285f interfaces%s
 D i-cstrea.ads		20210520051132 e53d8b8e interfaces.c_streams%s
-D main.adb		20220228123516 8d22c959 main%b
+D main.adb		20220301111454 5381d3cc main%b
 D system.ads		20210520051136 2ffa5114 system%s
 D s-crtl.ads		20210520051132 0ebbdb71 system.crtl%s
 D s-exctab.ads		20210520051132 54135002 system.exception_table%s
@@ -126,13 +126,13 @@ X 16 fracciones.ads
 1K9*Fracciones 27e15 19|1w19 3r18
 2R9*fraccion_t 26e14 19|10r7 11r7 12r7
 4V14*"+"{2R9} 19|35s14 37s8
-5V14*"-"{2R9} 19|43s13 45s7 45s13 69s14
+5V14*"-"{2R9} 19|43s13 45s7 45s13 61s14 69s14
 6V14*"-"{2R9} 19|51s14 53s8 75s14 77s8
 7V14*"*"{2R9} 19|59s14 61s8 88s11
 8V14*"/"{2R9} 19|67s14 69s8 83s14 84s8
 9V14*"="{boolean} 19|29s9 37s11 45s10 53s11 61s11 69s11 77s11 91s8
 13U14*Escribir 19|21s4 23s4 25s4 35s4 43s4 51s4 59s4 67s4 75s4 83s4
-16V14*"/"{2R9} 19|10s22 11s25 12s22 29s13 37s15 45s15 53s15 61s18 69s16 77s15
+16V14*"/"{2R9} 19|10s22 11s25 12s22 29s13 37s15 45s15 53s15 61s16 69s16 77s15
 . 85s8 91s12
 19V13*Numerador{integer} 19|16s7
 20V13*Denominador{positive} 19|16s30

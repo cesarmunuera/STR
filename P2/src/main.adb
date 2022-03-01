@@ -58,7 +58,7 @@ begin
    Put("A*B = ");
    Escribir(A*B);
 
-   if A*B /= (-1)/3 then
+   if A*B /= -1/3 then
       raise Practica_no_Apta;
    end if;
 
