@@ -2,7 +2,7 @@ V "GNAT Lib v2021"
 A -gnatA
 A -mtune=generic
 A -march=x86-64
-P ZX
+P SS ZX
 
 RN
 RV NO_DIRECT_BOOLEAN_OPERATORS
@@ -11,12 +11,14 @@ RV NO_EXCEPTION_PROPAGATION
 RV NO_EXCEPTIONS
 RV NO_IO
 RV NO_IMPLICIT_CONDITIONALS
+RV NO_SECONDARY_STACK
 RV NO_STANDARD_STORAGE_POOLS
 RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
 RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
 
-U fracciones%b		fracciones.adb		836c8d51 NE OO PK
+U fracciones%b		fracciones.adb		f45320bd NE OO PK
 W ada%s			ada.ads			ada.ali
 W ada.exceptions%s	a-except.adb		a-except.ali
 Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
@@ -24,9 +26,8 @@ W ada.text_io%s		a-textio.adb		a-textio.ali
 Z ada.text_io.generic_aux%s  a-tigeau.adb	a-tigeau.ali
 Z ada.text_io.integer_aux%s
 Z ada.text_io.integer_io%s
-Z system%s		system.ads		system.ali
+W system%s		system.ads		system.ali
 Z system.concat_3%s	s-conca3.adb		s-conca3.ali
-Z system.exception_table%s  s-exctab.adb	s-exctab.ali
 Z system.img_biu%s	s-imgbiu.ads		s-imgbiu.ali
 Z system.img_int%s	s-imgint.ads		s-imgint.ali
 Z system.img_llb%s	s-imgllb.ads		s-imgllb.ali
@@ -36,13 +37,16 @@ Z system.img_llli%s	s-imgllli.ads		s-imgllli.ali
 Z system.img_lllw%s	s-imglllw.ads		s-imglllw.ali
 Z system.img_llw%s	s-imgllw.ads		s-imgllw.ali
 Z system.img_wiu%s	s-imgwiu.ads		s-imgwiu.ali
-Z system.standard_library%s  s-stalib.adb	s-stalib.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 Z system.val_int%s	s-valint.ads		s-valint.ali
 Z system.val_lli%s	s-vallli.ads		s-vallli.ali
 Z system.val_llli%s	s-valllli.ads		s-valllli.ali
 
-U fracciones%s		fracciones.ads		0340707f EE NE OO PK
+U fracciones%s		fracciones.ads		d8764f76 EE OO PK
 Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+Z system%s		system.ads		system.ali
+Z system.exception_table%s  s-exctab.adb	s-exctab.ali
+Z system.standard_library%s  s-stalib.adb	s-stalib.ali
 
 D ada.ads		20210520051132 76789da1 ada%s
 D a-except.ads		20210520051128 946f3014 ada.exceptions%s
@@ -59,8 +63,8 @@ D a-tiinau.adb		20210520051130 89004916 ada.text_io.integer_aux%b
 D a-tiinio.ads		20210520051130 390edddb ada.text_io.integer_io%s
 D a-tiinio.adb		20210520051130 b79731f4 ada.text_io.integer_io%b
 D a-unccon.ads		20210520051130 0e9b276f ada.unchecked_conversion%s
-D fracciones.ads	20220223081922 0340707f fracciones%s
-D fracciones.adb	20220301173254 bab71857 fracciones%b
+D fracciones.ads	20220302100752 d8764f76 fracciones%s
+D fracciones.adb	20220302115414 16be8ab2 fracciones%b
 D interfac.ads		20210520051132 edec285f interfaces%s
 D i-cstrea.ads		20210520051132 e53d8b8e interfaces.c_streams%s
 D system.ads		20210520051136 2ffa5114 system%s
@@ -101,99 +105,99 @@ D s-valueu.ads		20210520051134 7b8fccf5 system.value_u%s
 D s-wchcon.ads		20210520051136 1b7d22d2 system.wch_con%s
 D unchconv.ads		20210520051136 ca2f9e18 unchecked_conversion%s
 G a e
-G c Z s b [Oadd fracciones 4 13 none]
-G c Z s b [Osubtract fracciones 5 13 none]
-G c Z s b [Osubtract fracciones 6 13 none]
-G c Z s b [Omultiply fracciones 7 13 none]
-G c Z s b [Odivide fracciones 8 13 none]
-G c Z s b [Oeq fracciones 9 13 none]
-G c Z s b [leer fracciones 12 14 none]
-G c Z s b [escribir fracciones 13 14 none]
-G c Z s b [Odivide fracciones 16 13 none]
-G c Z s b [numerador fracciones 19 13 none]
-G c Z s b [denominador fracciones 20 13 none]
-G c Z s s [fraccion_tIP fracciones 23 9 none]
-G c Z b b [reducir fracciones 17 13 none]
+G c Z s b [Oadd fracciones 6 13 none]
+G c Z s b [Osubtract fracciones 7 13 none]
+G c Z s b [Osubtract fracciones 8 13 none]
+G c Z s b [Omultiply fracciones 9 13 none]
+G c Z s b [Odivide fracciones 10 13 none]
+G c Z s b [Oeq fracciones 11 13 none]
+G c Z s b [leer fracciones 14 14 none]
+G c Z s b [escribir fracciones 15 14 none]
+G c Z s b [Odivide fracciones 18 13 none]
+G c Z s b [numerador fracciones 21 13 none]
+G c Z s b [denominador fracciones 22 13 none]
+G c Z s s [fraccion_tIP fracciones 25 9 none]
+G c Z b b [reducir fracciones 16 13 none]
 X 1 ada.ads
-16K9*Ada 20e8 17|1r6 1r23 2r6 73r36
+16K9*Ada 20e8 17|1r6 1r23 2r6 70r36 124r15 195r15
 X 2 a-except.ads
-44K13*Exceptions 289e19 17|2w10
+44K13*Exceptions 289e19 17|2w10 124r19 195r19
+94V13*Exception_Information{string} 17|124s30 195s30
 X 9 a-textio.ads
-58K13*Text_IO 725e16 17|1w10 1r27 73r40
-463U14*Put 17|76s7 84s10 87s13
-506U14*Put_Line 17|10s7 129s10 205s10
+58K13*Text_IO 725e16 17|1w10 1r27 70r40
+463U14*Put 17|73s7 81s10 84s13 124s10 195s10
+506U14*Put_Line 17|10s7 123s10 194s10
 X 13 a-tiinio.ads
-46k21*Integer_IO 108e27 17|73r48
-59U14 Get 17|77s21[73] 85s24[73]
+46k21*Integer_IO 108e27 17|70r48
+59U14 Get 17|74s21[70] 82s24[70]
 X 16 fracciones.ads
-1K9*Fracciones 23E9 27l5 27e15 17|4b14 256l5 256t15
-2R9*fraccion_t 4r24 4r43 5r21 5r40 6r24 6r43 7r24 7r43 8r24 8r43 9r24 12r27
-. 13r27 16r40 19r27 20r27 23c9 26e14 17|8r27 17r26 17r45 18r20 57r21 57r40
-. 58r13 68r27 71r13 107r40 108r18 137r24 137r43 138r13 148r24 148r43 149r13
-. 169r24 169r43 170r13 181r24 181r43 182r12 213r27 223r29 233r24 234r20
-4V14*"+"{2R9} 4>18 4>21 17|137b14 143t7
-4r18 X{2R9} 17|137b18 140r19 140r45 141r18
-4r21 Y{2R9} 17|137b21 140r27 140r37 141r26
-5V14*"-"{2R9} 5>18 17|57b14 63t7 93s20 191s17
-5r18 X{2R9} 17|57b18 60r18 61r18
-6V14*"-"{2R9} 6>18 6>21 17|148b14 164t7
-6r18 X{2R9} 17|148b18 155r11 156r21 157r21 159r22 159r48 160r21
-6r21 Y{2R9} 17|148b21 155r19 156r29 159r30 159r40 160r29
-7V14*"*"{2R9} 7>18 7>21 17|169b14 176t7
-7r18 X{2R9} 17|169b18 172r18 173r18
-7r21 Y{2R9} 17|169b21 172r26 173r26
-8V14*"/"{2R9} 8>18 8>21 17|181b14 208t7
-8r18 X{2R9} 17|181b18 186r18 187r12 188r26 192r15
-8r21 Y{2R9} 17|181b21 186r26 187r20 188r34 192r23
-9V14*"="{boolean} 9>18 9>21 17|233b14 254t7
-9r18 X{2R9} 17|233b18 239r23
-9r21 Y{2R9} 17|233b21 240r23
-12U14*Leer 12<20 17|68b14 102t7
-12r20 F{2R9} 17|68b20 101m7
-13U14*Escribir 13>24 17|8b14 11t7
-13r24 F{2R9} 17|8b24 10r16 10r36
-16V14*"/"{2R9} 16>18 16>21 17|107b14 132t7
-16i18 X{integer} 17|107b18 115r26 122r26
-16i21 Y{integer} 17|107b21 114r11 116r26 117r14 123r26
-19V13*Numerador{integer} 19>24 17|213b13 218t7
-19r24 F{2R9} 17|213b24 216r14
-20V13*Denominador{positive} 20>25 17|223b13 228t7
-20r25 F{2R9} 17|223b26 226r14
-24i7*Num{integer} 17|10r18 24r13 26r22 47m22 47r32 60m11 60r20 78m11 115m19
-. 118m19 122m19 140m11 140r21 140r39 156m14 156r23 156r31 159m14 159r24 159r42
-. 172m11 172r20 172r28 186m11 186r20 187r22 188r36 192r25 196m14 216r16 244r19
-. 244r30
-25i7*Den{positive} 17|10r38 27r18 48m22 48r32 61m11 61r20 90m17 96m17 116m19
-. 119m19 123m19 140r29 140r47 141m11 141r20 141r28 155r13 155r21 157m14 157r23
-. 159r32 159r50 160m14 160r23 160r31 173m11 173r20 173r28 186r28 187r14 188m14
-. 188r28 192r17 197m14 226r16 243r16 243r27
+1K9*Fracciones 25E9 29l5 29e15 17|4b14 245l5 245t15
+2R9*fraccion_t 6r24 6r43 7r21 7r40 8r24 8r43 9r24 9r43 10r24 10r43 11r24
+. 14r27 15r27 18r40 21r27 22r27 25c9 28e14 17|8r27 16r26 16r45 17r20 54r21
+. 54r40 55r13 65r27 68r13 103r40 104r18 131r24 131r43 132r13 142r24 142r43
+. 143r13 161r24 161r43 162r13 173r24 173r43 174r12 202r27 212r29 222r24 223r20
+3X4*Indeterminacion 17|114r16 122r25 187r16 193r25
+6V14*"+"{2R9} 6>18 6>21 17|131b14 137t7
+6r18 X{2R9} 17|131b18 134r19 134r45 135r18
+6r21 Y{2R9} 17|131b21 134r27 134r37 135r26
+7V14*"-"{2R9} 7>18 17|54b14 60t7 89s20 181s17
+7r18 X{2R9} 17|54b18 57r18 58r18
+8V14*"-"{2R9} 8>18 8>21 17|142b14 156t7
+8r18 X{2R9} 17|142b18 147r11 148r21 149r21 151r22 151r48 152r21
+8r21 Y{2R9} 17|142b21 147r19 148r29 151r30 151r40 152r29
+9V14*"*"{2R9} 9>18 9>21 17|161b14 168t7
+9r18 X{2R9} 17|161b18 164r18 165r18
+9r21 Y{2R9} 17|161b21 164r26 165r26
+10V14*"/"{2R9} 10>18 10>21 17|173b14 197t7
+10r18 X{2R9} 17|173b18 177r18 178r12 179r26 182r15
+10r21 Y{2R9} 17|173b21 177r26 178r20 179r34 182r23
+11V14*"="{boolean} 11>18 11>21 17|222b14 243t7
+11r18 X{2R9} 17|222b18 228r23
+11r21 Y{2R9} 17|222b21 229r23
+14U14*Leer 14<20 17|65b14 98t7
+14r20 F{2R9} 17|65b20 97m7
+15U14*Escribir 15>24 17|8b14 11t7
+15r24 F{2R9} 17|8b24 10r16 10r36
+18V14*"/"{2R9} 18>18 18>21 17|103b14 126t7
+18i18 X{integer} 17|103b18 109r26 116r26
+18i21 Y{integer} 17|103b21 108r11 110r26 111r14 117r26
+21V13*Numerador{integer} 21>24 17|202b13 207t7
+21r24 F{2R9} 17|202b24 205r14
+22V13*Denominador{positive} 22>25 17|212b13 217t7
+22r25 F{2R9} 17|212b26 215r14
+26i7*Num{integer} 17|10r18 23r13 25r21 44m22 44r32 57m11 57r20 75m11 109m19
+. 112m19 116m19 134m11 134r21 134r39 148m14 148r23 148r31 151m14 151r24 151r42
+. 164m11 164r20 164r28 177m11 177r20 178r22 179r36 182r25 185m14 205r16 233r19
+. 233r30
+27i7*Den{positive} 17|10r38 26r17 45m22 45r32 58m11 58r20 87m17 92m17 110m19
+. 113m19 117m19 134r29 134r47 135m11 135r20 135r28 147r13 147r21 149m14 149r23
+. 151r32 151r50 152m14 152r23 152r31 165m11 165r20 165r28 177r28 178r14 179m14
+. 179r28 182r17 186m14 215r16 232r16 232r27
 X 17 fracciones.adb
-17V13 reducir{16|2R9} 17b13 17>22 52t7 62s14 101s12 126s14 131s17 142s14
-. 163s14 175s14 201s14 207s17 239s15 240s15
-17r22 X{16|2R9} 22r22 24r11 26r20 27r16 47r30 48r30
-18r7 fraccionAux{16|2R9} 22m7 47m10 48m10 51r14
-19i7 v1{integer} 26m10 31r14 32r20 33m13 41r22 42m13 47r38 48r38
-19i11 v2{integer} 27m10 31r17 33r19 34m13 41r29 42r19 43m13
-19i15 aux{integer} 32m13 34r19
-19i20 resto{integer} 39m10 40r17 41m13 43r19
-58r7 aux{16|2R9} 60m7 61m7 62r22
-69i7 numerador{integer} 77m25 78r18
-69i18 denominador{integer} 85m28 86r14 88r17 90r28 96r24
-70b7 invalido{boolean} 81m7 83r14 89m13 95m13
-71r7 aux{16|2R9} 78m7 90m13 93m13 93r22 96m13 101r20
-73K15 Fracciones_ES[13|46] 77r7 85r10
-108r7 fraccion{16|2R9} 115m10 116m10 118m10 119m10 122m10 123m10 126r22 131r25
-109X7 Indeterminacion 120r16 128r25
-128r12 Ocurrencia{2|53R9}
-138r7 aux{16|2R9} 140m7 141m7 142r22
-149r7 aux{16|2R9} 156m10 157m10 159m10 160m10 163r22
-170r7 aux{16|2R9} 172m7 173m7 175r22
-182r7 aux{16|2R9} 186m7 188m10 191m10 191r19 196m10 197m10 201r22 207r25
-183X7 Indeterminacion 198r16 204r25
-204r12 Ocurrencia{2|53R9}
-214i7 aux{integer} 216m7 217r14
-224i7 aux{positive} 226m7 227r14
-234r7 aux1{16|2R9} 239m7 243r11 244r14
-234r13 aux2{16|2R9} 240m7 243r22 244r25
-235b7 igual{boolean} 245m13 247m13 250m10 253r14
+16V13 reducir{16|2R9} 16b13 16>22 49t7 59s14 97s12 120s14 125s17 136s14 155s14
+. 167s14 190s14 196s17 228s15 229s15
+16r22 X{16|2R9} 21r22 23r11 25r19 26r15 44r30 45r30
+17r7 fraccionAux{16|2R9} 21m7 44m10 45m10 48r14
+18i7 n{integer} 25m10 29r14 30r20 31m13 38r22 39m13 44r38 45r38
+18i10 d{integer} 26m10 29r16 31r18 32m13 38r28 39r18 40m13
+18i13 aux{integer} 30m13 32r18
+18i18 resto{integer} 36m10 37r17 38m13 40r18
+55r7 aux{16|2R9} 57m7 58m7 59r22
+66i7 numerador{integer} 74m25 75r18
+66i18 denominador{integer} 82m28 83r14 85r17 87r28 92r24
+67b7 invalido{boolean} 78m7 80r14 86m13 91m13
+68r7 aux{16|2R9} 75m7 87m13 89m13 89r22 92m13 97r20
+70K15 Fracciones_ES[13|46] 74r7 82r10
+104r7 fraccion{16|2R9} 109m10 110m10 112m10 113m10 116m10 117m10 120r22 125r25
+122r12 Ocurrencia{2|53R9} 124r53
+132r7 aux{16|2R9} 134m7 135m7 136r22
+143r7 aux{16|2R9} 148m10 149m10 151m10 152m10 155r22
+162r7 aux{16|2R9} 164m7 165m7 167r22
+174r7 aux{16|2R9} 177m7 179m10 181m10 181r19 185m10 186m10 190r22 196r25
+193r12 Ocurrencia{2|53R9} 195r53
+203i7 aux{integer} 205m7 206r14
+213i7 aux{positive} 215m7 216r14
+223r7 aux1{16|2R9} 228m7 232r11 233r14
+223r13 aux2{16|2R9} 229m7 232r22 233r25
+224b7 igual{boolean} 234m13 236m13 239m10 242r14
 

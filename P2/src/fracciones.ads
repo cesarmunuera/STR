@@ -1,5 +1,7 @@
 package Fracciones is
    type fraccion_t is private;
+   Indeterminacion: exception;
+
 
    function "+" (X, Y: fraccion_t) return fraccion_t;
    function "-" (X: fraccion_t) return fraccion_t;

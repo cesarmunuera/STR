@@ -9,7 +9,7 @@ procedure main is
    A: fraccion_t := 2/3;
    B: fraccion_t := -9/18;
    P: fraccion_t := 0/5;
-   Q: fraccion_t := 5/0;
+   --Q: fraccion_t := 26/0; Es para probar las indeterminaciones del constructor. Por defecto, retorna 1/1.
 
 begin
 
@@ -24,8 +24,8 @@ begin
    Put("El valor de P = ");
    Escribir(P);
    Put("El valor de Q = ");
-   Escribir(Q);
-   Put_Line(" ");
+   --Escribir(Q);
+   --Put_Line(" ");
 
    --Comparacion ..............................
    if B /= 1/(-2) then
@@ -80,7 +80,7 @@ begin
       raise Practica_no_Apta;
    end if;
 
-   --Division ................................
+   -- .........................................
    Put("A/P = ");
    Escribir(A/P);
    P:=A/P;

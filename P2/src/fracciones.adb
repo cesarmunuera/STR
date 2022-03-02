@@ -12,40 +12,37 @@ package body Fracciones is
 
 
 
-   --Esta funcion calcula el mcd del numerador y denominador, para poder
-   --dividirlos, y dejar la funcion reducida
+   --Esta funcion calcula el mcd del numerador y denominador, para poder dividirlos, y dejar la funcion reducida.
    function reducir (X : fraccion_t) return fraccion_t is
       fraccionAux: fraccion_t;
-      v1, v2, aux, resto : integer;
+      n, d, aux, resto : integer;
    begin
 
       fraccionAux := X;
-      --Primero comprobamos que el numerador no sea 0
+      --Primero comprobamos que el numerador no sea 0. Si lo es, es irreducible.
       if (X.Num /= 0) then
-         --Guardamos el numerador en valor absoluto, y denominador primero.
-         v1 := abs X.Num;
-         v2 := X.Den;
+         --Guardamos el numerador en valor absoluto y denominador, primero.
+         n := abs X.Num;
+         d := X.Den;
 
-         --Ahora comprobamos que el numerador sea mayor al denominador para
-         --un paso posterior.
-         if (v1<v2) then
-            aux := v1;
-            v1 := v2;
-            v2 := aux;
+         --Ahora comprobamos que el numerador sea mayor al denominador para un paso posterior.
+         if (n<d) then
+            aux := n;
+            n := d;
+            d := aux;
          end if;
 
-         --Ahora calculamos el MCD. Inicializamos el resto por el bucle. El MCD se
-         --guardara en v1
+         --Ahora calculamos el MCD. Inicializamos el resto por el bucle. El MCD se guardara en n.
          resto := 1;
          while (resto /= 0) loop
-            resto := v1 mod v2;
-            v1 := v2;
-            v2 := resto;
+            resto := n mod d;
+            n := d;
+            d := resto;
          end loop;
 
          --Procedemos a reducir la fraccion
-         fraccionAux.Num := (X.Num / v1);
-         fraccionAux.Den := (X.Den / v1);
+         fraccionAux.Num := (X.Num / n);
+         fraccionAux.Den := (X.Den / n);
       end if;
 
       return fraccionAux;
@@ -88,8 +85,7 @@ package body Fracciones is
          elsif (denominador < 0) then
             invalido := false;
             aux.Den := abs(denominador);
-            --Si el denominador es 0, llamamos a "-", que nos pone signo en
-            --el numerador
+            --Si el denominador es 0, llamamos a "-", que nos pone signo en el numerador
             aux := -(aux);
          else
             invalido := false;
@@ -106,11 +102,9 @@ package body Fracciones is
    --Esta es la funcion del constructor
    function "/" (X, Y: Integer) return fraccion_t is
       fraccion : fraccion_t;
-      Indeterminacion: exception;
    begin
 
-      --Primero debemos comprobar si el denominador es negativo. Si lo es,
-      --ponemos el numerador negativo y el denominador positivo.
+      --Primero debemos comprobar si el denominador es negativo. Si lo es, ponemos el numerador negativo y el denominador positivo.
       if (Y < 0) then
          fraccion.Num := X * (-1);
          fraccion.Den := Y * (-1);
@@ -127,7 +121,7 @@ package body Fracciones is
    exception
       when Ocurrencia : Indeterminacion =>
          Put_line ("Indeterminacion, 0 en el denominador. Problema en constructor.");
-         --Put (Ada.Exceptions.Exception_Information (Ocurrencia));
+         Put (Ada.Exceptions.Exception_Information (Ocurrencia));
          return reducir(fraccion);
    end;
 
@@ -149,9 +143,7 @@ package body Fracciones is
       aux : fraccion_t;
    begin
 
-      --Primero debemos comprobar si tienen el mismo denominador. Si lo tienen,
-      --solo restamos los numeradores. Soluciona simplificaciones cuando hay
-      --un 0 en el numerador.
+      --Primero debemos comprobar si tienen el mismo denominador. Si lo tienen, solo restamos los numeradores.
       if (X.Den = Y.Den) then
          aux.Num := X.Num - Y.Num;
          aux.Den := X.Den;
@@ -180,19 +172,16 @@ package body Fracciones is
    --Esta es la funcion de la division
    function "/" (X, Y: fraccion_t) return fraccion_t is
       aux: fraccion_t;
-      Indeterminacion: exception;
    begin
 
       aux.Num := X.Num * Y.Den;
       if ((X.Den * Y.Num) < 0) then
          aux.Den := abs (X.Den * Y.Num);
-         --El denominador en positivo. Si es negativo, llamamos a una funcion que
-         --pone el signo - en el numerador.
+         --El denominador en positivo. Si es negativo, llamamos a una funcion que pone el signo - en el numerador.
          aux := -(aux);
       elsif ((X.Den * Y.Num) = 0) then
-         --Este es el caso de una indeterminacion, tener un 0 en el denominador.
-         --Retornamos esto, en forma de muestra de una indeterminacion.
-         --Tambien lanzamos una excepcion.
+         --Este es el caso de una indeterminacion, tener un 0 en el denominador. Retornamos esto, en forma de muestra
+         --de una indeterminacion. Tambien lanzamos una excepcion.
          aux.Num := 1;
          aux.Den := 1;
          raise Indeterminacion;
@@ -203,7 +192,7 @@ package body Fracciones is
    exception
       when Ocurrencia : Indeterminacion =>
          Put_line ("Indeterminacion, 0 en el denominador. Problema en division.");
-         --Put (Ada.Exceptions.Exception_Information (Ocurrencia));
+         Put (Ada.Exceptions.Exception_Information (Ocurrencia));
          return reducir(aux);
    end;
 
