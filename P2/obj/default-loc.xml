@@ -2,13 +2,13 @@
 <Locations >
   <Project>
     <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\P2\default.gpr</vfs_file>
-    <file_marker column=" 26" line=" 12" >
+    <file_marker column=" 36" line=" 74" >
+      <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\P2\default.gpr</vfs_project>
+      <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\P2\src\fracciones.adb</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 1" line=" 1" >
       <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\P2\default.gpr</vfs_project>
       <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\P2\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker current="true" column=" 6" line=" 26" >
-      <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\P2\default.gpr</vfs_project>
-      <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\P2\src\fracciones.ads</vfs_file>
     </file_marker>
   </Project>
 </Locations>
