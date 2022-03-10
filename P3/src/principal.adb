@@ -2,6 +2,7 @@ with Ada.Text_Io, Colas; use Ada.Text_Io;
 
 procedure Principal is
 
+   package Colas_de_Integer is new Colas (Integer, Integer'image);
    use Colas_de_Integer;
    Práctica_no_Apta: exception;
 

@@ -10,7 +10,7 @@ package Colas is
    function Está_Vacía (La_Cola: cola_t) return Boolean;
    function Está_Llena (La_Cola: cola_t) return Boolean;
    procedure MostrarCola (La_Cola: cola_t);
-   procedure Copiar ( Origen: cola_t; Destino:in out cola_t);
+   procedure Copiar (Origen: cola_t; Destino:in out cola_t);
    function "="(La_Cola, Con_La_Cola: cola_t) return Boolean;
 
 
@@ -24,7 +24,6 @@ private
       ptr_Siguiente: ref_Nodo;
    end record;
    type cola_t is record
-      ptr_Primero,
-      ptr_Último : ref_Nodo;
+      ptr_Primero, ptr_Último : ref_Nodo;
    end record;
 end Colas;
