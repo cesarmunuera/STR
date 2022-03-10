@@ -7,8 +7,8 @@ package Colas is
 
    procedure Poner (el_Elemento: elemento_t; en_la_Cola: in out cola_t);
    procedure Quitar (un_Elemento: out elemento_t; de_la_Cola: in out cola_t);
-   function Está_Vacía (La_Cola: cola_t) return Boolean;
-   function Está_Llena (La_Cola: cola_t) return Boolean;
+   function Esta_Vacia (La_Cola: cola_t) return Boolean;
+   function Esta_Llena (La_Cola: cola_t) return Boolean;
    procedure MostrarCola (La_Cola: cola_t);
    procedure Copiar (Origen: cola_t; Destino:in out cola_t);
    function "="(La_Cola, Con_La_Cola: cola_t) return Boolean;
