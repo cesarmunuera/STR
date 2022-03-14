@@ -20,8 +20,9 @@ RV NO_DEFAULT_INITIALIZATION
 RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U principal%b		principal.adb		4aae1455 NE OO SU
+U principal%b		principal.adb		791f655a NE OO SU
 W ada%s			ada.ads			ada.ali
+Z ada.exceptions%s	a-except.adb		a-except.ali
 Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 Z ada.unchecked_deallocation%s
@@ -44,10 +45,10 @@ D a-textio.ads		20210520051130 aef4d56d ada.text_io%s
 D a-unccon.ads		20210520051130 0e9b276f ada.unchecked_conversion%s
 D a-uncdea.ads		20210520051130 c3a8ac65 ada.unchecked_deallocation%s
 D colas.ads		20220314131534 cca0ca6b colas%s
-D colas.adb		20220314135222 27345edd colas%b
+D colas.adb		20220314165254 b46f84c1 colas%b
 D interfac.ads		20210520051132 edec285f interfaces%s
 D i-cstrea.ads		20210520051132 e53d8b8e interfaces.c_streams%s
-D principal.adb		20220314134328 28fa0b53 principal%b
+D principal.adb		20220314164158 1b4b7a5c principal%b
 D system.ads		20210520051136 2ffa5114 system%s
 D s-crtl.ads		20210520051132 0ebbdb71 system.crtl%s
 D s-exctab.ads		20210520051132 54135002 system.exception_table%s
@@ -73,20 +74,40 @@ X 1 ada.ads
 16K9*Ada 20e8 16|1r6 1r30
 X 9 a-textio.ads
 58K13*Text_IO 725e16 16|1w10 1r34
-506U14*Put_Line 16|16s4 19s4 24s4 29s7 30s7 32s7 33s7
+262U14*New_Line 16|22s4 25s4 33s4 47s4 51s4 67s4 71s4 131s4 134s4
+463U14*Put 16|32s4 40s4 58s4 76s4 89s4 94s4 104s4 111s4 141s4
+506U14*Put_Line 16|16s4 23s4 28s4 36s4 45s4 49s4 54s4 61s4 65s4 69s4 79s4
+. 81s4 85s4 107s4 129s4 132s4 137s4 144s4 150s13 151s13 156s4 161s7 162s7
+. 164s7 165s7
 X 12 colas.ads
 5k9*Colas 29e10 16|1w19 5r36
 6R9 cola_t 16|9r16[5]
-8U14 Poner 16|14s7[5]
-9U14 Quitar 16|20s4[5]
-12U14 MostrarCola 16|17s4[5] 21s4[5]
+8U14 Poner 16|14s7[5] 20s7[5] 43s4[5] 62s4[5] 63s4[5] 92s23[5] 101s7[5] 103s4[5]
+. 122s7[5] 126s7[5] 147s10[5]
+9U14 Quitar 16|78s4[5] 92s7[5] 97s7[5] 114s7[5] 118s7[5] 147s25[5]
+10V13 Esta_Vacia{boolean} 16|91s14[5] 96s14[5] 113s14[5] 117s14[5]
+12U14 MostrarCola 16|17s4[5] 24s4[5] 46s4[5] 50s4[5] 66s4[5] 70s4[5] 80s4[5]
+. 82s4[5] 130s4[5] 133s4[5]
+13U14 Copiar 16|44s4[5]
+14V14 "="{boolean} 16|29s10[5] 37s10[5] 55s10[5] 73s10[5] 86s10[5] 108s10[5]
+. 138s10[5]
 X 16 principal.adb
-3U11*Principal 3b11 34l5 34t14
+3U11*Principal 3b11 166l5 166t14
 5K12 Colas_de_Integer[12|5] 6r8
-7X4 Práctica_no_Apta 28r9
-9r4 C1{12|6R9[5]} 14m17 14r17 17r16 20m14 20r14 21r16
-9r8 C2{12|6R9[5]}
-9r12 C3{12|6R9[5]}
-10i4 E{integer} 20m11
+7X4 Práctica_no_Apta 30r13 38r13 56r13 74r13 87r13 109r13 139r13 160r9
+9r4 C1{12|6R9[5]} 14m17 14r17 17r16 29r7 29r13 37r7 92m33 92r33 108r7 147m20
+. 147r20 147m36 147r36
+9r8 C2{12|6R9[5]} 20m17 20r17 24r16 37r12 44r12 46r16 55r7 63m16 63r16 66r16
+. 73r7 80r16 86r7 91r25 92m18 92r18 101m17 101r17 103m15 103r15 108r13 117r26
+. 118m18 118r18 122m17 122r17 130r16 138r7
+9r12 C3{12|6R9[5]} 43m14 43r14 44m16 44r16 50r16 55r13 62m16 62r16 70r16
+. 73r12 78m15 78r15 82r16 86r12 96r25 97m18 97r18 113r26 114m18 114r18 126m17
+. 126r17 133r16 138r12
+10i4 E{integer} 78m12 92m15 92r30 97m15 114m15 118m15 147m33
 13i8 I{integer} 14r14
+19i8 I{integer} 20r14
+100i8 I{integer} 101r14
+121i8 I{integer} 122r14
+125i8 I{integer} 126r14
+145i8 I{integer}
 

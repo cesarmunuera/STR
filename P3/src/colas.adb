@@ -143,6 +143,7 @@ package body Colas is
          Put(ToString(nodoAux.Datos));
          nodoAux := nodoAux.ptr_Siguiente;
       end loop;
+      new_line;
    end;
 
 end Colas;

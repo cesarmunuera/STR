@@ -15,7 +15,7 @@ RV NO_DEFAULT_INITIALIZATION
 RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U colas%b		colas.adb		86c8edbe NE OO PK GE
+U colas%b		colas.adb		159337a2 NE OO PK GE
 W ada%s			ada.ads			ada.ali
 Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
@@ -36,7 +36,7 @@ D a-textio.ads		20210520051130 aef4d56d ada.text_io%s
 D a-unccon.ads		20210520051130 0e9b276f ada.unchecked_conversion%s
 D a-uncdea.ads		20210520051130 c3a8ac65 ada.unchecked_deallocation%s
 D colas.ads		20220314131534 cca0ca6b colas%s
-D colas.adb		20220314135222 27345edd colas%b
+D colas.adb		20220314165254 b46f84c1 colas%b
 D interfac.ads		20210520051132 edec285f interfaces%s
 D i-cstrea.ads		20210520051132 e53d8b8e interfaces.c_streams%s
 D system.ads		20210520051136 2ffa5114 system%s
@@ -61,6 +61,7 @@ X 1 ada.ads
 16K9*Ada 20e8 13|1r6 1r18 2r5 54r31
 X 9 a-textio.ads
 58K13*Text_IO 725e16 13|1w10 2r9
+262U14*New_Line 13|146s7
 463U14*Put 13|143s10
 X 11 a-uncdea.ads
 20u15*Unchecked_Deallocation 13|1w22 54r35
@@ -68,7 +69,7 @@ X 12 colas.ads
 2+9 elemento_t 3r40 8r34 9r39 23r14 13|29r34 53r39 76r18
 3V18 ToString{string} 3>27 13|143s14
 3*27 el_Elemento{2+9}
-5k9*Colas 2z9 3z18 20E9 29l5 29e10 13|4b14 148l5 148t10
+5k9*Colas 2z9 3z18 20E9 29l5 29e10 13|4b14 149l5 149t10
 6R9*cola_t 8r65 9r70 10r34 11r34 12r36 13r30 13r53 14r39 26c9 28e14 13|7r34
 . 20r34 29r65 53r70 75r30 75r53 98r39 136r36
 8U14*Poner 8>21 8=46 13|29b14 48t7 89s10
@@ -82,7 +83,7 @@ X 12 colas.ads
 10r25 La_Cola{6R9} 13|7b25 10r11
 11V13*Esta_Llena{boolean} 11>25 13|20b13 24t7 57s11 82s14
 11r25 La_Cola{6R9} 13|20b25 23r31
-12U14*MostrarCola 12>27 13|136b14 146t7
+12U14*MostrarCola 12>27 13|136b14 147t7
 12r27 La_Cola{6R9} 13|136b27 141r18
 13U14*Copiar 13>22 13=38 13|75b14 93t7
 13r22 Origen{6R9} 13|75b22 87r18
