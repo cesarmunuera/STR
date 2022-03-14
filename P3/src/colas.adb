@@ -27,23 +27,23 @@ package body Colas is
 
    --Funcion que nos mete un nuevo elemento a una cola dada
    procedure Poner (el_Elemento: elemento_t; en_la_Cola: in out cola_t) is
-      n : ref_nodo;
+      nodoAux : ref_nodo;
    begin
       --Nos creamos el nodo de forma dinamica
-      n := new Nodo;
+      nodoAux := new Nodo;
       --Le asignamos los datos
-      n.Datos := el_Elemento;
-      n.ptr_Siguiente := null;
+      nodoAux.Datos := el_Elemento;
+      nodoAux.ptr_Siguiente := null;
       --Ahora comprobaremos si la cola esta vacia o tiene algun elemento
       if (Esta_Vacia (en_la_Cola)) then
-         en_la_Cola.ptr_Primero := n;
-         en_la_Cola.ptr_Último := n;
+         en_la_Cola.ptr_Primero := nodoAux;
+         en_la_Cola.ptr_Último := nodoAux;
          --Los punteros de la cola al unico nodo, el que introducimos
       else
          --El siguiente del ultimo esta a null, pero ahora debe ser el nuevo nodo
-         en_la_Cola.ptr_Último.ptr_Siguiente := n;
+         en_la_Cola.ptr_Último.ptr_Siguiente := nodoAux;
          --Ahora el ultimo nodo de la cola debe ser el nuevo nodo
-         en_la_Cola.ptr_Último := n;
+         en_la_Cola.ptr_Último := nodoAux;
       end if;
    end;
 
@@ -51,21 +51,19 @@ package body Colas is
 
    --Funcion que desencola una cola dada
    procedure Quitar (un_Elemento: out elemento_t; de_la_Cola: in out cola_t) is
+      nodoLimpiar : ref_nodo;
       procedure borrar is new Ada.Unchecked_Deallocation(Nodo,ref_Nodo);
    begin
+      nodoLimpiar := new Nodo;
       --Primero comprobamos que la cola tenga elementos
       if (Esta_Llena (de_la_Cola)) then
-         --Ahora tenemos que ver si solo tiene un elemento
-         if (de_la_Cola.ptr_Primero = de_la_Cola.ptr_Último) then
+      	    nodoLimpiar := de_la_Cola.ptr_Primero;
+      	    --Nos almacenamos un puntero al nodo a borrar, para no perderlo
             un_Elemento := de_la_Cola.ptr_Primero.Datos;
-            borrar(de_la_Cola.ptr_Primero);
-            --Salvamos el elemento a borrar y lo borramos
-         else
-            un_Elemento := de_la_Cola.ptr_Primero.Datos;
+            --Al actualizar el primero, ya perdemos ese nodo
             de_la_Cola.ptr_Primero := de_la_Cola.ptr_Primero.ptr_Siguiente;
-            --borrar(de_la_Cola.ptr_Primero);
-            --Lo mismo, pero ahora el primero es el siguiente del antiguo primero
-         end if;
+            --Como lo tenemos en 
+            borrar(nodoLimpiar);
       end if;
    end;
 

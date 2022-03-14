@@ -1,0 +1,97 @@
+V "GNAT Lib v10"
+P ZX
+
+RN
+RV NO_ALLOCATORS
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_IO
+RV NO_LOCAL_ALLOCATORS
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_UNCHECKED_DEALLOCATION
+RV NO_DEFAULT_INITIALIZATION
+RV SPARK_05
+
+U colas%b		colas.adb		9ccd1e9b NE OO PK GE
+W ada%s			ada.ads			ada.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W ada.unchecked_deallocation%s
+
+U colas%s		colas.ads		cca0ca6b BN EE NE OO PK GE
+
+D ada.ads		20210408115627 76789da1 ada%s
+D a-except.ads		20210408115627 a7106115 ada.exceptions%s
+D a-ioexce.ads		20210408115627 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20210408115627 119b8fb3 ada.streams%s
+D a-tags.ads		20210408115627 491b781d ada.tags%s
+D a-textio.ads		20210408115627 aef4d56d ada.text_io%s
+D a-unccon.ads		20210408115627 0e9b276f ada.unchecked_conversion%s
+D a-uncdea.ads		20210408115627 eff36322 ada.unchecked_deallocation%s
+D colas.ads		20220314183002 cca0ca6b colas%s
+D colas.adb		20220314185252 116a62bf colas%b
+D interfac.ads		20210408115627 5ab55268 interfaces%s
+D i-cstrea.ads		20210408115627 e53d8b8e interfaces.c_streams%s
+D system.ads		20210408115627 4635ec04 system%s
+D s-crtl.ads		20210408115627 0ebbdb71 system.crtl%s
+D s-exctab.ads		20210408115627 54135002 system.exception_table%s
+D s-ficobl.ads		20210408115627 078245e4 system.file_control_block%s
+D s-parame.ads		20210408115627 48ec542b system.parameters%s
+D s-secsta.ads		20210408115627 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20210408115627 a7318a92 system.soft_links%s
+D s-stache.ads		20210408115627 a37c21ec system.stack_checking%s
+D s-stalib.ads		20210408115627 09bd3940 system.standard_library%s
+D s-stoele.ads		20210408115627 2dc34a04 system.storage_elements%s
+D s-traent.ads		20210408115627 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20210408115627 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20210408115627 1b7d22d2 system.wch_con%s
+G a e
+G c Z s b [colas standard 5 9 none]
+X 1 ada.ads
+16K9*Ada 20e8 10|1r6 1r18 2r5 55r31
+X 6 a-textio.ads
+57K13*Text_IO 727e16 10|1w10 2r9
+264U14*New_Line 10|144s7
+465U14*Put 10|141s10
+X 8 a-uncdea.ads
+20u15*Unchecked_Deallocation 10|1w22 55r35
+X 9 colas.ads
+2+9 elemento_t 3r40 8r34 9r39 23r14 10|29r34 53r39 74r18
+3V18 ToString{string} 3>27 10|141s14
+3*27 el_Elemento{2+9}
+5k9*Colas 2z9 3z18 20E9 29l5 29e10 10|4b14 147l5 147t10
+6R9*cola_t 8r65 9r70 10r34 11r34 12r36 13r30 13r53 14r39 26c9 28e14 10|7r34
+. 20r34 29r65 53r70 73r30 73r53 96r39 134r36
+8U14*Poner 8>21 8=46 10|29b14 48t7 87s10
+8*21 el_Elemento{2+9} 10|29b21 35r24
+8r46 en_la_Cola{6R9} 10|29b46 38r23 39m10 40m10 44r10 46m10
+9U14*Quitar 9<22 9=51 10|53b14 68t7 81s10
+9*22 un_Elemento{2+9} 10|53b22 62m13
+9r51 de_la_Cola{6R9} 10|53b51 59r23 60r28 62r28 64m13 64r39
+10V13*Esta_Vacia{boolean} 10>25 10|7b13 15t7 23s19 38s11 103s11 103s35
+10r25 La_Cola{6R9} 10|7b25 10r11
+11V13*Esta_Llena{boolean} 11>25 10|20b13 24t7 59s11 80s14
+11r25 La_Cola{6R9} 10|20b25 23r31
+12U14*MostrarCola 12>27 10|134b14 145t7
+12r27 La_Cola{6R9} 10|134b27 139r18
+13U14*Copiar 13>22 13=38 10|73b14 91t7
+13r22 Origen{6R9} 10|73b22 85r18
+13r38 Destino{6R9} 10|73b38 80r25 81m27 87m31
+14V14*"="{boolean} 14>17 14>26 10|96b14 130t7
+14r17 La_Cola{6R9} 10|96b17 103r22 106r22
+14r26 Con_La_Cola{6R9} 10|96b26 103r46 107r22
+20R9 Nodo 21r28 22c9 25e14 10|33r22 55r58 57r26 77r22 99r23 100r23 137r22
+21P9 ref_Nodo(20R9) 24r22 27r33 10|30r17 54r21 55r63 75r16 97r28 135r13
+23*7 Datos{2+9} 10|35m15 62r51 87r24 114r26 114r43 141r31
+24p7 ptr_Siguiente{21P9} 10|36m15 44m32 64r62 88r29 115r34 116r34 142r29
+27p7 ptr_Primero{21P9} 10|10r19 39m21 60r39 62r38 62r39 64m24 64r49 64r50
+. 85r25 106r30 107r34 139r26
+27p20 ptr_Último{21P9} 10|40m21 44r20 44r21 46m21
+X 10 colas.adb
+30p7 nodoAux{9|21P9} 33m7 35r7 36r7 39r36 40r35 44r49 46r35
+54p7 nodoLimpiar{9|21P9} 57m7 60m13 66m20 66r20
+55U17 borrar[8|20] 66s13
+74*7 elemento{9|2+9} 81m17
+75p7 nodoAux{9|21P9} 77m7 85m7 86r14 87r16 88m10 88r21
+97p7 nodoAux1{9|21P9} 99m7 106m10 109r15 114r17 115m13 115r25 118r18 121r21
+97p17 nodoAux2{9|21P9} 100m7 107m10 109r36 114r34 116m13 116r25 118r40 121r42
+135p4 nodoAux{9|21P9} 137m7 139m7 140r14 141r23 142m10 142r21
+
