@@ -1,0 +1,20 @@
+[GENERATED OBJECT FILE]
+b__principal.o
+[PROJECT FILES]
+C:\Users\cesar\Desktop\Universidad\STR\STR\P3\p3.gpr
+20220308110716 e6a00c30c9cf6ce40971012b0bbef45a
+[BOUND OBJECT FILES]
+C:\Users\cesar\Desktop\Universidad\STR\STR\P3\obj\colas.o
+C:\Users\cesar\Desktop\Universidad\STR\STR\P3\obj\principal.o
+[GENERATED SOURCE FILES]
+b__principal.ads
+b__principal.adb
+b__principal.ali
+[RESULTING OPTIONS]
+-LC:\Users\cesar\Desktop\Universidad\STR\STR\P3\obj\
+-LC:\Users\cesar\Desktop\Universidad\STR\STR\P3\obj\
+-LC:/gnat/2021/lib/gcc/x86_64-w64-mingw32/10.3.1/adalib/
+-static
+-static-libgcc
+C:/gnat/2021/lib/gcc/x86_64-w64-mingw32/10.3.1/adalib/libgnat.a
+-Wl,--stack=0x2000000

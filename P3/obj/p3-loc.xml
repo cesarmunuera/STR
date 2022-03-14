@@ -2,11 +2,35 @@
 <Locations >
   <Project>
     <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\P3\p3.gpr</vfs_file>
-    <file_marker column=" 56" line=" 10" >
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\P3\p3.gpr</vfs_project>
+      <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\P3\src\principal.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 43" line=" 12" >
       <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\P3\p3.gpr</vfs_project>
       <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\P3\src\colas.ads</vfs_file>
     </file_marker>
-    <file_marker column=" 25" line=" 6" >
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\P3\p3.gpr</vfs_project>
+      <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\P3\src\principal.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\P3\p3.gpr</vfs_project>
+      <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\P3\src\principal.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\P3\p3.gpr</vfs_project>
+      <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\P3\src\principal.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\P3\p3.gpr</vfs_project>
+      <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\P3\src\principal.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\P3\p3.gpr</vfs_project>
+      <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\P3\src\principal.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
       <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\P3\p3.gpr</vfs_project>
       <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\P3\src\principal.adb</vfs_file>
     </file_marker>
@@ -14,11 +38,7 @@
       <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\P3\p3.gpr</vfs_project>
       <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\P3\src\principal.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 11" line=" 20" >
-      <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\P3\p3.gpr</vfs_project>
-      <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\P3\src\principal.adb</vfs_file>
-    </file_marker>
-    <file_marker current="true" column=" 16" line=" 91" >
+    <file_marker current="true" column=" 4" line=" 10" >
       <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\P3\p3.gpr</vfs_project>
       <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\P3\src\principal.adb</vfs_file>
     </file_marker>

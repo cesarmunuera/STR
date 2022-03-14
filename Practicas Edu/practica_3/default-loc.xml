@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<Locations >
+  <Project >
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\Practicas</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\Practicas Edu\practica_3\Edu\practica_3\principal.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\Practicas</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\Practicas Edu\practica_3\default.gpr</vfs_project>
+      <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\Practicas Edu\practica_3\principal.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 89" >
+      <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\Practicas Edu\practica_3\default.gpr</vfs_project>
+      <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\Practicas Edu\practica_3\principal.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\Practicas Edu\practica_3\default.gpr</vfs_project>
+      <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\Practicas Edu\practica_3\colas.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 30" >
+      <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\Practicas Edu\practica_3\default.gpr</vfs_project>
+      <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\Practicas Edu\practica_3\colas.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\Practicas Edu\practica_3\default.gpr</vfs_project>
+      <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\Practicas Edu\practica_3\colas.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 117" >
+      <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\Practicas Edu\practica_3\default.gpr</vfs_project>
+      <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\Practicas Edu\practica_3\colas.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\Practicas</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\Practicas Edu\practica_3\Edu\practica_3\principal.adb</vfs_file>
+    </file_marker>
+  </Project>
+</Locations>
