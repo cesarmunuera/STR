@@ -57,13 +57,13 @@ package body Colas is
       nodoLimpiar := new Nodo;
       --Primero comprobamos que la cola tenga elementos
       if (Esta_Llena (de_la_Cola)) then
-      	    nodoLimpiar := de_la_Cola.ptr_Primero;
-      	    --Nos almacenamos un puntero al nodo a borrar, para no perderlo
-            un_Elemento := de_la_Cola.ptr_Primero.Datos;
-            --Al actualizar el primero, ya perdemos ese nodo
-            de_la_Cola.ptr_Primero := de_la_Cola.ptr_Primero.ptr_Siguiente;
-            --Como lo tenemos en 
-            borrar(nodoLimpiar);
+         nodoLimpiar := de_la_Cola.ptr_Primero;
+         --Nos almacenamos un puntero al nodo a borrar, para no perderlo
+         un_Elemento := de_la_Cola.ptr_Primero.Datos;
+         --Al actualizar el primero, ya perdemos ese nodo
+         de_la_Cola.ptr_Primero := de_la_Cola.ptr_Primero.ptr_Siguiente;
+         --Como lo tenemos en 
+         borrar(nodoLimpiar);
       end if;
    end;
 
