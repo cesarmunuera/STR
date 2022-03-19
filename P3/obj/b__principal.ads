@@ -280,7 +280,7 @@ package ada_main is
    pragma Export (C, u00119, "system__finalization_rootS");
    u00120 : constant Version_32 := 16#d265cbbc#;
    pragma Export (C, u00120, "system__file_control_blockS");
-   u00121 : constant Version_32 := 16#159337a2#;
+   u00121 : constant Version_32 := 16#5e2d428f#;
    pragma Export (C, u00121, "colasB");
    u00122 : constant Version_32 := 16#cca0ca6b#;
    pragma Export (C, u00122, "colasS");
