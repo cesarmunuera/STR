@@ -1,13 +1,22 @@
 <?xml version="1.0"?>
 <Locations >
-  <Project >
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project />
-      <vfs_file>C:\GNAT\2021\bin\p2.gpr</vfs_file>
+  <Project>
+    <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\P4\p4.gpr</vfs_file>
+    <file_marker column=" 15" line=" 52" >
+      <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\P4\p4.gpr</vfs_project>
+      <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\P4\src\horno.adb</vfs_file>
     </file_marker>
-    <file_marker current="true" column=" 26" line=" 2" >
-      <vfs_project />
-      <vfs_file>C:\GNAT\2021\bin\p2.gpr</vfs_file>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\P4\p4.gpr</vfs_project>
+      <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\P4\src\horno.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 31" >
+      <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\P4\p4.gpr</vfs_project>
+      <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\P4\src\medir1.adb</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 1" line=" 1" >
+      <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\P4\p4.gpr</vfs_project>
+      <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\P4\src\retardadores.adb</vfs_file>
     </file_marker>
   </Project>
 </Locations>
