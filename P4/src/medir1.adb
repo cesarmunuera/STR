@@ -1,14 +1,16 @@
 with Calefactor, Sensor, Ada.Real_Time;
 use Calefactor, Sensor, Ada.Real_Time;
 
-procedure Medir1 is
+procedure medir1 is
    potencia : Potencias;
-   temp_e, temp_actual, temp_aux, Cp : Temperaturas;
+   temp_e, temp_actual, temp_aux: Temperaturas;
    tiempo_inicial, tiempo_final : Time;
    l_dif_tiempo : Time_Span;
+   Cp : Float;
 begin
    --Calculamos Te
    Leer(temp_e);
+
 
 
    --Encendemos el horno
@@ -16,11 +18,12 @@ begin
    Escribir(potencia);
 
 
+
    --Calculamos L. Mientras que la diferencia de la temperatura ambiente con la del interior no sea notable,
-   --seguimos esperando a que el horno siga calentando
+   --seguimos esperando a que el horno siga calentando. La diferencia va creciendo.
    Leer(temp_actual);
    tiempo_inicial := Clock;
-   while not (temp_e - temp_actual > 0.1) loop
+   while (temp_actual - temp_e > 0.1) loop
       --Esperamos a que arranque
       Leer(temp_actual):
    end loop;
@@ -29,13 +32,15 @@ begin
    l_dif_tiempo := tiempo_inicial - tiempo_final;
 
 
+
    --Calculamos Cp. Tenemos que esperar a que la diferencia de temperatura en un instante sea minima con
-   --el instante anterior, que es cuando la curva se ha estabilizado
+   --el instante anterior, que es cuando la curva se ha estabilizado. La diferencia decrece.
+   --Si volvemos a leer temp_aux, la diferencia en de ambos es 0 y no entramos en el while
+   temp_aux := temp_actual;
    Leer(temp_actual);
-   Leer(temp_aux);
-   while not (temp_actual - temp_aux < 0.1) loop
-      --Esperamos a que llegue al regimen permanente
-      --Acualizamos variables
+   --Este bucle es el tramo del regimen transitorio
+   while (temp_actual - temp_aux < 0.1) loop
+      --Esperamos a que llegue al regimen permanente, actualizando variables.
       temp_aux := temp_actual;
       Leer(temp_actual);
    end loop;
@@ -44,5 +49,8 @@ begin
 
 
 
+   --Apagamos el horno
+   potencia := 0.0;
+   Escribir(potencia);
 
-end Medir1;
+end medir1;
