@@ -3,7 +3,7 @@ use Calefactor, Sensor, Ada.Real_Time;
 
 procedure medir1 is
    potencia : Potencias;
-   temp_e, temp_actual, temp_aux: Temperaturas;
+   temp_e, temp_actual, temp_aux, temp_despegue: Temperaturas;
    tiempo_inicial, tiempo_final : Time;
    l_dif_tiempo : Time_Span;
    Cp : Float;
@@ -28,6 +28,7 @@ begin
       Leer(temp_actual):
    end loop;
    tiempo_final := Clock;
+   temp_despegue := temp_actual;
    --Sacamos el tiempo inicial y luego el tiempo que tarda en variar la temperatura. Esto es el tiempo L
    l_dif_tiempo := tiempo_inicial - tiempo_final;
 
