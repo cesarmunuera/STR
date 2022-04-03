@@ -1,4 +1,7 @@
-V "GNAT Lib v10"
+V "GNAT Lib v2021"
+A -gnatA
+A -mtune=generic
+A -march=x86-64
 P ZX
 
 RN
@@ -10,8 +13,8 @@ RV NO_PROTECTED_TYPES
 RV NO_STANDARD_STORAGE_POOLS
 RV NO_TASKING
 RV NO_DEFAULT_INITIALIZATION
+RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
-RV SPARK_05
 RV MAX_TASKS=2
 RV MAX_ENTRY_QUEUE_LENGTH=1+
 
@@ -30,39 +33,39 @@ Z system.tasking.stages%s  s-tassta.adb		s-tassta.ali
 
 U horno%s		horno.ads		99cfb3f9 EE NE OO PK
 
-D ada.ads		20210408115627 76789da1 ada%s
-D a-except.ads		20210408115627 a7106115 ada.exceptions%s
-D a-reatim.ads		20210408115627 0240fc73 ada.real_time%s
-D a-retide.ads		20210408115627 081cdaa4 ada.real_time.delays%s
-D a-unccon.ads		20210408115627 0e9b276f ada.unchecked_conversion%s
-D horno.ads		20220403181927 99cfb3f9 horno%s
-D horno.adb		20220403181927 ab9b3edb horno%b
-D interfac.ads		20210408115627 5ab55268 interfaces%s
-D i-c.ads		20210408115627 5421119b interfaces.c%s
-D retardadores.ads	20220403181927 3ad953b4 retardadores%s
-D retardadores.adb	20220403181927 3e279e57 retardadores%b
-D system.ads		20210408115627 4635ec04 system%s
-D s-atacco.ads		20210408115627 4c36d12f system.address_to_access_conversions%s
-D s-exctab.ads		20210408115627 54135002 system.exception_table%s
-D s-linux.ads		20210408115627 ed0b8aee system.linux%s
-D s-multip.ads		20210408115627 38ac9f73 system.multiprocessors%s
-D s-oscons.ads		20210529074927 2da46a9c system.os_constants%s
-D s-osinte.ads		20210529074927 baabc537 system.os_interface%s
-D s-parame.ads		20210408115627 48ec542b system.parameters%s
-D s-secsta.ads		20210408115627 20bbe636 system.secondary_stack%s
-D s-soflin.ads		20210408115627 a7318a92 system.soft_links%s
-D s-stache.ads		20210408115627 a37c21ec system.stack_checking%s
-D s-stausa.ads		20210408115627 017a0a05 system.stack_usage%s
-D s-stalib.ads		20210408115627 09bd3940 system.standard_library%s
-D s-stoele.ads		20210408115627 2dc34a04 system.storage_elements%s
-D s-tasinf.ads		20210408115627 2b3f8252 system.task_info%s
-D s-taspri.ads		20210408115627 f40ac08d system.task_primitives%s
-D s-taprop.ads		20210408115627 1dd2e1b6 system.task_primitives.operations%s
-D s-taskin.ads		20210408115627 b9d612e2 system.tasking%s
-D s-taprob.ads		20210408115627 acd6094d system.tasking.protected_objects%s
-D s-tassta.ads		20210408115627 cca55c94 system.tasking.stages%s
-D s-traent.ads		20210408115627 005bf670 system.traceback_entries%s
-D s-unstyp.ads		20210408115627 34867c83 system.unsigned_types%s
+D ada.ads		20210520051132 76789da1 ada%s
+D a-except.ads		20210520051128 946f3014 ada.exceptions%s
+D a-reatim.ads		20210520051128 0240fc73 ada.real_time%s
+D a-retide.ads		20210520051128 081cdaa4 ada.real_time.delays%s
+D a-unccon.ads		20210520051130 0e9b276f ada.unchecked_conversion%s
+D horno.ads		20220403204952 99cfb3f9 horno%s
+D horno.adb		20220403204952 ab9b3edb horno%b
+D interfac.ads		20210520051132 edec285f interfaces%s
+D i-c.ads		20210520051132 d9beded9 interfaces.c%s
+D i-cstrin.ads		20210520051132 341d0ddf interfaces.c.strings%s
+D retardadores.ads	20220403204952 3ad953b4 retardadores%s
+D retardadores.adb	20220403204952 3e279e57 retardadores%b
+D system.ads		20210520051136 2ffa5114 system%s
+D s-atacco.ads		20210520051132 4c36d12f system.address_to_access_conversions%s
+D s-exctab.ads		20210520051132 54135002 system.exception_table%s
+D s-multip.ads		20210520051134 38ac9f73 system.multiprocessors%s
+D s-osinte.ads		20210520051128 97504df8 system.os_interface%s
+D s-parame.ads		20210520051134 4752c4cb system.parameters%s
+D s-secsta.ads		20210520051134 9b3ab94b system.secondary_stack%s
+D s-soflin.ads		20210520051134 a7318a92 system.soft_links%s
+D s-stache.ads		20210520051134 a37c21ec system.stack_checking%s
+D s-stausa.ads		20210520051134 017a0a05 system.stack_usage%s
+D s-stalib.ads		20210520051134 472fbca8 system.standard_library%s
+D s-stoele.ads		20210520051134 2dc34a04 system.storage_elements%s
+D s-tasinf.ads		20210520051128 601f6b72 system.task_info%s
+D s-taspri.ads		20210520051128 a1350802 system.task_primitives%s
+D s-taprop.ads		20210520051128 6eefbe12 system.task_primitives.operations%s
+D s-taskin.ads		20210520051128 88fba9ad system.tasking%s
+D s-taprob.ads		20210520051128 acd6094d system.tasking.protected_objects%s
+D s-tassta.ads		20210520051128 cca55c94 system.tasking.stages%s
+D s-traent.ads		20210520051134 26a8d361 system.traceback_entries%s
+D s-unstyp.ads		20210520051134 2b077493 system.unsigned_types%s
+D s-win32.ads		20210520051136 15ac53fb system.win32%s
 G a e
 G c b b b [b horno 3 1 none]
 G c Z s b [escribir horno 7 14 none]
@@ -119,7 +122,7 @@ X 6 horno.ads
 X 7 horno.adb
 6f4 L{float} 10r45 12r54
 8N4 Ts 12r56 50r60 55r51
-9K12 Retardador_de_Potencias[10|5] 61r10 72r10 75r10
+9K12 Retardador_de_Potencias[11|5] 61r10 72r10 75r10
 15N4 Ct 50r57
 16N4 Cp 50r38
 17f4 T_Ambiente{6|4F9} 26r26 50r44
@@ -137,15 +140,15 @@ X 7 horno.adb
 55o7 Periodo{3|54O9} 64r53
 56o7 Siguiente_Instante{3|49O9} 60r22 64m10 64r32
 57f7 Potencia{6|5F9} 61m40 62r27
-X 10 retardadores.ads
+X 11 retardadores.ads
 2f4 Retardo{float} 7|10r34
 3+9 Elementos 7|11r32
 4i4 Tamaño{positive} 7|12r35
-5k9*Retardadores 7|2w6 10r20 10|9e17
+5k9*Retardadores 7|2w6 10r20 11|9e17
 6U14*Escribir 7|75s34[9]
 7U14*Leer 7|61s34[9]
 8U14*Parar 7|72s34[9]
-X 23 s-stausa.ads
+X 22 s-stausa.ads
 208U14*Initialize 209i<c,__gnat_stack_usage_initialize>22
 273U14*Output_Results 277i<c,__gnat_stack_usage_output_results>22
 

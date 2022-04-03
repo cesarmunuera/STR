@@ -1,0 +1,26 @@
+[GENERATED OBJECT FILE]
+b__main.o
+[PROJECT FILES]
+C:\Users\cesar\Desktop\Universidad\STR\STR\pp4\pp4.gpr
+20220403205020 810a7901b8bf2c849b1381fe14a5f954
+[BOUND OBJECT FILES]
+C:\Users\cesar\Desktop\Universidad\STR\STR\pp4\obj\retardadores.o
+C:\Users\cesar\Desktop\Universidad\STR\STR\pp4\obj\horno.o
+C:\Users\cesar\Desktop\Universidad\STR\STR\pp4\obj\calefactor.o
+C:\Users\cesar\Desktop\Universidad\STR\STR\pp4\obj\sensor.o
+C:\Users\cesar\Desktop\Universidad\STR\STR\pp4\obj\main.o
+[GENERATED SOURCE FILES]
+b__main.ads
+b__main.adb
+b__main.ali
+[RESULTING OPTIONS]
+-LC:\Users\cesar\Desktop\Universidad\STR\STR\pp4\obj\
+-LC:\Users\cesar\Desktop\Universidad\STR\STR\pp4\obj\
+-LC:/gnat/2021/lib/gcc/x86_64-w64-mingw32/10.3.1/adalib/
+-static
+-static-libgcc
+C:/gnat/2021/lib/gcc/x86_64-w64-mingw32/10.3.1/adalib/libgnarl.a
+C:/gnat/2021/lib/gcc/x86_64-w64-mingw32/10.3.1/adalib/libgnat.a
+-Xlinker
+--stack=0x200000,0x1000
+-mthreads
