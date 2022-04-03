@@ -1,5 +1,5 @@
-with Calefactor, Sensor, Ada.Real_Time;
-use Calefactor, Sensor, Ada.Real_Time;
+with Calefactor, Sensor, Ada.Real_Time, Ada.Text_IO;
+use Calefactor, Sensor, Ada.Real_Time, Ada.Text_IO;
 
 procedure medir1 is
    potencia : Potencias;
@@ -15,7 +15,7 @@ begin
 
 
    --Encendemos el horno.
-   potencia := 1000;
+   potencia := 1000.0;
    Escribir(potencia);
    Put_Line("La potencia es: " & potencia'Image);
 
@@ -27,7 +27,7 @@ begin
    tiempo_inicial := Clock;
    while (temp_actual - temp_e > 0.1) loop
       --Esperamos a que arranque
-      Leer(temp_actual):
+      Leer(temp_actual);
    end loop;
    tiempo_final := Clock;
    temp_despegue := temp_actual;
@@ -48,7 +48,7 @@ begin
       Leer(temp_actual);
    end loop;
    --Calculamos con 0 = P - Cp(T - Te). Cp = (P / T-Te). P = potencia, T = temp_actual, Te = temp_e.
-   Cp = (potencia / (temp_actual - temp_e));
+   Cp := (Float(potencia)) / Float(temp_actual - temp_e);
    Put_Line("Cp es: " & Cp'Image);
 
 

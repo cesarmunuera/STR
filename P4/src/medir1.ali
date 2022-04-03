@@ -1,0 +1,97 @@
+V "GNAT Lib v10"
+M P W=b
+P ZX
+
+RN
+RV NO_FLOATING_POINT
+RV NO_IO
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV SPARK_05
+
+U medir1%b		medir1.adb		6b9401b4 NE OO SU IL
+W ada%s			ada.ads			ada.ali
+W ada.real_time%s	a-reatim.adb		a-reatim.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W calefactor%s		calefactor.adb		calefactor.ali
+W sensor%s		sensor.adb		sensor.ali
+Z system.concat_2%s	s-conca2.adb		s-conca2.ali
+Z system.img_real%s	s-imgrea.adb		s-imgrea.ali
+
+D ada.ads		20210408115627 76789da1 ada%s
+D a-except.ads		20210408115627 a7106115 ada.exceptions%s
+D a-ioexce.ads		20210408115627 e4a01f64 ada.io_exceptions%s
+D a-reatim.ads		20210408115627 0240fc73 ada.real_time%s
+D a-stream.ads		20210408115627 119b8fb3 ada.streams%s
+D a-tags.ads		20210408115627 491b781d ada.tags%s
+D a-textio.ads		20210408115627 aef4d56d ada.text_io%s
+D a-unccon.ads		20210408115627 0e9b276f ada.unchecked_conversion%s
+D calefactor.ads	20220403181927 7ef44599 calefactor%s
+D interfac.ads		20210408115627 5ab55268 interfaces%s
+D i-c.ads		20210408115627 5421119b interfaces.c%s
+D i-cstrea.ads		20210408115627 e53d8b8e interfaces.c_streams%s
+D medir1.adb		20220403182657 f610927c medir1%b
+D sensor.ads		20220403181927 4fc4ff4f sensor%s
+D system.ads		20210408115627 4635ec04 system%s
+D s-atacco.ads		20210408115627 4c36d12f system.address_to_access_conversions%s
+D s-conca2.ads		20210408115627 02a0d7d0 system.concat_2%s
+D s-crtl.ads		20210408115627 0ebbdb71 system.crtl%s
+D s-exctab.ads		20210408115627 54135002 system.exception_table%s
+D s-ficobl.ads		20210408115627 078245e4 system.file_control_block%s
+D s-imgrea.ads		20210408115627 c7a851e2 system.img_real%s
+D s-linux.ads		20210408115627 ed0b8aee system.linux%s
+D s-multip.ads		20210408115627 38ac9f73 system.multiprocessors%s
+D s-oscons.ads		20210529074927 2da46a9c system.os_constants%s
+D s-osinte.ads		20210529074927 baabc537 system.os_interface%s
+D s-parame.ads		20210408115627 48ec542b system.parameters%s
+D s-secsta.ads		20210408115627 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20210408115627 a7318a92 system.soft_links%s
+D s-stache.ads		20210408115627 a37c21ec system.stack_checking%s
+D s-stausa.ads		20210408115627 017a0a05 system.stack_usage%s
+D s-stalib.ads		20210408115627 09bd3940 system.standard_library%s
+D s-stoele.ads		20210408115627 2dc34a04 system.storage_elements%s
+D s-tasinf.ads		20210408115627 2b3f8252 system.task_info%s
+D s-taspri.ads		20210408115627 f40ac08d system.task_primitives%s
+D s-taprop.ads		20210408115627 1dd2e1b6 system.task_primitives.operations%s
+D s-taskin.ads		20210408115627 b9d612e2 system.tasking%s
+D s-traent.ads		20210408115627 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20210408115627 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20210408115627 1b7d22d2 system.wch_con%s
+G a e
+G c Z b b [medir1 standard 4 11 none]
+G r c none [medir1 standard 4 11 none] [leer sensor 4 14 none]
+G r c none [medir1 standard 4 11 none] [escribir calefactor 7 14 none]
+X 1 ada.ads
+16K9*Ada 20e8 13|1r26 1r41 2r25 2r40
+X 4 a-reatim.ads
+39K13*Real_Time 185e18 13|1w30 2r29
+49O9*Time<duration> 13|7r35
+54O9*Time_Span<duration> 13|8r19
+61V13*Clock{49O9} 13|27s22 32s20
+71V14*"-"{54O9} 13|35s33
+X 7 a-textio.ads
+57K13*Text_IO 727e16 13|1w45 2r44
+508U14*Put_Line 13|13s4 20s4 52s4
+X 9 calefactor.ads
+1K9*Calefactor 8e15 13|1w6 2r5
+5F9*Potencias<float> 13|5r15
+7U14*Escribir 13|19s4 58s4
+X 13 medir1.adb
+4U11*medir1 4b11 60l5 60t11
+5f4 potencia{9|5F9} 18m4 19r13 20r34 51r17 57m4 58r13
+6f4 temp_e{14|2F9} 12m9 13r46 28r25 51r50
+6f12 temp_actual{14|2F9} 26m9 28r11 30m12 33r21 42r16 43m9 45r11 47r19 48m12
+. 51r36
+6f25 temp_aux{14|2F9} 42m4 45r25 47m7
+6f35 temp_despegue{14|2F9} 33m4
+7o4 tiempo_inicial{4|49O9} 27m4 35r35
+7o20 tiempo_final{4|49O9} 32m4 35r20
+8o4 l_dif_tiempo{4|54O9} 35m4
+9f4 Cp{float} 51m4 52r25
+X 14 sensor.ads
+1K9*Sensor 13|1w18 2r17 14|5e11
+2F9*Temperaturas<float> 13|6r50
+4U14*Leer 13|12s4 26s4 30s7 43s4 48s7
+X 30 s-stausa.ads
+208U14*Initialize 209i<c,__gnat_stack_usage_initialize>22
+273U14*Output_Results 277i<c,__gnat_stack_usage_output_results>22
+

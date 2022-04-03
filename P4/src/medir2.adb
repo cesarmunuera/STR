@@ -12,14 +12,14 @@ begin
    fin := false;
 
    --Valores obtenidos en medir1.
-   Cp := 4;
-   temp_despegue := 4;
-   Te :=2;
+   Cp := 4.0;
+   temp_despegue := 4.0;
+   Te := 4.0;
 
 
 
    --Encendemos el horno.
-   potencia := 1000;
+   potencia := 1000.0;
    Escribir(potencia);
 
 
@@ -51,7 +51,7 @@ begin
       dif_temp := temp_actual - temp_anterior;
       dif_tiempo := Float(Seconds(tiempo_actual)) - Float(Seconds(tiempo_anterior));
 
-      pendiente_actual := dif_temp/dif_tiempo;           --Aqui el jaleo de los cast para poder dividir bien
+      pendiente_actual := Float(dif_temp)/dif_tiempo;           --Aqui el jaleo de los cast para poder dividir bien
       if (pendiente_actual < pendiente_anterior) then
          fin := true;
       else
@@ -62,7 +62,7 @@ begin
 
          temp_anterior := temp_actual;
          tiempo_anterior := tiempo_actual;
-      end;
+      end if;
    end loop;
 
 
@@ -70,10 +70,10 @@ begin
    --La temperatura con pendiente maxima es la que se encuentra entre las temperaturas que nos han dado
    --una pendiente maxima. Por ello, hacemos la media entre estas dos temperaturas. Se calcula el valor
    --intermedio y se le suma el offset, que es la temperatura menor.
-   temp_media := ((temp_anterior - temp_aux)/2) + temp_aux;
+   temp_media := ((temp_anterior - temp_aux)/2.0) + temp_aux;
 
    --Calculamos Ct con los datos anteriores.
-   Ct = ((potencia - (Cp * (temp_media - Te))) * (tiempo_actual - tiempo_anterior)) / (temp_anterior - temp_aux);
+   Ct := ((potencia - Float(Cp * Float(temp_media - Te))) * (Float(Seconds(tiempo_actual)) - Float(Seconds(tiempo_anterior))) / Float(temp_anterior - temp_aux);
 
 
 
@@ -81,4 +81,4 @@ begin
    potencia := 0.0;
    Escribir(potencia);
 
-end medir1;
+end medir2;
