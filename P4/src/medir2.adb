@@ -1,12 +1,11 @@
-with Calefactor, Sensor, Ada.Real_Time, Ada.Text_IO;
-use Calefactor, Sensor, Ada.Real_Time, Ada.Text_IO;
+with Calefactor, Sensor, Ada.Calendar, Ada.Text_IO;
+use Calefactor, Sensor, Ada.Calendar, Ada.Text_IO;
 
 procedure medir2 is
    temp_actual, temp_anterior, temp_aux, temp_despegue, dif_temp, temp_media, Te : Temperaturas;
    potencia : Potencias;
-   Cp, pendiente_actual, pendiente_anterior, Ct : Float;
+   Cp, pendiente_actual, pendiente_anterior, Ct, dif_tiempo : Float;
    fin : Boolean;
-   dif_tiempo : Time_Span;
    tiempo_anterior, tiempo_actual, tiempo_aux : Time;
 begin
 
@@ -50,7 +49,7 @@ begin
       tiempo_actual := Clock;
 
       dif_temp := temp_actual - temp_anterior;
-      dif_tiempo := tiempo_actual - tiempo_anterior;
+      dif_tiempo := Float(Seconds(tiempo_actual)) - Float(Seconds(tiempo_anterior));
 
       pendiente_actual := dif_temp/dif_tiempo;           --Aqui el jaleo de los cast para poder dividir bien
       if (pendiente_actual < pendiente_anterior) then

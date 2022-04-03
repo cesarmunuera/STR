@@ -32,7 +32,7 @@ begin
    tiempo_final := Clock;
    temp_despegue := temp_actual;
    --Sacamos el tiempo inicial y luego el tiempo que tarda en variar la temperatura. Esto es el tiempo L.
-   l_dif_tiempo := tiempo_inicial - tiempo_final;
+   l_dif_tiempo := tiempo_final - tiempo_inicial;
 
 
 
