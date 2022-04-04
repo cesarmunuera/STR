@@ -1,7 +1,7 @@
 with Calefactor, Sensor, Ada.Calendar, Ada.Text_IO;
 use Calefactor, Sensor, Ada.Calendar, Ada.Text_IO;
 
-procedure medir2 is
+procedure main is
    temp_actual, temp_anterior, temp_aux, temp_despegue, dif_temp, temp_media, Te : Temperaturas;
    potencia : Potencias;
    Cp, pendiente_actual, pendiente_anterior, Ct, dif_tiempo : Float;
@@ -10,13 +10,12 @@ procedure medir2 is
 begin
 
    fin := false;
+   pendiente_anterior := 0.0;
 
    --Valores obtenidos en medir1.
-   Cp := 4.0;
-   temp_despegue := 4.0;
-   Te := 4.0;
-
-
+   Cp := 28.65;
+   temp_despegue := 25.15;
+   Te := 25.0;
 
    --Encendemos el horno.
    potencia := 1000.0;
@@ -29,12 +28,12 @@ begin
    --Tomamos la temperatura ya que este valor será el del T1 para sacar la pendiente despues.
    Leer(temp_actual);
    tiempo_anterior := Clock;
+   Put_Line("Esperando a llegar al regimen transitorio ...");
    while (temp_actual < temp_despegue) loop
-      Put_Line("Esperando a llegar al regimen transitorio");
       Leer(temp_actual);
       tiempo_anterior := Clock;
    end loop;
-
+   Put_Line("Hemos entrado en el regimen transitorio!");
 
 
    --Calculamos el punto con mayor pendiente.
@@ -45,14 +44,21 @@ begin
    --podamos tener los puntos que han sido los maximos. T1 será el aux y T2 el anterior.
    temp_anterior := temp_actual;
    while (not fin) loop
+      delay 0.5;
+
       Leer(temp_actual);
       tiempo_actual := Clock;
 
       dif_temp := temp_actual - temp_anterior;
       dif_tiempo := Float(Seconds(tiempo_actual)) - Float(Seconds(tiempo_anterior));
+      --Put_Line("La diferencia de temperatura es: " & dif_temp'Image);
+      --Put_Line("La diferencia de tiempo es: " & dif_tiempo'Image);
 
-      pendiente_actual := Float(dif_temp)/dif_tiempo;           --Aqui el jaleo de los cast para poder dividir bien
-      if (pendiente_actual < pendiente_anterior) then
+
+      pendiente_actual := Float(dif_temp)/dif_tiempo;
+      Put_Line("La pendiente actual es: " & pendiente_actual'Image);
+      if (pendiente_actual - pendiente_anterior < 0.01) then
+         Put_Line("Salimos del bucle");
          fin := true;
       else
          pendiente_anterior := pendiente_actual;
@@ -73,12 +79,12 @@ begin
    temp_media := ((temp_anterior - temp_aux)/2.0) + temp_aux;
 
    --Calculamos Ct con los datos anteriores.
-   Ct := ((potencia - Float(Cp * Float(temp_media - Te))) * (Float(Seconds(tiempo_actual)) - Float(Seconds(tiempo_anterior))) / Float(temp_anterior - temp_aux);
-
+   Ct := ((Float(potencia) - Float(Cp * Float(temp_media - Te))) * (Float(Seconds(tiempo_actual)) - Float(Seconds(tiempo_anterior))) / Float(temp_anterior - temp_aux));
+   Put_Line("EL VALOR DE Ct ES: " & Ct'Image);
 
 
    --Apagamos el horno.
    potencia := 0.0;
    Escribir(potencia);
 
-end medir2;
+end main;

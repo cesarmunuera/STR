@@ -6,6 +6,7 @@ A -march=x86-64
 P ZX
 
 RN
+RV NO_CALENDAR
 RV NO_DELAY
 RV NO_FIXED_POINT
 RV NO_FLOATING_POINT
@@ -14,10 +15,10 @@ RV NO_RELATIVE_DELAY
 RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U main%b		main.adb		42348697 NE OO SU
+U main%b		main.adb		aa0992e1 NE OO SU IL
 W ada%s			ada.ads			ada.ali
+W ada.calendar%s	a-calend.adb		a-calend.ali
 Z ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
-W ada.real_time%s	a-reatim.adb		a-reatim.ali
 Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 W calefactor%s		calefactor.adb		calefactor.ali
@@ -30,7 +31,6 @@ D a-calend.ads		20210520051128 474d9720 ada.calendar%s
 D a-caldel.ads		20210520051128 9f20b83d ada.calendar.delays%s
 D a-except.ads		20210520051128 946f3014 ada.exceptions%s
 D a-ioexce.ads		20210520051128 e4a01f64 ada.io_exceptions%s
-D a-reatim.ads		20210520051128 0240fc73 ada.real_time%s
 D a-stream.ads		20210520051130 119b8fb3 ada.streams%s
 D a-string.ads		20210520051130 90ac6797 ada.strings%s
 D a-sttebu.ads		20210520051130 18209c64 ada.strings.text_buffers%s
@@ -40,13 +40,10 @@ D a-textio.ads		20210520051130 aef4d56d ada.text_io%s
 D a-unccon.ads		20210520051130 0e9b276f ada.unchecked_conversion%s
 D calefactor.ads	20220403204952 7ef44599 calefactor%s
 D interfac.ads		20210520051132 edec285f interfaces%s
-D i-c.ads		20210520051132 d9beded9 interfaces.c%s
-D i-cstrin.ads		20210520051132 341d0ddf interfaces.c.strings%s
 D i-cstrea.ads		20210520051132 e53d8b8e interfaces.c_streams%s
-D main.adb		20220404095738 dfb0155f main%b
+D main.adb		20220404163302 72806a7a main%b
 D sensor.ads		20220403213354 4fc4ff4f sensor%s
 D system.ads		20210520051136 2ffa5114 system%s
-D s-atacco.ads		20210520051132 4c36d12f system.address_to_access_conversions%s
 D s-conca2.ads		20210520051132 02a0d7d0 system.concat_2%s
 D s-crtl.ads		20210520051132 0ebbdb71 system.crtl%s
 D s-exctab.ads		20210520051132 54135002 system.exception_table%s
@@ -55,64 +52,61 @@ D s-imager.ads		20210520051134 500b11a9 system.image_r%s
 D s-imageu.ads		20210520051134 525c30c6 system.image_u%s
 D s-imgflt.ads		20210520051134 78689de8 system.img_flt%s
 D s-imguns.ads		20210520051134 0e4da2ac system.img_uns%s
-D s-multip.ads		20210520051134 38ac9f73 system.multiprocessors%s
-D s-osinte.ads		20210520051128 97504df8 system.os_interface%s
 D s-parame.ads		20210520051134 4752c4cb system.parameters%s
 D s-powflt.ads		20210520051134 46f7a1b9 system.powten_flt%s
 D s-putima.ads		20210520051134 4e095881 system.put_images%s
 D s-secsta.ads		20210520051134 9b3ab94b system.secondary_stack%s
 D s-soflin.ads		20210520051134 a7318a92 system.soft_links%s
 D s-stache.ads		20210520051134 a37c21ec system.stack_checking%s
-D s-stausa.ads		20210520051134 017a0a05 system.stack_usage%s
 D s-stalib.ads		20210520051134 472fbca8 system.standard_library%s
 D s-stoele.ads		20210520051134 2dc34a04 system.storage_elements%s
 D s-stoele.adb		20210520051134 ed88f8fb system.storage_elements%b
-D s-tasinf.ads		20210520051128 601f6b72 system.task_info%s
-D s-taspri.ads		20210520051128 a1350802 system.task_primitives%s
-D s-taprop.ads		20210520051128 6eefbe12 system.task_primitives.operations%s
-D s-taskin.ads		20210520051128 88fba9ad system.tasking%s
 D s-traent.ads		20210520051134 26a8d361 system.traceback_entries%s
 D s-unstyp.ads		20210520051134 2b077493 system.unsigned_types%s
 D s-wchcon.ads		20210520051136 1b7d22d2 system.wch_con%s
-D s-win32.ads		20210520051136 15ac53fb system.win32%s
 D unchconv.ads		20210520051136 ca2f9e18 unchecked_conversion%s
 G a e
 G c Z b b [main standard 4 11 none]
-G r c none [main standard 4 11 none] [leer sensor 4 14 none]
 G r c none [main standard 4 11 none] [escribir calefactor 7 14 none]
+G r c none [main standard 4 11 none] [leer sensor 4 14 none]
 X 1 ada.ads
-16K9*Ada 20e8 19|1r26 1r41 2r25 2r40
-X 6 a-reatim.ads
-39K13*Real_Time 185e18 19|1w30 2r29
-49O9*Time<duration> 19|8r35
-54O9*Time_Span<duration> 19|9r19
-61V13*Clock{49O9} 19|29s22 35s20
-71V14*"-"{54O9} 19|38s33
-X 12 a-textio.ads
-58K13*Text_IO 725e16 19|1w45 2r44
-506U14*Put_Line 19|15s4 22s4 30s4 39s4 48s4 51s4 53s4 61s7 62s7 67s4
-X 14 calefactor.ads
-1K9*Calefactor 8e15 19|1w6 2r5
-5F9*Potencias<float> 19|6r15
-7U14*Escribir 19|21s4 73s4
-X 19 main.adb
-4U11*Main 4b11 76l5 76t9
-6f4 potencia{14|5F9} 20m4 21r13 22r34 66r17 72m4 73r13
-7f4 temp_e{20|2F9} 14m9 15r46 31r25 66r50
-7f12 temp_actual{20|2F9} 28m9 30r44 31r11 33m12 36r21 39r49 46r16 50m9 51r44
-. 52r11 56r11 58r19 60m12 61r56 66r36
-7f25 temp_aux{20|2F9} 46m4 48r41 52r25 56r25 58m7 62r50
-7f35 temp_despegue{20|2F9} 36m4
-7f50 aux{20|2F9} 52m4 53r36
-8o4 tiempo_inicial{6|49O9} 29m4 38r35
-8o20 tiempo_final{6|49O9} 35m4 38r20
-9o4 l_dif_tiempo{6|54O9} 38m4
-10f4 Cp{float} 66m4 67r25
-X 20 sensor.ads
-1K9*Sensor 19|1w18 2r17 20|5e11
-2F9*Temperaturas<float> 19|7r55
-4U14*Leer 19|14s4 28s4 33s7 50s4 60s7
-X 39 s-stausa.ads
-208U14*Initialize 209i<c,__gnat_stack_usage_initialize>22
-273U14*Output_Results 277i<c,__gnat_stack_usage_output_results>22
+16K9*Ada 20e8 16|1r26 1r40 2r25 2r39
+X 2 a-calend.ads
+36K13*Calendar 413e17 16|1w30 2r29
+42I9*Time<226I9> 16|9r49
+54O12*Day_Duration{duration}
+56V13*Clock{42I9} 16|31s23 35s26 51s24
+67V13*Seconds{54O12} 16|54s27 54s59 82s75 82s107
+226I9 Time_Rep<long_long_integer>
+X 11 a-textio.ads
+58K13*Text_IO 725e16 16|1w44 2r43
+506U14*Put_Line 16|32s4 37s4 57s7 72s4 83s4
+X 13 calefactor.ads
+1K9*Calefactor 8e15 16|1w6 2r5
+5F9*Potencias<float> 16|6r15
+7U14*Escribir 16|23s4 88s4
+X 16 main.adb
+4U11*main 4b11 90l5 90t9
+5f4 temp_actual{17|2F9} 30m9 33r11 34m12 46r21 47r11 50m12 53r19 66r27
+5f17 temp_anterior{17|2F9} 46m4 53r33 63r22 66m10 79r20 82r142
+5f32 temp_aux{17|2F9} 63m10 79r36 79r53 82r158
+5f42 temp_despegue{17|2F9} 17m4 33r25
+5f57 dif_temp{17|2F9} 53m7 56r33
+5f67 temp_media{17|2F9} 79m4 82r47
+5f79 Te{17|2F9} 18m4 82r60
+5f83 temp_estable{17|2F9} 19m4 47r25
+6f4 potencia{13|5F9} 22m4 23r13 82r18 87m4 88r13
+7f4 Cp{float} 16m4 82r36
+7f8 pendiente_actual{float} 56m7 57r45 59r11 61r32 72r41
+7f26 pendiente_anterior{float} 13m4 59r30 61m10
+7f46 Ct{float} 82m4 83r37
+7f50 dif_tiempo{float} 54m7 56r43
+8b4 fin{boolean} 12m4
+9i4 tiempo_anterior{2|42I9} 31m4 35m7 54r67 64r24 67m10 82r115
+9i21 tiempo_actual{2|42I9} 51m7 54r35 67r29 82r83
+9i36 tiempo_aux{2|42I9} 64m10
+X 17 sensor.ads
+1K9*Sensor 16|1w18 2r17 17|5e11
+2F9*Temperaturas<float> 16|5r98
+4U14*Leer 16|30s4 34s7 50s7
 
