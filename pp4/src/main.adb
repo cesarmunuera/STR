@@ -4,13 +4,19 @@ use Calefactor, Sensor, Ada.Calendar, Ada.Text_IO;
 procedure main is
    temp_actual, temp_anterior, temp_aux, temp_despegue, dif_temp, temp_media, Te, temp_estable : Temperaturas;
    potencia : Potencias;
-   Cp, pendiente_actual, pendiente_anterior, Ct, dif_tiempo : Float;
+   Cp, pendiente_actual, pendiente_maxima, Ct, dif_tiempo : Float;
    fin : Boolean;
    tiempo_anterior, tiempo_actual, tiempo_aux : Time;
+
+   type vector_temp is array (1..4) of Temperaturas;
+   vectorTemperaturas : vector_temp;
+
+   type vector_tiempos is array (1..4) of Time;
+   vectorTiempos : vector_tiempos;
 begin
 
    fin := false;
-   pendiente_anterior := 0.0;
+   pendiente_maxima := 0.0;
 
    --Valores obtenidos en medir1.
    Cp := 28.65;
@@ -26,12 +32,11 @@ begin
 
    --Partimos de la temperatura en la que se supone que entramos en el regimen transitorio.
    --Por tanto, esto simplemente es un checkeo, ya que la actual tiene que ser superior.
-   --Tomamos la temperatura ya que este valor será el del T1 para sacar la pendiente despues.
-   Leer(temp_actual);
-   tiempo_anterior := Clock;
+   Leer(vectorTemperaturas(1));
+   vectorTiempos(2) := Clock;
    Put_Line("Esperando a llegar al regimen transitorio ...");
-   while (temp_actual < temp_despegue) loop
-      Leer(temp_actual);
+   while (vectorTemperaturas(1) < temp_despegue) loop
+      Leer(vectorTemperaturas(1));
       tiempo_anterior := Clock;
    end loop;
    Put_Line("Hemos entrado en el regimen transitorio!");
@@ -43,31 +48,32 @@ begin
    --con la anterior. Si es superior, los valores actuales pasan a los anteriores, y los anteriores
    --al auxiliar. De tal forma que cuando lleguemos a una pendiente menor a la anterior,
    --podamos tener los puntos que han sido los maximos. T1 será el aux y T2 el anterior.
-   temp_anterior := temp_actual;
-   while (temp_actual < temp_estable) loop
+   vectorTemperaturas(2) := vectorTemperaturas(1);
+   while (vectorTemperaturas(1) < temp_estable) loop
       delay 0.1;
 
-      Leer(temp_actual);
-      tiempo_actual := Clock;
+      Leer(vectorTemperaturas(1));
+      vectorTiempos(1) := Clock;
 
-      dif_temp := temp_actual - temp_anterior;
-      dif_tiempo := Float(Seconds(tiempo_actual)) - Float(Seconds(tiempo_anterior));
+      dif_temp := vectorTemperaturas(1) - vectorTemperaturas(2);
+      dif_tiempo := Float(Seconds(vectorTiempos(1))) - Float(Seconds(vectorTiempos(2)));
 
       pendiente_actual := Float(dif_temp)/dif_tiempo;
       Put_Line("La pendiente actual es: " & pendiente_actual'Image);
 
-      if (pendiente_actual > pendiente_anterior) then
+      if (pendiente_actual > pendiente_maxima) then
          --Put_Line("La pendiente superior actual es: " & pendiente_actual'Image);
-         pendiente_anterior := pendiente_actual;
+         pendiente_maxima := pendiente_actual;
 
-         temp_aux := temp_anterior;
-         tiempo_aux := tiempo_anterior;
+         vectorTemperaturas(4) := vectorTemperaturas(2);--Posiciones anteriores
+         vectorTiempos(4) := vectorTiempos(2);
 
-         temp_anterior := temp_actual;
-         tiempo_anterior := tiempo_actual;
-      else
-
+         vectorTemperaturas(3) := vectorTemperaturas(1);--Posiciones actuales
+         vectorTiempos(3) := vectorTiempos(1);
       end if;
+
+      vectorTemperaturas(2) := vectorTemperaturas(1);--Actualizamos tiempos de trabajo
+      vectorTiempos(2) := vectorTiempos(1);
 
       --Put_Line("La temperatura actual es: " & temp_actual'Image);
    end loop;
@@ -78,10 +84,11 @@ begin
    --La temperatura con pendiente maxima es la que se encuentra entre las temperaturas que nos han dado
    --una pendiente maxima. Por ello, hacemos la media entre estas dos temperaturas. Se calcula el valor
    --intermedio y se le suma el offset, que es la temperatura menor.
-   temp_media := ((temp_anterior - temp_aux)/2.0) + temp_aux;
+   temp_media := ((vectorTemperaturas(3) - vectorTemperaturas(4))/2.0) + vectorTemperaturas(4);
 
    --Calculamos Ct con los datos anteriores.
-   Ct := ((Float(potencia) - Float(Cp * Float(temp_media - Te))) * (Float(Seconds(tiempo_actual)) - Float(Seconds(tiempo_anterior))) / Float(temp_anterior - temp_aux));
+   Ct := ((Float(potencia) - Float(Cp * Float(temp_media - Te))) * (Float(Seconds(vectorTiempos(3)))
+          - Float(Seconds(vectorTiempos(4))))) / (Float(vectorTemperaturas(3) - vectorTemperaturas(4)));
    Put_Line("EL VALOR DE Ct ES: " & Ct'Image);
 
 

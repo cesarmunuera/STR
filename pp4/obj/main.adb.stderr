@@ -1,0 +1,5 @@
+main.adb:5:04: warning: variable "temp_actual" is never read and never assigned [-gnatwv]
+main.adb:5:17: warning: variable "temp_anterior" is never read and never assigned [-gnatwv]
+main.adb:5:32: warning: variable "temp_aux" is never read and never assigned [-gnatwv]
+main.adb:9:21: warning: variable "tiempo_actual" is never read and never assigned [-gnatwv]
+main.adb:9:36: warning: variable "tiempo_aux" is never read and never assigned [-gnatwv]
