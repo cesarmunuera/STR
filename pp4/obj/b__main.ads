@@ -40,7 +40,7 @@ package ada_main is
    pragma Export (C, main, "main");
 
    type Version_32 is mod 2 ** 32;
-   u00001 : constant Version_32 := 16#96a879f1#;
+   u00001 : constant Version_32 := 16#8a0888df#;
    pragma Export (C, u00001, "mainB");
    u00002 : constant Version_32 := 16#2e11c0b1#;
    pragma Export (C, u00002, "system__standard_libraryB");
@@ -426,20 +426,24 @@ package ada_main is
    pragma Export (C, u00192, "sensorB");
    u00193 : constant Version_32 := 16#4fc4ff4f#;
    pragma Export (C, u00193, "sensorS");
-   u00194 : constant Version_32 := 16#6424aad3#;
-   pragma Export (C, u00194, "system__img_fltS");
-   u00195 : constant Version_32 := 16#ecc88e78#;
-   pragma Export (C, u00195, "system__fat_fltS");
+   u00194 : constant Version_32 := 16#47ae2d21#;
+   pragma Export (C, u00194, "system__img_fixed_64S");
+   u00195 : constant Version_32 := 16#2d8c0d8e#;
+   pragma Export (C, u00195, "system__exn_lliS");
    u00196 : constant Version_32 := 16#2549028f#;
    pragma Export (C, u00196, "system__img_utilB");
    u00197 : constant Version_32 := 16#44802e3b#;
    pragma Export (C, u00197, "system__img_utilS");
-   u00198 : constant Version_32 := 16#690df0ad#;
-   pragma Export (C, u00198, "system__powten_fltS");
-   u00199 : constant Version_32 := 16#eca5ecae#;
-   pragma Export (C, u00199, "system__memoryB");
-   u00200 : constant Version_32 := 16#76873720#;
-   pragma Export (C, u00200, "system__memoryS");
+   u00198 : constant Version_32 := 16#6424aad3#;
+   pragma Export (C, u00198, "system__img_fltS");
+   u00199 : constant Version_32 := 16#ecc88e78#;
+   pragma Export (C, u00199, "system__fat_fltS");
+   u00200 : constant Version_32 := 16#690df0ad#;
+   pragma Export (C, u00200, "system__powten_fltS");
+   u00201 : constant Version_32 := 16#eca5ecae#;
+   pragma Export (C, u00201, "system__memoryB");
+   u00202 : constant Version_32 := 16#76873720#;
+   pragma Export (C, u00202, "system__memoryS");
 
    --  BEGIN ELABORATION ORDER
    --  ada%s
@@ -488,6 +492,7 @@ package ada_main is
    --  system.concat_2%b
    --  system.concat_3%s
    --  system.concat_3%b
+   --  system.exn_lli%s
    --  system.traceback%s
    --  system.traceback%b
    --  ada.characters.handling%s
@@ -571,6 +576,7 @@ package ada_main is
    --  system.arith_64%s
    --  system.arith_64%b
    --  system.fat_flt%s
+   --  system.img_fixed_64%s
    --  system.img_flt%s
    --  system.multiprocessors%s
    --  system.multiprocessors%b

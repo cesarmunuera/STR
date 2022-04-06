@@ -55,11 +55,18 @@ begin
       Leer(vectorTemperaturas(1));
       vectorTiempos(1) := Clock;
 
+      --Put_Line("La temperatura actual es es: " & vectorTemperaturas(1)'Image);
+      --Put_Line("La temperatura anterior es es: " & vectorTemperaturas(2)'Image);
+
+      Put_Line("El tiempo actual es: " & Seconds(vectorTiempos(1))'Image);
+      Put_Line("El tiempo anterior es: " & Seconds(vectorTiempos(2))'Image);
+
       dif_temp := vectorTemperaturas(1) - vectorTemperaturas(2);
+      Put_Line("La diferencia de tiempos es: " & dif_temp'Image);
       dif_tiempo := Float(Seconds(vectorTiempos(1))) - Float(Seconds(vectorTiempos(2)));
 
       pendiente_actual := Float(dif_temp)/dif_tiempo;
-      Put_Line("La pendiente actual es: " & pendiente_actual'Image);
+      --Put_Line("La pendiente actual es: " & pendiente_actual'Image);
 
       if (pendiente_actual > pendiente_maxima) then
          --Put_Line("La pendiente superior actual es: " & pendiente_actual'Image);
@@ -96,4 +103,7 @@ begin
    potencia := 0.0;
    Escribir(potencia);
 
+
+
+   --En vez de segundos float y delay 0.1, usamos integer milisegundos y delay 1
 end main;

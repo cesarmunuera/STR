@@ -13,9 +13,9 @@ W horno%s		horno.adb		horno.ali
 
 U sensor%s		sensor.ads		4fc4ff4f EE NE OO PK
 
-D horno.ads		20220403204952 99cfb3f9 horno%s
-D sensor.ads		20220403213354 4fc4ff4f sensor%s
-D sensor.adb		20220403221118 1be19fbb sensor%b
+D horno.ads		20220406060450 99cfb3f9 horno%s
+D sensor.ads		20220406060450 4fc4ff4f sensor%s
+D sensor.adb		20220406060450 1be19fbb sensor%b
 D system.ads		20210520051136 2ffa5114 system%s
 G a e
 G c Z s b [leer sensor 4 14 none]
