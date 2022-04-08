@@ -4,7 +4,8 @@ use Calefactor, Sensor, Ada.Calendar, Ada.Text_IO;
 procedure main is
    temp_actual, temp_anterior, temp_aux, temp_despegue, dif_temp, temp_media, Te, temp_estable : Temperaturas;
    potencia : Potencias;
-   Cp, pendiente_actual, pendiente_maxima, Ct, dif_tiempo : Float;
+   Cp, Ct : Float;
+   dif_tiempo, pendiente_actual, pendiente_maxima : Integer;
    fin : Boolean;
    tiempo_anterior, tiempo_actual, tiempo_aux : Time;
 
@@ -16,7 +17,7 @@ procedure main is
 begin
 
    fin := false;
-   pendiente_maxima := 0.0;
+   pendiente_maxima := 0;
 
    --Valores obtenidos en medir1.
    Cp := 28.65;
@@ -33,10 +34,11 @@ begin
    --Partimos de la temperatura en la que se supone que entramos en el regimen transitorio.
    --Por tanto, esto simplemente es un checkeo, ya que la actual tiene que ser superior.
    Leer(vectorTemperaturas(1));
+   vectorTiempos(2) := Clock;
    Put_Line("Esperando a llegar al regimen transitorio ...");
    while (vectorTemperaturas(1) < temp_despegue) loop
       Leer(vectorTemperaturas(1));
-      vectorTiempos(1) := Clock;
+      tiempo_anterior := Clock;
    end loop;
    Put_Line("Hemos entrado en el regimen transitorio!");
 
@@ -46,30 +48,25 @@ begin
    --eso el tiempo lo hemos tomado en su momento. En el bucle, comprobamos la pendiente actual
    --con la anterior. Si es superior, los valores actuales pasan a los anteriores, y los anteriores
    --al auxiliar. De tal forma que cuando lleguemos a una pendiente menor a la anterior,
-   --podamos tener los puntos que han sido los maximos. T1 será el aux y T2 el anterior.
-
+   --podamos tener los puntos que han sido los maximos. T1 serÃ¡ el aux y T2 el anterior.
+   vectorTemperaturas(2) := vectorTemperaturas(1);
    while (vectorTemperaturas(1) < temp_estable) loop
-
-      vectorTemperaturas(2) := vectorTemperaturas(1);
-      vectorTiempos(2) := vectorTiempos(1);
-
-      delay 0.1;
+      delay 1.0;
 
       Leer(vectorTemperaturas(1));
       vectorTiempos(1) := Clock;
 
-      --Put_Line(vectorTemperaturas(1)'Image);
-      --Put_Line("La temperatura anterior es: " & vectorTemperaturas(2)'Image);
+      --Put_Line("La temperatura actual es es: " & vectorTemperaturas(1)'Image);
+      --Put_Line("La temperatura anterior es es: " & vectorTemperaturas(2)'Image);
 
-      --Put_Line("El tiempo actual es: " & Seconds(vectorTiempos(1))'Image);
-      --Put_Line("El tiempo anterior es: " & Seconds(vectorTiempos(2))'Image);
+      Put_Line("El tiempo actual es: " & Seconds(vectorTiempos(1))'Image);
+      Put_Line("El tiempo anterior es: " & Seconds(vectorTiempos(2))'Image);
 
       dif_temp := vectorTemperaturas(1) - vectorTemperaturas(2);
-      dif_tiempo := Float(Seconds(vectorTiempos(1))) - Float(Seconds(vectorTiempos(2)));
-      --Put_Line("La diferencia de tiempos es: " & dif_tiempo'Image);
-      Put_Line(dif_temp'Image);
+      Put_Line("La diferencia de tiempos es: " & dif_temp'Image);
+      dif_tiempo := Integer(Seconds(vectorTiempos(1))) - Integer(Seconds(vectorTiempos(2)));
 
-      pendiente_actual := Float(dif_temp)/dif_tiempo;
+      pendiente_actual := Integer(dif_temp)/dif_tiempo;
       --Put_Line("La pendiente actual es: " & pendiente_actual'Image);
 
       if (pendiente_actual > pendiente_maxima) then

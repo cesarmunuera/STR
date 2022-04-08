@@ -15,17 +15,15 @@ RV NO_RELATIVE_DELAY
 RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U main%b		main.adb		8a0888df NE OO SU IL
+U main%b		main.adb		12ff36ab NE OO SU IL
 W ada%s			ada.ads			ada.ali
 W ada.calendar%s	a-calend.adb		a-calend.ali
 Z ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
 Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 W calefactor%s		calefactor.adb		calefactor.ali
-Z interfaces%s		interfac.ads		interfac.ali
 W sensor%s		sensor.adb		sensor.ali
 Z system.concat_2%s	s-conca2.adb		s-conca2.ali
-Z system.img_fixed_64%s	s-imfi64.ads		s-imfi64.ali
 Z system.img_flt%s	s-imgflt.ads		s-imgflt.ali
 
 D ada.ads		20210520051132 76789da1 ada%s
@@ -43,18 +41,15 @@ D a-unccon.ads		20210520051130 0e9b276f ada.unchecked_conversion%s
 D calefactor.ads	20220406060450 7ef44599 calefactor%s
 D interfac.ads		20210520051132 edec285f interfaces%s
 D i-cstrea.ads		20210520051132 e53d8b8e interfaces.c_streams%s
-D main.adb		20220406072952 52817044 main%b
+D main.adb		20220408115114 ca76ce30 main%b
 D sensor.ads		20220406060450 4fc4ff4f sensor%s
 D system.ads		20210520051136 2ffa5114 system%s
-D s-arit64.ads		20210520051132 5f88d2b0 system.arith_64%s
 D s-conca2.ads		20210520051132 02a0d7d0 system.concat_2%s
 D s-crtl.ads		20210520051132 0ebbdb71 system.crtl%s
 D s-exctab.ads		20210520051132 54135002 system.exception_table%s
 D s-ficobl.ads		20210520051132 078245e4 system.file_control_block%s
-D s-imagef.ads		20210520051134 019cdf69 system.image_f%s
 D s-imager.ads		20210520051134 500b11a9 system.image_r%s
 D s-imageu.ads		20210520051134 525c30c6 system.image_u%s
-D s-imfi64.ads		20210520051134 dbac59b3 system.img_fixed_64%s
 D s-imgflt.ads		20210520051134 78689de8 system.img_flt%s
 D s-imguns.ads		20210520051134 0e4da2ac system.img_uns%s
 D s-parame.ads		20210520051134 4752c4cb system.parameters%s
@@ -80,50 +75,45 @@ X 2 a-calend.ads
 36K13*Calendar 413e17 16|1w30 2r29
 42I9*Time<226I9> 16|9r49 14r43
 54O12*Day_Duration{duration}
-56V13*Clock{42I9} 16|36s24 40s26 56s27
-67V13*Seconds{54O12} 16|61s42 62s44 66s27 66s62 97s75 98s19
+56V13*Clock{42I9} 16|39s27 59s27
+67V13*Seconds{54O12} 16|68s27 68s62 101s75 102s19
 226I9 Time_Rep<long_long_integer>
 X 11 a-textio.ads
 58K13*Text_IO 725e16 16|1w44 2r43
-506U14*Put_Line 16|37s4 42s4 61s7 62s7 65s7 87s4 99s4
+506U14*Put_Line 16|36s4 41s4 70s7 91s4 103s4
 X 13 calefactor.ads
 1K9*Calefactor 8e15 16|1w6 2r5
 5F9*Potencias<float> 16|6r15
-7U14*Escribir 16|29s4 104s4
-X 14 interfac.ads
-55I9*Integer_64<long_long_integer>
+7U14*Escribir 16|29s4 108s4
 X 16 main.adb
-4U11*main 4b11 106l5 106t9
+4U11*main 4b11 113l5 113t9
 5f4 temp_actual{17|2F9}
 5f17 temp_anterior{17|2F9}
 5f32 temp_aux{17|2F9}
-5f42 temp_despegue{17|2F9} 23m4 38r35
-5f57 dif_temp{17|2F9} 64m7 65r50 68r33
-5f67 temp_media{17|2F9} 94m4 97r47
-5f79 Te{17|2F9} 24m4 97r60
-5f83 temp_estable{17|2F9} 25m4 52r35
-6f4 potencia{13|5F9} 28m4 29r13 97r18 103m4 104r13
-7f4 Cp{float} 22m4 97r36
-7f8 pendiente_actual{float} 68m7 71r11 73r30 87r41
-7f26 pendiente_maxima{float} 19m4 71r30 73m10
-7f44 Ct{float} 97m4 99r37
-7f48 dif_tiempo{float} 66m7 68r43
+5f42 temp_despegue{17|2F9} 23m4 37r35
+5f57 dif_temp{17|2F9} 67m7 70r16 72r33
+5f67 temp_media{17|2F9} 98m4 101r47
+5f79 Te{17|2F9} 24m4 101r60
+5f83 temp_estable{17|2F9} 25m4 51r35
+6f4 potencia{13|5F9} 28m4 29r13 101r18 107m4 108r13
+7f4 Cp{float} 22m4 101r36
+7f8 pendiente_actual{float} 72m7 75r11 77r30 91r41
+7f26 pendiente_maxima{float} 19m4 75r30 77m10
+7f44 Ct{float} 101m4 103r37
+7f48 dif_tiempo{float} 68m7 72r43
 8b4 fin{boolean} 18m4
-9i4 tiempo_anterior{2|42I9} 40m7
+9i4 tiempo_anterior{2|42I9}
 9i21 tiempo_actual{2|42I9}
 9i36 tiempo_aux{2|42I9}
 11A9 vector_temp(17|2F9)<integer> 12r25
-12a4 vectorTemperaturas{11A9} 35m9 35r9 38r11 39m12 39r12 51m4 51r29 52r11
-. 55m12 55r12 64r19 64r43 75m10 75r35 78m10 78r35 82m7 82r32 94r20 94r44
-. 94r74 98r57 98r81
+12a4 vectorTemperaturas{11A9} 35m9 35r9 37r11 38m12 38r12 51r11 53m7 53r32
+. 58m12 58r12 67r19 67r43 79m10 79r35 82m10 82r35 86m7 86r32 98r20 98r44
+. 98r74 102r57 102r81
 14A9 vector_tiempos(2|42I9)<integer> 15r20
-15a4 vectorTiempos{14A9} 36m4 56m7 61r50 62r52 66r35 66r70 76m10 76r30 79m10
-. 79r30 83m7 83r27 97r83 98r27
+15a4 vectorTiempos{14A9} 39m7 54m7 54r27 59m7 68r35 68r70 80m10 80r30 83m10
+. 83r30 87m7 87r27 101r83 102r27
 X 17 sensor.ads
 1K9*Sensor 16|1w18 2r17 17|5e11
 2F9*Temperaturas<float> 16|5r98 11r40
-4U14*Leer 16|35s4 39s7 55s7
-X 19 s-arit64.ads
-44I12*Int64{14|55I9}
-54V13*Multiply_With_Ovflo_Check64{44I12} 55i<c,__gnat_mulv64>22
+4U14*Leer 16|35s4 38s7 58s7
 
