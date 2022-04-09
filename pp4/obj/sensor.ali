@@ -13,20 +13,20 @@ W horno%s		horno.adb		horno.ali
 
 U sensor%s		sensor.ads		4fc4ff4f EE NE OO PK
 
-D horno.ads		20220406060450 99cfb3f9 horno%s
-D sensor.ads		20220406060450 4fc4ff4f sensor%s
-D sensor.adb		20220406060450 1be19fbb sensor%b
+D horno.ads		20220408145616 99cfb3f9 horno%s
+D sensor.ads		20220408145732 4fc4ff4f sensor%s
+D sensor.adb		20220408150724 1be19fbb sensor%b
 D system.ads		20210520051136 2ffa5114 system%s
 G a e
 G c Z s b [leer sensor 4 14 none]
-G r c none [leer sensor 4 14 none] [leer horno 8 14 none]
+G r c none [leer sensor 4 14 none] [leer horno 6 14 none]
 X 1 horno.ads
-3K9*Horno 9e10 3|1w6 2r5 8r7 8r18
-4F9*Temperaturas<float> 3|8r24
-8U14*Leer 3|8s13
+1K9*Horno 7e10 3|1w6 2r5 7r7 7r18
+2F9*Temperaturas<float> 3|7r24
+6U14*Leer 3|7s13
 X 2 sensor.ads
-1K9*Sensor 5l5 5e11 3|4b14 13l5 13t11
-2F9*Temperaturas<float> 4r40 3|6r40
-4U14*Leer 4<20 3|6b14 9t7
-4f20 la_Temperatura{2F9} 3|6b20 8m37 8r37
+1K9*Sensor 5l5 5e11 3|4b14 9l5 9t11
+2F9*Temperaturas<float> 4r40 3|5r41
+4U14*Leer 4<20 3|5b14 8t7
+4f20 la_Temperatura{2F9} 3|5b20 7m37 7r37
 

@@ -13,20 +13,20 @@ W horno%s		horno.adb		horno.ali
 
 U calefactor%s		calefactor.ads		7ef44599 EE NE OO PK
 
-D calefactor.ads	20220406060450 7ef44599 calefactor%s
-D calefactor.adb	20220406060450 9b58c1fb calefactor%b
-D horno.ads		20220406060450 99cfb3f9 horno%s
+D calefactor.ads	20220408145748 7ef44599 calefactor%s
+D calefactor.adb	20220408150352 9b58c1fb calefactor%b
+D horno.ads		20220408145616 99cfb3f9 horno%s
 D system.ads		20210520051136 2ffa5114 system%s
 G a e
 G c Z s b [escribir calefactor 7 14 none]
-G r c none [escribir calefactor 7 14 none] [escribir horno 7 14 none]
+G r c none [escribir calefactor 7 14 none] [escribir horno 5 14 none]
 X 1 calefactor.ads
-1K9*Calefactor 8l5 8e15 2|4b14 12l5 12t15
-5F9*Potencias<float> 7r37 2|6r37
-7U14*Escribir 7>24 2|6b14 9t7
-7f24 la_Potencia{5F9} 2|6b24 8r38
+1K9*Calefactor 8l5 8e15 2|4b14 9l5 9t15
+5F9*Potencias<float> 7r37 2|5r38
+7U14*Escribir 7>24 2|5b14 8t7
+7f24 la_Potencia{5F9} 2|5b24 7r38
 X 3 horno.ads
-3K9*Horno 2|1w6 2r5 8r7 8r22 3|9e10
-5F9*Potencias<float> 2|8r28
-7U14*Escribir 2|8s13
+1K9*Horno 2|1w6 2r5 7r7 7r22 3|7e10
+3F9*Potencias<float> 2|7r28
+5U14*Escribir 2|7s13
 

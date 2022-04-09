@@ -1,31 +1,7 @@
 <?xml version="1.0"?>
 <Locations >
   <Project >
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\P4\p4.gpr</vfs_project>
-      <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\P4\src\horno.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\P4\p4.gpr</vfs_project>
-      <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\P4\src\medir2.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 21" line=" 2" >
-      <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\P4\p4.gpr</vfs_project>
-      <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\P4\src\sensor.ads</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\P4\p4.gpr</vfs_project>
-      <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\P4\src\medir1.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\P4\p4.gpr</vfs_project>
-      <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\P4\src\medir1.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\P4\p4.gpr</vfs_project>
-      <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\P4\src\sensor.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 11" line=" 78" >
+    <file_marker column=" 1" line=" 79" >
       <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\P4\p4.gpr</vfs_project>
       <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\P4\src\medir1.adb</vfs_file>
     </file_marker>
