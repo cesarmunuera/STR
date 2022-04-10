@@ -2,11 +2,8 @@ with Horno;
 use Horno;
 
 package body calefactor is
-
-   procedure Escribir (la_Potencia: Potencias) is
+   procedure Escribir (la_Potencia : Potencias) is
    begin
-      Escribir(la_Potencia);
+      Horno.Escribir(Horno.Potencias(la_Potencia));
    end;
-
-
 end calefactor;

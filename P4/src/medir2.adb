@@ -1,7 +1,7 @@
 with Calefactor, Sensor, Ada.Calendar, Ada.Text_IO;
 use Calefactor, Sensor, Ada.Calendar, Ada.Text_IO;
 
-procedure main is
+procedure medir2 is
    temp_despegue, dif_temp, temp_media, Te, temp_estable : Temperaturas;
    potencia : Potencias;
    Cp, pendiente_actual, pendiente_maxima, Ct, dif_tiempo : Float;
@@ -46,7 +46,6 @@ begin
    --con la anterior. Si es superior, los valores actuales pasan a los anteriores, y los anteriores
    --al auxiliar. De tal forma que cuando lleguemos a una pendiente menor a la anterior,
    --podamos tener los puntos que han sido los maximos. T1 será el aux y T2 el anterior.
-
    Put_Line("Calculando pendiente máxima ...");
    while (vectorTemperaturas(1) < temp_estable) loop
 
@@ -58,7 +57,7 @@ begin
       Leer(vectorTemperaturas(1));
       vectorTiempos(1) := Clock;
 
-      --Put_Line(vectorTemperaturas(1)'Image);
+      --Put_Line("La teemperatura actual es: " & vectorTemperaturas(1)'Image);
       --Put_Line("La temperatura anterior es: " & vectorTemperaturas(2)'Image);
 
       --Put_Line("El tiempo actual es: " & Seconds(vectorTiempos(1))'Image);
@@ -70,10 +69,9 @@ begin
       --Put_Line("La diferencia de temperatura es: " & dif_temp'Image);
 
       pendiente_actual := Float(dif_temp)/dif_tiempo;
-      --Put_Line(pendiente_actual'Image);
+      --Put_Line("La pendiente actual es: " & pendiente_actual'Image);
 
       if (pendiente_actual > pendiente_maxima) then
-         --Put_Line("La pendiente superior actual es: " & pendiente_actual'Image);
          pendiente_maxima := pendiente_actual;
 
          vectorTemperaturas(4) := vectorTemperaturas(2);--Posiciones anteriores
@@ -82,11 +80,8 @@ begin
          vectorTemperaturas(3) := vectorTemperaturas(1);--Posiciones actuales
          vectorTiempos(3) := vectorTiempos(1);
       end if;
-
-      --Put_Line("La temperatura actual es: " & temp_actual'Image);
    end loop;
-   --Put_Line("La pendiente final es: " & pendiente_actual'Image);
-   Put_Line("La pendiente maxima fue: " & pendiente_maxima'Image);
+   --Put_Line("La pendiente maxima fue: " & pendiente_maxima'Image);
 
 
 
@@ -104,8 +99,4 @@ begin
    --Apagamos el horno.
    potencia := 0.0;
    Escribir(potencia);
-
-
-
-   --En vez de segundos float y delay 0.1, usamos integer milisegundos y delay 1
-end main;
+end medir2;
