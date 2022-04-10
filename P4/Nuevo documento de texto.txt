@@ -1,6 +1,6 @@
 PARÁMETRO   I	VALOR Y UNIDADES
 --------------------------------
      Te     I      25.15ºC
-     L	    I         
+     L	    I       2.8 S 
      Cp	    I      28.73 W/K
      Ct	    I     705.247 J/K

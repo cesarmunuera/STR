@@ -15,7 +15,7 @@ RV NO_RELATIVE_DELAY
 RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U main%b		main.adb		ebdd3ce4 NE OO SU IL
+U main%b		main.adb		7d38e83f NE OO SU IL
 W ada%s			ada.ads			ada.ali
 W ada.calendar%s	a-calend.adb		a-calend.ali
 Z ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
@@ -41,7 +41,7 @@ D a-unccon.ads		20210520051130 0e9b276f ada.unchecked_conversion%s
 D calefactor.ads	20220408145748 7ef44599 calefactor%s
 D interfac.ads		20210520051132 edec285f interfaces%s
 D i-cstrea.ads		20210520051132 e53d8b8e interfaces.c_streams%s
-D main.adb		20220409082926 3354c47f main%b
+D main.adb		20220410153830 a5b110a4 main%b
 D sensor.ads		20220408145732 4fc4ff4f sensor%s
 D system.ads		20210520051136 2ffa5114 system%s
 D s-conca2.ads		20210520051132 02a0d7d0 system.concat_2%s
@@ -67,47 +67,39 @@ D s-wchcon.ads		20210520051136 1b7d22d2 system.wch_con%s
 D unchconv.ads		20210520051136 ca2f9e18 unchecked_conversion%s
 G a e
 G c Z b b [main standard 4 11 none]
-G r c none [main standard 4 11 none] [escribir calefactor 7 14 none]
 G r c none [main standard 4 11 none] [leer sensor 4 14 none]
+G r c none [main standard 4 11 none] [escribir calefactor 7 14 none]
 X 1 ada.ads
 16K9*Ada 20e8 16|1r26 1r40 2r25 2r39
 X 2 a-calend.ads
 36K13*Calendar 413e17 16|1w30 2r29
-42I9*Time<226I9> 16|13r43
+42I9*Time<226I9> 16|8r35
 54O12*Day_Duration{duration}
-56V13*Clock{42I9} 16|38s27 59s27
-67V13*Seconds{54O12} 16|68s27 68s62 99s75 100s19
+56V13*Clock{42I9} 16|29s22 35s20
+67V13*Seconds{54O12} 16|38s15 38s46
 226I9 Time_Rep<long_long_integer>
 X 11 a-textio.ads
 58K13*Text_IO 725e16 16|1w44 2r43
-506U14*Put_Line 16|35s4 40s4 51s7 89s4 101s4
+506U14*Put_Line 16|15s4 22s4 30s4 39s4 40s4 56s4 65s4 69s4
 X 13 calefactor.ads
 1K9*Calefactor 8e15 16|1w6 2r5
 5F9*Potencias<float> 16|6r15
-7U14*Escribir 16|28s4 106s4
+7U14*Escribir 16|21s4 75s4
 X 16 main.adb
-4U11*main 4b11 111l5 111t9
-5f4 temp_despegue{17|2F9} 22m4 36r35
-5f19 dif_temp{17|2F9} 67m7 72r33
-5f29 temp_media{17|2F9} 96m4 99r47
-5f41 Te{17|2F9} 23m4 99r60
-5f45 temp_estable{17|2F9} 24m4 50r35
-6f4 potencia{13|5F9} 27m4 28r13 99r18 105m4 106r13
-7f4 Cp{float} 21m4 99r36
-7f8 pendiente_actual{float} 72m7 75r11 77r30
-7f26 pendiente_maxima{float} 18m4 75r30 77m10 89r43
-7f44 Ct{float} 99m4 101r37
-7f48 dif_tiempo{float} 68m7 72r43
-8b4 fin{boolean} 17m4
-10A9 vector_temp(17|2F9)<integer> 11r25
-11a4 vectorTemperaturas{10A9} 34m9 34r9 36r11 37m12 37r12 50r11 53m7 53r32
-. 58m12 58r12 67r19 67r43 79m10 79r35 82m10 82r35 96r20 96r44 96r74 100r57
-. 100r81
-13A9 vector_tiempos(2|42I9)<integer> 14r20
-14a4 vectorTiempos{13A9} 38m7 54m7 54r27 59m7 68r35 68r70 80m10 80r30 83m10
-. 83r30 99r83 100r27
+4U11*main 4b11 78l5 78t9
+6f4 potencia{13|5F9} 20m4 21r13 22r38 68r17 74m4 75r13
+7f4 temp_e{17|2F9} 14m9 15r51 31r25 68r50
+7f12 temp_actual{17|2F9} 28m9 30r44 31r11 33m12 36r21 40r49 47r16 52m9 53r11
+. 57r11 59r19 61m12 65r55 68r36
+7f25 temp_aux{17|2F9} 47m4 53r25 57r25 59m7
+7f35 temp_despegue{17|2F9} 36m4
+7f50 aux{17|2F9} 53m4
+8i4 tiempo_inicial{2|42I9} 29m4 38r54
+8i20 tiempo_final{2|42I9} 35m4 38r23
+9f4 L{float} 38m4 39r39
+10f4 Cp{float} 68m4 69r28
 X 17 sensor.ads
 1K9*Sensor 16|1w18 2r17 17|5e11
-2F9*Temperaturas<float> 16|5r60 10r40
-4U14*Leer 16|34s4 37s7 58s7
+2F9*Temperaturas<float> 16|7r56
+4U14*Leer 16|14s4 28s4 33s7 52s4 61s7
 
