@@ -1,0 +1,27 @@
+with Calefactor, Sensor, Ada.Calendar, Ada.Text_IO;
+use Calefactor, Sensor, Ada.Calendar, Ada.Text_IO;
+
+procedure Main is
+   potencia : Potencias;
+   temp: Temperaturas;
+   Fichero1 : File_Type;
+   
+   
+begin
+
+   Open(Fichero1, Out_File, "C:\Users\cesar\Desktop\Universidad\STR\STR\P5\src\lecturas.txt");
+  
+   
+--Encendemos el horno.
+   potencia := 3000.0;
+   Escribir(potencia);
+   
+   while (true) loop
+      delay 0.1;
+      Leer(temp);
+      Put_Line(temp'Image);
+      Put_Line(Fichero1, temp'Image);
+   end loop;
+   
+   Close(Fichero1);
+end Main;

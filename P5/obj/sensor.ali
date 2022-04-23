@@ -1,0 +1,32 @@
+V "GNAT Lib v2021"
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_FLOATING_POINT
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U sensor%b		sensor.adb		8f056307 NE OO PK
+W horno%s		horno.adb		horno.ali
+
+U sensor%s		sensor.ads		4fc4ff4f EE NE OO PK
+
+D horno.ads		20220420214124 99cfb3f9 horno%s
+D sensor.ads		20220420214124 4fc4ff4f sensor%s
+D sensor.adb		20220420214124 590e2fb1 sensor%b
+D system.ads		20210520051136 2ffa5114 system%s
+G a e
+G c Z s b [leer sensor 4 14 none]
+G r c none [leer sensor 4 14 none] [leer horno 6 14 none]
+X 1 horno.ads
+1K9*Horno 7e10 3|1w6 5r7 5r19
+2F9*Temperaturas<float> 3|5r25
+6U14*Leer 3|5s13
+X 2 sensor.ads
+1K9*Sensor 5l5 5e11 3|2b14 7l5 7t11
+2F9*Temperaturas<float> 4r40 3|3r40
+4U14*Leer 4<20 3|3b14 6l8 6t12
+4f20 la_Temperatura{2F9} 3|3b20 5m38 5r38
+
