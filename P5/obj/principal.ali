@@ -6,25 +6,23 @@ A -march=x86-64
 P ZX
 
 RN
-RV NO_CALENDAR
 RV NO_DELAY
 RV NO_FIXED_POINT
 RV NO_FLOATING_POINT
 RV NO_IO
 RV NO_RELATIVE_DELAY
 RV NO_DEFAULT_INITIALIZATION
-RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U main%b		main.adb		829320b0 NE OO SU
+U principal%b		principal.adb		bb2c935c NE OO SU IL
 W ada%s			ada.ads			ada.ali
-W ada.calendar%s	a-calend.adb		a-calend.ali
 Z ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
+W ada.real_time%s	a-reatim.adb		a-reatim.ali
 Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 W calefactor%s		calefactor.adb		calefactor.ali
+W pid%s			pid.adb			pid.ali
 W sensor%s		sensor.adb		sensor.ali
-Z system.concat_2%s	s-conca2.adb		s-conca2.ali
 Z system.img_flt%s	s-imgflt.ads		s-imgflt.ali
 
 D ada.ads		20210520051132 76789da1 ada%s
@@ -32,6 +30,7 @@ D a-calend.ads		20210520051128 474d9720 ada.calendar%s
 D a-caldel.ads		20210520051128 9f20b83d ada.calendar.delays%s
 D a-except.ads		20210520051128 946f3014 ada.exceptions%s
 D a-ioexce.ads		20210520051128 e4a01f64 ada.io_exceptions%s
+D a-reatim.ads		20210520051128 0240fc73 ada.real_time%s
 D a-stream.ads		20210520051130 119b8fb3 ada.streams%s
 D a-string.ads		20210520051130 90ac6797 ada.strings%s
 D a-sttebu.ads		20210520051130 18209c64 ada.strings.text_buffers%s
@@ -41,11 +40,15 @@ D a-textio.ads		20210520051130 aef4d56d ada.text_io%s
 D a-unccon.ads		20210520051130 0e9b276f ada.unchecked_conversion%s
 D calefactor.ads	20220420214124 7ef44599 calefactor%s
 D interfac.ads		20210520051132 edec285f interfaces%s
+D i-c.ads		20210520051132 d9beded9 interfaces.c%s
+D i-cstrin.ads		20210520051132 341d0ddf interfaces.c.strings%s
 D i-cstrea.ads		20210520051132 e53d8b8e interfaces.c_streams%s
-D main.adb		20220423172214 5a1ad82b main%b
+D pid.ads		20220424153752 43ecaad7 pid%s
+D pid.adb		20220424201706 04589372 pid%b
+D principal.adb		20220424201430 6544aa43 principal%b
 D sensor.ads		20220420214124 4fc4ff4f sensor%s
 D system.ads		20210520051136 2ffa5114 system%s
-D s-conca2.ads		20210520051132 02a0d7d0 system.concat_2%s
+D s-atacco.ads		20210520051132 4c36d12f system.address_to_access_conversions%s
 D s-crtl.ads		20210520051132 0ebbdb71 system.crtl%s
 D s-exctab.ads		20210520051132 54135002 system.exception_table%s
 D s-ficobl.ads		20210520051132 078245e4 system.file_control_block%s
@@ -53,68 +56,70 @@ D s-imager.ads		20210520051134 500b11a9 system.image_r%s
 D s-imageu.ads		20210520051134 525c30c6 system.image_u%s
 D s-imgflt.ads		20210520051134 78689de8 system.img_flt%s
 D s-imguns.ads		20210520051134 0e4da2ac system.img_uns%s
+D s-multip.ads		20210520051134 38ac9f73 system.multiprocessors%s
+D s-osinte.ads		20210520051128 97504df8 system.os_interface%s
 D s-parame.ads		20210520051134 4752c4cb system.parameters%s
 D s-powflt.ads		20210520051134 46f7a1b9 system.powten_flt%s
 D s-putima.ads		20210520051134 4e095881 system.put_images%s
 D s-secsta.ads		20210520051134 9b3ab94b system.secondary_stack%s
 D s-soflin.ads		20210520051134 a7318a92 system.soft_links%s
 D s-stache.ads		20210520051134 a37c21ec system.stack_checking%s
+D s-stausa.ads		20210520051134 017a0a05 system.stack_usage%s
 D s-stalib.ads		20210520051134 472fbca8 system.standard_library%s
 D s-stoele.ads		20210520051134 2dc34a04 system.storage_elements%s
 D s-stoele.adb		20210520051134 ed88f8fb system.storage_elements%b
+D s-tasinf.ads		20210520051128 601f6b72 system.task_info%s
+D s-taspri.ads		20210520051128 a1350802 system.task_primitives%s
+D s-taprop.ads		20210520051128 6eefbe12 system.task_primitives.operations%s
+D s-taskin.ads		20210520051128 88fba9ad system.tasking%s
 D s-traent.ads		20210520051134 26a8d361 system.traceback_entries%s
 D s-unstyp.ads		20210520051134 2b077493 system.unsigned_types%s
 D s-wchcon.ads		20210520051136 1b7d22d2 system.wch_con%s
+D s-win32.ads		20210520051136 15ac53fb system.win32%s
 D unchconv.ads		20210520051136 ca2f9e18 unchecked_conversion%s
 G a e
-G c Z b b [main standard 4 11 none]
-G r c none [main standard 4 11 none] [escribir calefactor 7 14 none]
-G r c none [main standard 4 11 none] [leer sensor 4 14 none]
+G c Z b b [principal standard 4 11 none]
+G r i none [principal standard 4 11 none] [pid standard 5 9 none]
+G r c none [principal standard 4 11 none] [leer sensor 4 14 none]
+G r c none [principal standard 4 11 none] [escribir calefactor 7 14 none]
 X 1 ada.ads
-16K9*Ada 20e8 16|1r26 1r40 2r25 2r39
-X 2 a-calend.ads
-36K13*Calendar 413e17 16|1w30 2r29
-42I9*Time<226I9> 16|13r43
-54O12*Day_Duration{duration}
-56V13*Clock{42I9} 16|41s27 61s27
-67V13*Seconds{54O12} 16|70s27 70s62 98s75 99s19
-226I9 Time_Rep<long_long_integer>
-X 11 a-textio.ads
-58K13*Text_IO 725e16 16|1w44 2r43
-65P9*File_Type 16|16r15
-67n32*Out_File{67E9} 16|18r19
-112U14*Open 16|18s4
-127U14*Close 16|107s4
-496U14*Put_Line 16|76s7
-506U14*Put_Line 16|38s4 43s4 52s4 75s7 100s4
-X 13 calefactor.ads
-1K9*Calefactor 8e15 16|1w6 2r5
-5F9*Potencias<float> 16|6r15
-7U14*Escribir 16|31s4 105s4
-X 16 main.adb
-4U11*Main 4b11 108l5 108t9
-5f4 temp_despegue{17|2F9} 25m4 39r35
-5f19 dif_temp{17|2F9} 69m7 74r33
-5f29 temp_media{17|2F9} 95m4 98r47
-5f41 Te{17|2F9} 26m4 98r60
-5f45 temp_estable{17|2F9} 27m4 53r35
-6f4 potencia{13|5F9} 30m4 31r13 98r18 104m4 105r13
-7f4 Cp{float} 24m4 98r36
-7f8 pendiente_actual{float} 74m7 75r16 76r26 78r11 79r30
-7f26 pendiente_maxima{float} 21m4 78r30 79m10
-7f44 Ct{float} 98m4 100r37
-7f48 dif_tiempo{float} 70m7 74r43
-8b4 fin{boolean} 20m4
-10A9 vector_temp(17|2F9)<integer> 11r25
-11a4 vectorTemperaturas{10A9} 37m9 37r9 39r11 40m12 40r12 53r11 55m7 55r32
-. 60m12 60r12 69r19 69r43 81m10 81r35 84m10 84r35 95r20 95r44 95r74 99r57
-. 99r81
-13A9 vector_tiempos(2|42I9)<integer> 14r20
-14a4 vectorTiempos{13A9} 41m7 56m7 56r27 61m7 70r35 70r70 82m10 82r30 85m10
-. 85r30 98r83 99r27
-16p4 Fichero1{11|65P9} 18m9 18r9 76r16 107m10 107r10
-X 17 sensor.ads
-1K9*Sensor 16|1w18 2r17 17|5e11
-2F9*Temperaturas<float> 16|5r60 10r40
-4U14*Leer 16|37s4 40s7 60s7
+16K9*Ada 20e8 21|1r6 1r21 2r5 2r20
+X 6 a-reatim.ads
+39K13*Real_Time 185e18 21|1w10 2r9
+X 12 a-textio.ads
+58K13*Text_IO 725e16 21|1w25 2r24
+506U14*Put_Line 21|36s7
+X 14 calefactor.ads
+1K9*Calefactor 8e15 21|1w42 2r41
+5F9*Potencias<float> 21|6r73 21r8
+7U14*Escribir 21|39s7 43s4
+X 19 pid.ads
+2F9 Real 21|6r29
+3F9 Entrada 21|6r42
+4F9 Salida 21|6r65
+5k9*PID 18e8 21|1w54 6r25
+6R9 Controlador 21|16r14[6]
+8U14 Programar 21|29s4[6]
+9U14 Controlar 21|38s7[6]
+X 21 principal.adb
+4U11*principal 4b11 45l5 45t14
+6K12 PID_t[19|5] 7r8
+9f4 Kd{float} 26m4 29r28
+9f8 Ki{float} 25m4 29r25
+12f4 Kp{float} 25r10 26r10 29r22
+13f4 Ti{float} 25r15
+14f4 Td{float} 26r15
+16r4 control{19|6R9[6]} 29m14 29r14 38m17 38r17
+18i4 Tiempo_ejecucion{integer} 32r16
+19f4 Temperatura_horno{22|2F9} 34m12 36r16 38r45
+20f4 Temperatura_deseada{22|2F9} 38r25
+21f4 u{14|5F9} 38m63 39r16
+32i8 i{integer}
+X 22 sensor.ads
+1K9*Sensor 21|1w34 2r33 22|5e11
+2F9*Temperaturas<float> 21|6r51 19r24 20r26
+4U14*Leer 21|34s7
+X 40 s-stausa.ads
+208U14*Initialize 209i<c,__gnat_stack_usage_initialize>22
+273U14*Output_Results 277i<c,__gnat_stack_usage_output_results>22
 

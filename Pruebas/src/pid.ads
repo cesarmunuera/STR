@@ -5,12 +5,11 @@ generic
 package PID is
    type Controlador is limited private;
    
-   --Inicializa el controlador con las tres constantes preseteadas
-   procedure Programar (el_Controlador: in out Controlador; Kp, Ki, Kd: Real);      
-   
-   --Le pasamos el error y nos dice la portencia que tienes que enchufar al horno
-   procedure Controlar(con_el_Controlador: in out Controlador; R, C: Entrada; U: out Salida);
-   
+   procedure Programar (el_Controlador: in out Controlador;
+                            Kp, Ki, Kd:        Real);                   
+   procedure Controlar(con_el_Controlador: in out Controlador;
+                                     R, C:        Entrada;
+                                        U: out    Salida);
 private
    type Controlador is record
       -- Parámetros del controlador

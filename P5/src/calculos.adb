@@ -1,10 +1,10 @@
 with Calefactor, Sensor, Ada.Calendar, Ada.Text_IO;
 use Calefactor, Sensor, Ada.Calendar, Ada.Text_IO;
 
-procedure Main is
-   temp_despegue, dif_temp, temp_media, Te, temp_estable : Temperaturas;
+procedure calculos is
+   temp_despegue, dif_temp, Te, temp_estable : Temperaturas;
    potencia : Potencias;
-   Cp, pendiente_actual, pendiente_maxima, Ct, dif_tiempo : Float;
+   Cp, pendiente_actual, pendiente_maxima, dif_tiempo : Float;
    fin : Boolean;
 
    type vector_temp is array (1..4) of Temperaturas;
@@ -13,9 +13,9 @@ procedure Main is
    type vector_tiempos is array (1..4) of Time;
    vectorTiempos : vector_tiempos;
 
-   Fichero1 : File_Type;
+   Kp, Ti, Td, L, T : Float;
+
 begin
-   Open(Fichero1, Out_File, "C:\Users\cesar\Desktop\Universidad\STR\STR\P5\src\lecturaspendientes.txt");
 
    fin := false;
    pendiente_maxima := 0.0;
@@ -60,20 +60,11 @@ begin
       Leer(vectorTemperaturas(1));
       vectorTiempos(1) := Clock;
 
-      --Put_Line("La teemperatura actual es: " & vectorTemperaturas(1)'Image);
-      --Put_Line("La temperatura anterior es: " & vectorTemperaturas(2)'Image);
-
-      --Put_Line("El tiempo actual es: " & Seconds(vectorTiempos(1))'Image);
-      --Put_Line("El tiempo anterior es: " & Seconds(vectorTiempos(2))'Image);
-
       dif_temp := vectorTemperaturas(1) - vectorTemperaturas(2);
       dif_tiempo := Float(Seconds(vectorTiempos(1))) - Float(Seconds(vectorTiempos(2)));
-      --Put_Line("La diferencia de tiempos es: " & dif_tiempo'Image);
-      --Put_Line("La diferencia de temperatura es: " & dif_temp'Image);
 
       pendiente_actual := Float(dif_temp)/dif_tiempo;
-      Put_Line(pendiente_actual'Image);
-      Put_Line(Fichero1, pendiente_actual'Image);
+      --Put_Line(pendiente_actual'Image);
 
       if (pendiente_actual > pendiente_maxima) then
          pendiente_maxima := pendiente_actual;
@@ -85,24 +76,34 @@ begin
          vectorTiempos(3) := vectorTiempos(1);
       end if;
    end loop;
-   --Put_Line("La pendiente maxima fue: " & pendiente_maxima'Image);
 
+   --Obtenemos los puntos de la recta
+   Put_Line("Punto 1");
+   Put_Line("La temperatura de pendiente maxima es " & vectorTemperaturas(4)'Image);
+   Put_Line("El tiempo de pendiente maxima es " & Float(Seconds(vectorTiempos(4)))'Image);
+   Put_Line("Punto 2");
+   Put_Line("La temperatura de pendiente maxima es " & vectorTemperaturas(3)'Image);
+   Put_Line("El tiempo de pendiente maxima es " & Float(Seconds(vectorTiempos(3)))'Image);
 
+   --Generamos la recta
+   Put_Line("La recta que sale con estos puntos es: y-25.74 = (38)/(25) * (x-5134.4)" );
+   Put_Line("La temperatura K es 60º, y la temperatura base es de 25º");
+   Put_Line("Interseccionando con estas rectas, obtenemos los tiempos 51340.8s y 51369.5");
+   Put_Line("Por tanto, L 51340.8s vale, y T vale 28.7");
+   L := 51340.8;
+   T := 28.7;
 
-   --La temperatura con pendiente maxima es la que se encuentra entre las temperaturas que nos han dado
-   --una pendiente maxima. Por ello, hacemos la media entre estas dos temperaturas. Se calcula el valor
-   --intermedio y se le suma el offset, que es la temperatura menor.
-   temp_media := ((vectorTemperaturas(3) - vectorTemperaturas(4))/2.0) + vectorTemperaturas(4);
-
-   --Calculamos Ct con los datos anteriores.
-   Ct := ((Float(potencia) - Float(Cp * Float(temp_media - Te))) * (Float(Seconds(vectorTiempos(3)))
-          - Float(Seconds(vectorTiempos(4))))) / (Float(vectorTemperaturas(3) - vectorTemperaturas(4)));
-   Put_Line("EL VALOR DE Ct ES: " & Ct'Image);
+   --Calculamos Kp, Ti y Td
+   Kp := 1.2 * (T/L);   --6.7 x 10(-4)
+   Ti := 2.0 * L;       --102681.8
+   Td := 0.5 * L;       --25670.4
+   Put_Line("El valor de Kp es: " & Kp'Image);
+   Put_Line("El valor de Ti es: " & Ti'Image);
+   Put_Line("El valor de Td es: " & Td'Image);
 
 
    --Apagamos el horno.
    potencia := 0.0;
    Escribir(potencia);
 
-   Close(Fichero1);
-end Main;
+end calculos;

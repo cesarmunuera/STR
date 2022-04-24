@@ -15,12 +15,14 @@ RV NO_RELATIVE_DELAY
 RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U main%b		main.adb		5b23fcfa NE OO SU
+U main%b		main.adb		61e15f34 NE OO SU
 W ada%s			ada.ads			ada.ali
 W ada.calendar%s	a-calend.adb		a-calend.ali
 Z ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
 Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
+W calefactor%s		calefactor.adb		calefactor.ali
+W sensor%s		sensor.adb		sensor.ali
 Z system.concat_2%s	s-conca2.adb		s-conca2.ali
 Z system.img_flt%s	s-imgflt.ads		s-imgflt.ali
 
@@ -36,9 +38,11 @@ D a-stuten.ads		20210520051130 808c40ad ada.strings.utf_encoding%s
 D a-tags.ads		20210520051130 9eaa38c6 ada.tags%s
 D a-textio.ads		20210520051130 aef4d56d ada.text_io%s
 D a-unccon.ads		20210520051130 0e9b276f ada.unchecked_conversion%s
+D calefactor.ads	20220420214124 7ef44599 calefactor%s
 D interfac.ads		20210520051132 edec285f interfaces%s
 D i-cstrea.ads		20210520051132 e53d8b8e interfaces.c_streams%s
-D main.adb		20220403174846 b29abeb7 main%b
+D main.adb		20220424102814 b968a7af main%b
+D sensor.ads		20220420214124 4fc4ff4f sensor%s
 D system.ads		20210520051136 2ffa5114 system%s
 D s-conca2.ads		20210520051132 02a0d7d0 system.concat_2%s
 D s-crtl.ads		20210520051132 0ebbdb71 system.crtl%s
@@ -62,25 +66,50 @@ D s-unstyp.ads		20210520051134 2b077493 system.unsigned_types%s
 D s-wchcon.ads		20210520051136 1b7d22d2 system.wch_con%s
 D unchconv.ads		20210520051136 ca2f9e18 unchecked_conversion%s
 G a e
-G c Z b b [main standard 3 11 none]
+G c Z b b [main standard 6 11 none]
+G r c none [main standard 6 11 none] [escribir calefactor 7 14 none]
+G r c none [main standard 6 11 none] [leer sensor 4 14 none]
 X 1 ada.ads
-16K9*Ada 20e8 15|1r6 1r20 2r5 2r19 2r32
+16K9*Ada 20e8 16|1r6 1r23 4r6 4r24
 X 2 a-calend.ads
-36K13*Calendar 413e17 15|1w10 2r9
-42I9*Time<226I9> 15|5r16 6r14
+36K13*Calendar 413e17 16|4w10 4r28
+42I9*Time<226I9> 16|8r21 9r16 10r16 11r21
 54O12*Day_Duration{duration}
-56V13*Clock{42I9} 15|11s17 17s15
-67V13*Seconds{54O12} 15|19s16 20s16
+56V13*Clock{42I9} 16|33s23 36s22 43s20 48s20 70s25
+67V13*Seconds{54O12} 16|34s29 37s28 44s31 49s30 71s31
 226I9 Time_Rep<long_long_integer>
 X 11 a-textio.ads
-58K13*Text_IO 725e16 15|1w24 2r23 2r36
-506U14*Put_Line 15|24s4 25s4 26s4
-X 15 main.adb
-3U11*Main 3b11 28l5 28t9
-5i4 t_inicial{2|42I9} 11m4 19r24
-6i4 t_final{2|42I9} 17m4 20r24
-8f4 t1{float} 19m4 22r15 25r37
-8f8 t2{float} 20m4 22r10 24r37
-8f12 t3{float} 22m4 26r37
-13i8 i{integer}
+58K13*Text_IO 725e16 16|1w10 1r27
+506U14*Put_Line 16|39s4 56s7 74s4
+X 13 calefactor.ads
+1K9*Calefactor 8e15 16|3w6 3r22
+5F9*Potencias<float> 16|21r15
+7U14*Escribir 16|29s4 76s4
+X 16 main.adb
+6U11*Main 6b11 79l5 79t9
+7f4 temp_amb{17|2F9} 28m4 73r52
+7f14 temp_act{17|2F9} 47m12 55r31 63r16 64r30 65r30
+7f24 temp_anterior{17|2F9} 42m12 55r40 63r25 64r39 66r30
+8i4 instanteInicial{2|42I9} 33m4 34r37
+9i4 instante1{2|42I9} 43m7 44r39
+10i4 instante2{2|42I9} 48m7 49r38
+11i4 instanteActual{2|42I9} 36m4 37r36 70m7 71r39
+12f4 segundosInicio{float} 44m7 57r43 67r42
+13f4 segundosInicial{float} 34m4 40r27
+14f4 difTiempoMax{float} 67m10 73r80
+15f4 difTempMax{float} 63r40 64m10 73r66
+16f4 tempAntMax{float} 66m10
+17f4 tempActMax{float} 65m10 73r35
+19f4 segundosActual{float} 37m4 40r10 71m7
+20f4 segundosFinal{float} 49m7 57r27 67r26
+21f4 potencia{13|5F9} 29r13 73r18
+22f4 Cp{float} 73r31
+23f4 Ct{float} 73m4 74r49
+25f4 temp_pendiente{float} 55m7 56r16 58r20
+25f20 tiempo_pendiente{float} 57m7 58r35
+25f38 pendiente{float} 58m7
+X 17 sensor.ads
+1K9*Sensor 16|2w6 2r18 17|5e11
+2F9*Temperaturas<float> 16|7r40
+4U14*Leer 16|42s7 47s7
 

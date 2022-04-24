@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
 <Locations >
-  <Project>
-    <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\P4\p4.gpr</vfs_file>
+  <Project >
     <file_marker current="true" column=" 1" line=" 1" >
       <vfs_project />
       <vfs_file>C:\Users\cesar\AppData\Local\Temp\Rar$DIa21112.37712\sensor.adb</vfs_file>

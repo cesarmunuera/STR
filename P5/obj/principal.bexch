@@ -1,18 +1,19 @@
 [GENERATED OBJECT FILE]
-b__main.o
+b__principal.o
 [PROJECT FILES]
 C:\Users\cesar\Desktop\Universidad\STR\STR\P5\p5.gpr
-20220420214124 a088aea85c8f3c1c7b69776649a7f1a8
+20220424201020 4ac41790278cb4d67ac061998ff3251a
 [BOUND OBJECT FILES]
+C:\Users\cesar\Desktop\Universidad\STR\STR\P5\obj\pid.o
 C:\Users\cesar\Desktop\Universidad\STR\STR\P5\obj\retardadores.o
 C:\Users\cesar\Desktop\Universidad\STR\STR\P5\obj\horno.o
 C:\Users\cesar\Desktop\Universidad\STR\STR\P5\obj\calefactor.o
 C:\Users\cesar\Desktop\Universidad\STR\STR\P5\obj\sensor.o
-C:\Users\cesar\Desktop\Universidad\STR\STR\P5\obj\main.o
+C:\Users\cesar\Desktop\Universidad\STR\STR\P5\obj\principal.o
 [GENERATED SOURCE FILES]
-b__main.ads
-b__main.adb
-b__main.ali
+b__principal.ads
+b__principal.adb
+b__principal.ali
 [RESULTING OPTIONS]
 -LC:\Users\cesar\Desktop\Universidad\STR\STR\P5\obj\
 -LC:\Users\cesar\Desktop\Universidad\STR\STR\P5\obj\
