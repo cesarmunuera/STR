@@ -1,13 +1,11 @@
 [GENERATED OBJECT FILE]
 b__main.o
 [PROJECT FILES]
-C:\Users\cesar\Desktop\Universidad\STR\STR\Pruebas\p5.gpr
-20220420214124 c5828355d8bd34e98d87f0f6c903aba5
+C:\Users\cesar\Desktop\Universidad\STR\STR\Pruebas\pruebas.gpr
+20220430153328 c5e85e8a0702f2dde8078bb5d1bf7212
 [BOUND OBJECT FILES]
-C:\Users\cesar\Desktop\Universidad\STR\STR\Pruebas\obj\retardadores.o
-C:\Users\cesar\Desktop\Universidad\STR\STR\Pruebas\obj\horno.o
-C:\Users\cesar\Desktop\Universidad\STR\STR\Pruebas\obj\calefactor.o
-C:\Users\cesar\Desktop\Universidad\STR\STR\Pruebas\obj\sensor.o
+C:\Users\cesar\Desktop\Universidad\STR\STR\Pruebas\obj\proc.o
+C:\Users\cesar\Desktop\Universidad\STR\STR\Pruebas\obj\plan.o
 C:\Users\cesar\Desktop\Universidad\STR\STR\Pruebas\obj\main.o
 [GENERATED SOURCE FILES]
 b__main.ads
@@ -19,8 +17,5 @@ b__main.ali
 -LC:/gnat/2021/lib/gcc/x86_64-w64-mingw32/10.3.1/adalib/
 -static
 -static-libgcc
-C:/gnat/2021/lib/gcc/x86_64-w64-mingw32/10.3.1/adalib/libgnarl.a
 C:/gnat/2021/lib/gcc/x86_64-w64-mingw32/10.3.1/adalib/libgnat.a
--Xlinker
---stack=0x200000,0x1000
--mthreads
+-Wl,--stack=0x2000000

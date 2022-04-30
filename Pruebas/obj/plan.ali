@@ -1,26 +1,34 @@
 V "GNAT Lib v2021"
-M P W=b
 A -gnatA
 A -mtune=generic
 A -march=x86-64
 P ZX
 
 RN
+RV NO_ACCESS_SUBPROGRAMS
+RV NO_CALENDAR
+RV NO_DELAY
+RV NO_FIXED_POINT
+RV NO_FLOATING_POINT
 RV NO_IO
-RV NO_STANDARD_STORAGE_POOLS
 RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLICIT_LOOPS
 
-U main%b		main.adb		7f9aca37 NE OO SU IL
+U plan%b		plan.adb		1932930b NE OO PK IL
 W ada%s			ada.ads			ada.ali
+W ada.calendar%s	a-calend.adb		a-calend.ali
 Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
-W plan%s		plan.adb		plan.ali
 W proc%s		proc.adb		proc.ali
 Z system.concat_2%s	s-conca2.adb		s-conca2.ali
-Z system.img_int%s	s-imgint.ads		s-imgint.ali
+Z system.img_flt%s	s-imgflt.ads		s-imgflt.ali
+
+U plan%s		plan.ads		04f51e26 EE NE OO PK IL
+Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
 
 D ada.ads		20210520051132 76789da1 ada%s
+D a-calend.ads		20210520051128 474d9720 ada.calendar%s
 D a-except.ads		20210520051128 946f3014 ada.exceptions%s
 D a-ioexce.ads		20210520051128 e4a01f64 ada.io_exceptions%s
 D a-stream.ads		20210520051130 119b8fb3 ada.streams%s
@@ -32,17 +40,20 @@ D a-textio.ads		20210520051130 aef4d56d ada.text_io%s
 D a-unccon.ads		20210520051130 0e9b276f ada.unchecked_conversion%s
 D interfac.ads		20210520051132 edec285f interfaces%s
 D i-cstrea.ads		20210520051132 e53d8b8e interfaces.c_streams%s
-D main.adb		20220430172940 65b00e11 main%b
 D plan.ads		20220430152920 04f51e26 plan%s
+D plan.adb		20220430172146 4455c00d plan%b
 D proc.ads		20220426094240 b02b0f6d proc%s
 D system.ads		20210520051136 2ffa5114 system%s
 D s-conca2.ads		20210520051132 02a0d7d0 system.concat_2%s
 D s-crtl.ads		20210520051132 0ebbdb71 system.crtl%s
 D s-exctab.ads		20210520051132 54135002 system.exception_table%s
 D s-ficobl.ads		20210520051132 078245e4 system.file_control_block%s
-D s-imagei.ads		20210520051134 0d3f86a7 system.image_i%s
-D s-imgint.ads		20210520051134 bdb6f5ec system.img_int%s
+D s-imager.ads		20210520051134 500b11a9 system.image_r%s
+D s-imageu.ads		20210520051134 525c30c6 system.image_u%s
+D s-imgflt.ads		20210520051134 78689de8 system.img_flt%s
+D s-imguns.ads		20210520051134 0e4da2ac system.img_uns%s
 D s-parame.ads		20210520051134 4752c4cb system.parameters%s
+D s-powflt.ads		20210520051134 46f7a1b9 system.powten_flt%s
 D s-putima.ads		20210520051134 4e095881 system.put_images%s
 D s-secsta.ads		20210520051134 9b3ab94b system.secondary_stack%s
 D s-soflin.ads		20210520051134 a7318a92 system.soft_links%s
@@ -55,27 +66,39 @@ D s-unstyp.ads		20210520051134 2b077493 system.unsigned_types%s
 D s-wchcon.ads		20210520051136 1b7d22d2 system.wch_con%s
 D unchconv.ads		20210520051136 ca2f9e18 unchecked_conversion%s
 G a e
-G c Z b b [main standard 4 11 none]
-G r c none [main standard 4 11 none] [medir plan 6 14 none]
+G c Z s b [medir plan 6 14 none]
+G c Z s s [array_ref_procedimiento_tIP plan 3 9 none]
+G c Z s s [array_tiempos_tIP plan 4 9 none]
 X 1 ada.ads
-16K9*Ada 20e8 13|1r6 2r5
-X 9 a-textio.ads
-58K13*Text_IO 725e16 13|1w10 2r9
-506U14*Put_Line 13|11s4 12s4 13s4 14s4 15s4
-X 13 main.adb
-4U11*main 4b11 18l5 18t9
-5a4 Procedimientos{14|3A9} 6r30 10r11
-6a4 Tiempos{14|4A9} 10m27 12r37 13r37 14r37 15r37
+16K9*Ada 20e8 15|1r6 1r23 2r12 3r11
+X 2 a-calend.ads
+36K13*Calendar 413e17 15|2w16 3r15
+42I9*Time<226I9> 15|9r46
+54O12*Day_Duration{duration}
+56V13*Clock{42I9} 15|12s20 16s16 21s16 26s16 31s16
+67V13*Seconds{54O12} 15|17s19 17s43 22s19 22s43 27s19 27s43 32s19 32s43
+226I9 Time_Rep<long_long_integer>
+X 10 a-textio.ads
+58K13*Text_IO 725e16 15|1w10 1r27
+506U14*Put_Line 15|37s7 38s7 39s7 40s7
 X 14 plan.ads
-1K9*plan 13|1w19 2r18 14|7e9
-2P9*ref_Procedimiento_t
-3A9*array_ref_Procedimiento_t(2P9)<integer> 13|5r20
-4A9*array_Tiempos_t(natural)<integer> 13|6r13
-6U14*Medir 13|10s4
-X 15 proc.ads
-1K9*Proc 13|1w25 2r24 15|6e9
-2U14*P1 13|5r50
-3U14*P2 13|5r61
-4U14*P3 13|5r72
-5U14*P4 13|5r83
+1K9*plan 7l5 7e9 15|5b14 50l5 50t9
+2P9*ref_Procedimiento_t 3r67
+3A9*array_ref_Procedimiento_t(2P9)<integer> 6r37 15|7r37
+4A9*array_Tiempos_t(natural)<integer> 6r78 15|7r78
+6U14*Medir 6>21 6<64 15|7b14 48l8 48t13
+6a21 Procedimientos{3A9} 15|7b21 15r7 20r7 25r7 30r7
+6a64 Tiempos{4A9} 15|7b64 43m7 44m7 45m7 46m7
+X 15 plan.adb
+8f7 t1{float} 17m7 37r40 43r29
+8f11 t2{float} 22m7 38r40 44r29
+8f15 t3{float} 27m7 39r40 45r29
+8f19 t4{float} 32m7 40r40 46r29
+9i7 t1fin{2|42I9} 16m7 17r27
+9i14 t2fin{2|42I9} 21m7 22r27
+9i21 t3fin{2|42I9} 26m7 27r27
+9i28 t4fin{2|42I9} 31m7 32r27
+9i35 tcomienzo{2|42I9} 12m7 17r51 22r51 27r51 32r51
+X 16 proc.ads
+1K9*Proc 15|2w6 3r5 16|6e9
 
