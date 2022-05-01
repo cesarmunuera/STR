@@ -40,7 +40,7 @@ package ada_main is
    pragma Export (C, main, "main");
 
    type Version_32 is mod 2 ** 32;
-   u00001 : constant Version_32 := 16#7f9aca37#;
+   u00001 : constant Version_32 := 16#155b329b#;
    pragma Export (C, u00001, "mainB");
    u00002 : constant Version_32 := 16#2e11c0b1#;
    pragma Export (C, u00002, "system__standard_libraryB");
@@ -280,7 +280,7 @@ package ada_main is
    pragma Export (C, u00119, "system__finalization_rootS");
    u00120 : constant Version_32 := 16#d265cbbc#;
    pragma Export (C, u00120, "system__file_control_blockS");
-   u00121 : constant Version_32 := 16#1932930b#;
+   u00121 : constant Version_32 := 16#8c3f60e9#;
    pragma Export (C, u00121, "planB");
    u00122 : constant Version_32 := 16#04f51e26#;
    pragma Export (C, u00122, "planS");
@@ -310,28 +310,10 @@ package ada_main is
    pragma Export (C, u00134, "ada__calendar__delaysB");
    u00135 : constant Version_32 := 16#d86d2f1d#;
    pragma Export (C, u00135, "ada__calendar__delaysS");
-   u00136 : constant Version_32 := 16#fd83e873#;
-   pragma Export (C, u00136, "system__concat_2B");
-   u00137 : constant Version_32 := 16#2d5a86c4#;
-   pragma Export (C, u00137, "system__concat_2S");
-   u00138 : constant Version_32 := 16#6424aad3#;
-   pragma Export (C, u00138, "system__img_fltS");
-   u00139 : constant Version_32 := 16#ecc88e78#;
-   pragma Export (C, u00139, "system__fat_fltS");
-   u00140 : constant Version_32 := 16#1b28662b#;
-   pragma Export (C, u00140, "system__float_controlB");
-   u00141 : constant Version_32 := 16#cf061228#;
-   pragma Export (C, u00141, "system__float_controlS");
-   u00142 : constant Version_32 := 16#2549028f#;
-   pragma Export (C, u00142, "system__img_utilB");
-   u00143 : constant Version_32 := 16#44802e3b#;
-   pragma Export (C, u00143, "system__img_utilS");
-   u00144 : constant Version_32 := 16#690df0ad#;
-   pragma Export (C, u00144, "system__powten_fltS");
-   u00145 : constant Version_32 := 16#eca5ecae#;
-   pragma Export (C, u00145, "system__memoryB");
-   u00146 : constant Version_32 := 16#76873720#;
-   pragma Export (C, u00146, "system__memoryS");
+   u00136 : constant Version_32 := 16#eca5ecae#;
+   pragma Export (C, u00136, "system__memoryB");
+   u00137 : constant Version_32 := 16#76873720#;
+   pragma Export (C, u00137, "system__memoryS");
 
    --  BEGIN ELABORATION ORDER
    --  ada%s
@@ -339,8 +321,6 @@ package ada_main is
    --  ada.characters.latin_1%s
    --  interfaces%s
    --  system%s
-   --  system.float_control%s
-   --  system.float_control%b
    --  system.img_int%s
    --  system.io%s
    --  system.io%b
@@ -349,7 +329,6 @@ package ada_main is
    --  system.crtl%s
    --  interfaces.c_streams%s
    --  interfaces.c_streams%b
-   --  system.powten_flt%s
    --  system.storage_elements%s
    --  system.storage_elements%b
    --  system.stack_checking%s
@@ -364,16 +343,12 @@ package ada_main is
    --  system.traceback_entries%b
    --  system.unsigned_types%s
    --  system.img_uns%s
-   --  system.img_util%s
-   --  system.img_util%b
    --  system.wch_con%s
    --  system.wch_con%b
    --  system.wch_jis%s
    --  system.wch_jis%b
    --  system.wch_cnv%s
    --  system.wch_cnv%b
-   --  system.concat_2%s
-   --  system.concat_2%b
    --  system.traceback%s
    --  system.traceback%b
    --  ada.characters.handling%s
@@ -452,8 +427,6 @@ package ada_main is
    --  ada.strings.text_buffers.utils%b
    --  system.arith_64%s
    --  system.arith_64%b
-   --  system.fat_flt%s
-   --  system.img_flt%s
    --  system.put_images%s
    --  system.put_images%b
    --  ada.streams%s

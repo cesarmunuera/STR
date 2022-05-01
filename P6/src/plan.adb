@@ -1,44 +1,53 @@
+with Ada.Text_IO; use Ada.Text_IO;
 with Proc, Ada.Calendar;
 use Proc, Ada.Calendar;
 
 package body plan is
 
    procedure Medir (Procedimientos: array_ref_Procedimiento_t; Tiempos : out array_Tiempos_t) is
-      t1fin, t1 : Time;
-      t2fin, t2 : Time;
-      t3fin, t3 : Time;
-      t4fin, t4 : Time;
-      tcomienzo : Time;
+      t1, t2 ,t3, t4 : Float;
+      t1fin, t2fin, t3fin, t4fin: Time;
+      tcomienzo1, tcomienzo2, tcomienzo3, tcomienzo4 : Time;
 
    begin
-      tcomienzo := Clock;
 
       --Medimos el tiempo del procedimiento 1
-      Procedimientos[1].all;
+      tcomienzo1 := Clock;
+      Procedimientos(1).all;
       t1fin := Clock;
-      t1 := tcomienzo - t1fin;
+      t1 := Float(Seconds(t1fin)) - Float(Seconds(tcomienzo1));
 
       --Medimos el tiempo del procedimiento 2
-      Procedimientos[2].all;
+      tcomienzo2 := Clock;
+      Procedimientos(2).all;
       t2fin := Clock;
-      t2 := tcomienzo - t2fin;
+      t2 := Float(Seconds(t2fin)) - Float(Seconds(tcomienzo2));
 
       --Medimos el tiempo del procedimiento 3
-      Procedimientos[3].all;
+      tcomienzo3 := Clock;
+      Procedimientos(3).all;
       t3fin := Clock;
-      t3 := tcomienzo - t3fin;
+      t3 := Float(Seconds(t3fin)) - Float(Seconds(tcomienzo3));
 
       --Medimos el tiempo del procedimiento 4
-      Procedimientos[4].all;
-      t1fin := Clock;
-      t4 := tcomienzo - t4fin;
+      tcomienzo4 := Clock;
+      Procedimientos(4).all;
+      t4fin := Clock;
+      t4 := Float(Seconds(t4fin)) - Float(Seconds(tcomienzo4));
+
 
       --Rellenamos el array de tiempo
-      Tiempos[1] := t1;
-      Tiempos[2] := t2;
-      Tiempos[3] := t3;
-      Tiempos[4] := t4;
+      --Put_Line("El tiempo de P1 es " & t1'Image);
+      --Put_Line("El tiempo de P2 es " & t2'Image);
+      --Put_Line("El tiempo de P3 es " & t3'Image);
+      --Put_Line("El tiempo de P4 es " & t4'Image);
+
+
+      Tiempos(1) := Integer(t1*1000.00);
+      Tiempos(2) := Integer(t2*1000.00);
+      Tiempos(3) := Integer(t3*1000.00);
+      Tiempos(4) := Integer(t4*1000.00);
 
    end Medir;
 
-end plan
+end plan;

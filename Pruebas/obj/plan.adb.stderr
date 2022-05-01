@@ -1,0 +1,2 @@
+plan.adb:49:13: error: unconstrained subtype not allowed (need initialization)
+plan.adb:49:13: error: provide initial value or explicit array bounds

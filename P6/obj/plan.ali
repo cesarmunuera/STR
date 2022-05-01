@@ -1,25 +1,32 @@
 V "GNAT Lib v2021"
-M P W=b
 A -gnatA
 A -mtune=generic
 A -march=x86-64
 P ZX
 
 RN
+RV NO_ACCESS_SUBPROGRAMS
+RV NO_CALENDAR
+RV NO_DELAY
+RV NO_FIXED_POINT
+RV NO_FLOATING_POINT
 RV NO_IO
-RV NO_STANDARD_STORAGE_POOLS
 RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLICIT_LOOPS
 
-U main%b		main.adb		1ec0fbda NE OO SU IL
+U plan%b		plan.adb		8c3f60e9 NE OO PK IL
 W ada%s			ada.ads			ada.ali
+W ada.calendar%s	a-calend.adb		a-calend.ali
 Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
-W plan%s		plan.adb		plan.ali
 W proc%s		proc.adb		proc.ali
-Z system.img_int%s	s-imgint.ads		s-imgint.ali
+
+U plan%s		plan.ads		04f51e26 EE NE OO PK IL
+Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
 
 D ada.ads		20210520051132 76789da1 ada%s
+D a-calend.ads		20210520051128 474d9720 ada.calendar%s
 D a-except.ads		20210520051128 946f3014 ada.exceptions%s
 D a-ioexce.ads		20210520051128 e4a01f64 ada.io_exceptions%s
 D a-stream.ads		20210520051130 119b8fb3 ada.streams%s
@@ -31,15 +38,13 @@ D a-textio.ads		20210520051130 aef4d56d ada.text_io%s
 D a-unccon.ads		20210520051130 0e9b276f ada.unchecked_conversion%s
 D interfac.ads		20210520051132 edec285f interfaces%s
 D i-cstrea.ads		20210520051132 e53d8b8e interfaces.c_streams%s
-D main.adb		20220501103834 0f71f6bd main%b
-D plan.ads		20220501122616 0f6ed767 plan%s
-D proc.ads		20220501095912 b02b0f6d proc%s
+D plan.ads		20220501095912 04f51e26 plan%s
+D plan.adb		20220501111026 d15833ef plan%b
+D proc.ads		20220427204432 b02b0f6d proc%s
 D system.ads		20210520051136 2ffa5114 system%s
 D s-crtl.ads		20210520051132 0ebbdb71 system.crtl%s
 D s-exctab.ads		20210520051132 54135002 system.exception_table%s
 D s-ficobl.ads		20210520051132 078245e4 system.file_control_block%s
-D s-imagei.ads		20210520051134 0d3f86a7 system.image_i%s
-D s-imgint.ads		20210520051134 bdb6f5ec system.img_int%s
 D s-parame.ads		20210520051134 4752c4cb system.parameters%s
 D s-putima.ads		20210520051134 4e095881 system.put_images%s
 D s-secsta.ads		20210520051134 9b3ab94b system.secondary_stack%s
@@ -53,30 +58,41 @@ D s-unstyp.ads		20210520051134 2b077493 system.unsigned_types%s
 D s-wchcon.ads		20210520051136 1b7d22d2 system.wch_con%s
 D unchconv.ads		20210520051136 ca2f9e18 unchecked_conversion%s
 G a e
-G c Z b b [main standard 4 11 none]
-G r c none [main standard 4 11 none] [medir plan 6 14 none]
+G c Z s b [medir plan 6 14 none]
+G c Z s s [array_ref_procedimiento_tIP plan 3 9 none]
+G c Z s s [array_tiempos_tIP plan 4 9 none]
 X 1 ada.ads
-16K9*Ada 20e8 13|1r6 2r5
-X 9 a-textio.ads
-58K13*Text_IO 725e16 13|1w10 2r9
-262U14*New_Line 13|27s7
-463U14*Put 13|22s7 23s7 24s7 25s7 26s7
-506U14*Put_Line 13|18s4 19s4 20s4 29s4
-X 13 main.adb
-4U11*main 4b11 32l5 32t9
-5a4 Procedimientos{14|3A9} 6r30 17r11
-6a4 Tiempos{14|4A9} 17m27 21r13 25r12
-21i8 i{integer} 23r12 25r20
+16K9*Ada 20e8 15|1r6 1r23 2r12 3r11
+X 2 a-calend.ads
+36K13*Calendar 413e17 15|2w16 3r15
+42I9*Time<226I9> 15|9r35 10r56
+54O12*Day_Duration{duration}
+56V13*Clock{42I9} 15|15s21 17s16 21s21 23s16 27s21 29s16 33s21 35s16
+67V13*Seconds{54O12} 15|18s19 18s43 24s19 24s43 30s19 30s43 36s19 36s43
+226I9 Time_Rep<long_long_integer>
+X 10 a-textio.ads
+58K13*Text_IO 725e16 15|1w10 1r27
 X 14 plan.ads
-1K9*plan 13|1w19 2r18 14|29e9
-2P9*ref_Procedimiento_t
-3A9*array_ref_Procedimiento_t(2P9)<integer> 13|5r20
-4A9*array_Tiempos_t(natural)<integer> 13|6r13
-6U14*Medir 13|17s4
-X 15 proc.ads
-1K9*Proc 13|1w25 2r24 15|6e9
-2U14*P1 13|5r50
-3U14*P2 13|5r61
-4U14*P3 13|5r72
-5U14*P4 13|5r83
+1K9*plan 7l5 7e9 15|5b14 53l5 53t9
+2P9*ref_Procedimiento_t 3r67
+3A9*array_ref_Procedimiento_t(2P9)<integer> 6r37 15|7r37
+4A9*array_Tiempos_t(natural)<integer> 6r78 15|7r78
+6U14*Medir 6>21 6<64 15|7b14 51l8 51t13
+6a21 Procedimientos{3A9} 15|7b21 16r7 22r7 28r7 34r7
+6a64 Tiempos{4A9} 15|7b64 46m7 47m7 48m7 49m7
+X 15 plan.adb
+8f7 t1{float} 18m7 46r29
+8f11 t2{float} 24m7 47r29
+8f15 t3{float} 30m7 48r29
+8f19 t4{float} 36m7 49r29
+9i7 t1fin{2|42I9} 17m7 18r27
+9i14 t2fin{2|42I9} 23m7 24r27
+9i21 t3fin{2|42I9} 29m7 30r27
+9i28 t4fin{2|42I9} 35m7 36r27
+10i7 tcomienzo1{2|42I9} 15m7 18r51
+10i19 tcomienzo2{2|42I9} 21m7 24r51
+10i31 tcomienzo3{2|42I9} 27m7 30r51
+10i43 tcomienzo4{2|42I9} 33m7 36r51
+X 16 proc.ads
+1K9*Proc 15|2w6 3r5 16|6e9
 

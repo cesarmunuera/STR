@@ -2,8 +2,10 @@
 b__main.o
 [PROJECT FILES]
 C:\Users\cesar\Desktop\Universidad\STR\STR\P6\p6.gpr
-20220426094206 a49071596233ee8a5d06b9c8e4c34c66
+20220427204432 a49071596233ee8a5d06b9c8e4c34c66
 [BOUND OBJECT FILES]
+C:\Users\cesar\Desktop\Universidad\STR\STR\P6\obj\proc.o
+C:\Users\cesar\Desktop\Universidad\STR\STR\P6\obj\plan.o
 C:\Users\cesar\Desktop\Universidad\STR\STR\P6\obj\main.o
 [GENERATED SOURCE FILES]
 b__main.ads

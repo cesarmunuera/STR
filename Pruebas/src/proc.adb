@@ -2,6 +2,10 @@ with Ada.Text_Io;
 use Ada.Text_Io;
 
 package body proc is
+
+   --Igual hay que hacer un delay until. Pillar el tiempo nada mas entrar al Pn, y hacerle delay until ese tiempo + el de computo.
+   --De esta forma, se cumple completamente que el computo sea 400ms.
+
    procedure P1 is
    begin
       Put_Line("Comenzamos con la P1");
