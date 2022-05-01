@@ -15,6 +15,7 @@ package plan is
       Planificable : Boolean;
    end record;
    type array_reg_Planificacion_t is array (Positive range <>) of reg_Planificacion_t;
+   type pVector_t is access array_reg_Planificacion_t;
 
    procedure Planificar (Tareas: in out array_reg_Planificacion_t);
 
@@ -24,6 +25,6 @@ package plan is
    end record;
 
    type array_t is array (Integer range <>) of array_reg;
-   --type array_t is array (Integer range <>) of array_reg;
+   type pArray_t is access array_t;
 
 end plan;

@@ -1,27 +1,8 @@
 <?xml version="1.0"?>
 <Locations >
-  <Project >
+  <Project>
+    <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\P6\p6.gpr</vfs_file>
     <file_marker column=" 1" line=" 1" >
-      <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\P6\p6.gpr</vfs_project>
-      <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\P6\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 33" >
-      <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\P6\p6.gpr</vfs_project>
-      <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\P6\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\P6\p6.gpr</vfs_project>
-      <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\P6\src\prueba.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 33" >
-      <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\P6\p6.gpr</vfs_project>
-      <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\P6\src\main.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\P6\p6.gpr</vfs_project>
-      <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\P6\src\prueba.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 33" >
       <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\P6\p6.gpr</vfs_project>
       <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\P6\src\main.adb</vfs_file>
     </file_marker>
@@ -29,17 +10,9 @@
       <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\P6\p6.gpr</vfs_project>
       <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\P6\src\proc.ads</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 1" >
+    <file_marker current="true" column=" 1" line=" 36" >
       <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\P6\p6.gpr</vfs_project>
       <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\P6\src\proc.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 1" line=" 36" >
-      <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\P6\p6.gpr</vfs_project>
-      <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\P6\src\proc.adb</vfs_file>
-    </file_marker>
-    <file_marker current="true" column=" 1" line=" 1" >
-      <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\P6\p6.gpr</vfs_project>
-      <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\P6\src\plan.adb</vfs_file>
     </file_marker>
   </Project>
 </Locations>

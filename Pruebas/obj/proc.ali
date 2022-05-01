@@ -35,7 +35,7 @@ D a-unccon.ads		20210520051130 0e9b276f ada.unchecked_conversion%s
 D interfac.ads		20210520051132 edec285f interfaces%s
 D i-cstrea.ads		20210520051132 e53d8b8e interfaces.c_streams%s
 D proc.ads		20220501095912 b02b0f6d proc%s
-D proc.adb		20220501105138 6ee46e95 proc%b
+D proc.adb		20220501110722 6ee46e95 proc%b
 D system.ads		20210520051136 2ffa5114 system%s
 D s-crtl.ads		20210520051132 0ebbdb71 system.crtl%s
 D s-exctab.ads		20210520051132 54135002 system.exception_table%s
@@ -61,11 +61,11 @@ X 1 ada.ads
 16K9*Ada 20e8 16|1r6 2r5
 X 11 a-textio.ads
 58K13*Text_IO 725e16 16|1w10 2r9
-506U14*Put_Line 16|7s7 14s7 21s7 28s7
+506U14*Put_Line 16|11s7 18s7 25s7 32s7
 X 15 proc.ads
-1K9*Proc 6l5 6e9 16|4b14 31l5 31t9
-2U14*P1 16|5b14 9l8 9t10
-3U14*P2 16|12b14 16l8 16t10
-4U14*P3 16|19b14 23l8 23t10
-5U14*P4 16|26b14 30l8 30t10
+1K9*Proc 6l5 6e9 16|4b14 35l5 35t9
+2U14*P1 16|9b14 13l8 13t10
+3U14*P2 16|16b14 20l8 20t10
+4U14*P3 16|23b14 27l8 27t10
+5U14*P4 16|30b14 34l8 34t10
 

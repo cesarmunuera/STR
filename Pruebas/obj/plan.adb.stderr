@@ -1,2 +1,1 @@
-plan.adb:49:13: error: unconstrained subtype not allowed (need initialization)
-plan.adb:49:13: error: provide initial value or explicit array bounds
+plan.adb:52:34: warning: variable "ult" is never read and never assigned [-gnatwv]
