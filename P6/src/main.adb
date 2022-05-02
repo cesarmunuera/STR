@@ -9,14 +9,14 @@ begin
 
    Medir (Procedimientos, Tiempos);
    Put_line ("+--------------------------+");
-   Put_Line ("| Procedimiento T.computo |");
+   Put_Line ("| Procedimiento  T.Computo |");
    Put_line ("|--------------------------|");
    for i in Tiempos'Range loop
-      Put ("| ");
+      Put ("|    ");
       Put (i'Image);
-      Put (" ");
+      Put ("            ");
       Put (Tiempos(i)'Image);
-      Put (" |");
+      Put ("    |");
       New_Line;
    end loop;
    Put_line ("+--------------------------+");

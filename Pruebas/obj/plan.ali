@@ -20,7 +20,7 @@ RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_IMPLICIT_LOOPS
 
-U plan%b		plan.adb		2b5df1bb NE OO PK IL
+U plan%b		plan.adb		8346d165 NE OO PK IL
 W ada%s			ada.ads			ada.ali
 W ada.calendar%s	a-calend.adb		a-calend.ali
 Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
@@ -44,7 +44,7 @@ D a-unccon.ads		20210520051130 0e9b276f ada.unchecked_conversion%s
 D interfac.ads		20210520051132 edec285f interfaces%s
 D i-cstrea.ads		20210520051132 e53d8b8e interfaces.c_streams%s
 D plan.ads		20220501161542 d06d875b plan%s
-D plan.adb		20220501170010 a2a23bc0 plan%b
+D plan.adb		20220502095036 0ab91b1e plan%b
 D proc.ads		20220501095912 b02b0f6d proc%s
 D system.ads		20210520051136 2ffa5114 system%s
 D s-crtl.ads		20210520051132 0ebbdb71 system.crtl%s
@@ -82,8 +82,9 @@ X 2 a-calend.ads
 226I9 Time_Rep<long_long_integer>
 X 10 a-textio.ads
 58K13*Text_IO 725e16 15|1w10 1r27
+506U14*Put_Line 15|112s13
 X 14 plan.ads
-1K9*plan 30l5 30e9 15|5b14 125l5 125t9
+1K9*plan 30l5 30e9 15|5b14 130l5 130t9
 2P9*ref_Procedimiento_t 3r67
 3A9*array_ref_Procedimiento_t(2P9)<integer> 6r37 15|7r37
 4A9*array_Tiempos_t(natural)<integer> 6r78 15|7r78
@@ -93,16 +94,16 @@ X 14 plan.ads
 8R9*reg_Planificacion_t 16e14 17r67
 9i7*Nombre{positive}
 10i7*T{natural}
-11i7*D{natural} 15|64r36 114r38 114r67
-12i7*C{natural} 15|108r53
+11i7*D{natural} 15|64r36 119r38 119r67
+12i7*C{natural} 15|108r52
 13i7*P{positive} 15|93m34
-14i7*R{natural} 15|108m27 114r24 114r53
-15b7*Planificable{boolean} 15|115m23 117m23
+14i7*R{natural} 15|108m27 119r24 119r53
+15b7*Planificable{boolean} 15|120m23 122m23
 17A9*array_reg_Planificacion_t(8R9)<integer> 18r29 20r41 15|50r42 60r25
 18P9*pVector_t(17A9) 15|53r20
-20U14*Planificar 20=26 15|50b14 124l8 124t18
+20U14*Planificar 20=26 15|50b14 129l8 129t18
 20a26 Tareas{17A9} 15|50b26 63r16 64r26 93m10 97r17 98r27 100r17 101m10 108m7
-. 108r14 108r33 108r40 113r16 114r14 114r28 114r43 114r57 115m13 117m13
+. 108r14 108r32 108r39 110r16 118r16 119r14 119r28 119r43 119r57 120m13 122m13
 22R9*array_reg 25e14 27r48
 23i7*Valor{integer} 15|64m17 72r23 72r45 74r32 77m23 77r41 80m25
 24i7*Posicion{integer} 15|65m17 75r35 78m23 78r44 81m25 93r24 98r41
@@ -126,7 +127,6 @@ X 15 plan.adb
 52i7 valor{integer} 74m16 80r34
 52i14 posicion{integer} 75m16 81r37
 52i24 contador{integer} 58m7 72r35 83m16 83r28 87m10
-52i34 ult{integer}
 53p7 tareas_aux{14|18P9} 60m7 98r10 101r23
 54b7 condicion{boolean} 107m7
 63i11 i{integer} 64r14 64r33 65r14 65r29
@@ -135,7 +135,9 @@ X 15 plan.adb
 92i11 i{integer} 93r21 93r39
 97i11 i{integer} 98r21 98r38
 100i11 i{integer} 101r17 101r34
-113i11 i{integer} 114r21 114r35 114r50 114r64 115r20 117r20
+110i11 i{integer} 111r22
+111i14 j{integer}
+118i11 i{integer} 119r21 119r35 119r50 119r64 120r20 122r20
 X 16 proc.ads
 1K9*Proc 15|2w6 3r5 16|6e9
 

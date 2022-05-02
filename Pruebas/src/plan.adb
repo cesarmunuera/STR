@@ -52,6 +52,7 @@ package body plan is
       valor, posicion, contador: Integer;
       tareas_aux : pVector_t;
       condicion : Boolean;
+      acumulador, Wn, comprobante, aux : Integer;
 
    begin
       -- +++++++++++++++++++++++++++++ CALCULO DE PRIORIDADES ++++++++++++++++++++++++++++
@@ -106,7 +107,25 @@ package body plan is
       -- ++++++++++++++++++++++++ CALCULO DE TIEMPO DE RESPUESTA ++++++++++++++++++++++++
       condicion := True;
       Tareas(Tareas'Last).R := Tareas(Tareas'Last).C;
-      -- 24/43 s04
+
+      acumulador := Tareas(Tareas'Last).C;
+      for i in reverse 1..3 loop
+         acumulador := acumulador + Tareas(i).C;
+
+         comprobante := acumulador;
+         aux := acumulador;
+         while condicion loop
+            Wn := Tareas(i).C + (Tareas(i+1).C * (aux/Tareas(i+1).T));
+            if (comprobante = Wn) then
+               condicion := false;
+               Tareas(i).R := Wn;
+            else
+               comprobante := Wn;
+               aux := Wn;
+            end if;
+         end loop;
+
+      end loop;
 
 
       -- ++++++++++++++++++++++++++ CHEQUEO DE PLANIFICABILIDAD ++++++++++++++++++++++++
@@ -117,7 +136,6 @@ package body plan is
             Tareas(i).Planificable := False;
          end if;
       end loop;
-
 
 
 

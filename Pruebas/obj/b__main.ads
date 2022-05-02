@@ -284,7 +284,7 @@ package ada_main is
    pragma Export (C, u00121, "ada__text_io__generic_auxB");
    u00122 : constant Version_32 := 16#48b7189e#;
    pragma Export (C, u00122, "ada__text_io__generic_auxS");
-   u00123 : constant Version_32 := 16#2b5df1bb#;
+   u00123 : constant Version_32 := 16#8346d165#;
    pragma Export (C, u00123, "planB");
    u00124 : constant Version_32 := 16#d06d875b#;
    pragma Export (C, u00124, "planS");

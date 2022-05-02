@@ -11,7 +11,7 @@ RV NO_STANDARD_STORAGE_POOLS
 RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U main%b		main.adb		155b329b NE OO SU IL
+U main%b		main.adb		8d4ae088 NE OO SU IL
 W ada%s			ada.ads			ada.ali
 Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
@@ -31,7 +31,7 @@ D a-textio.ads		20210520051130 aef4d56d ada.text_io%s
 D a-unccon.ads		20210520051130 0e9b276f ada.unchecked_conversion%s
 D interfac.ads		20210520051132 edec285f interfaces%s
 D i-cstrea.ads		20210520051132 e53d8b8e interfaces.c_streams%s
-D main.adb		20220501111028 0f71f6bd main%b
+D main.adb		20220502104412 976024ae main%b
 D plan.ads		20220501095912 04f51e26 plan%s
 D proc.ads		20220427204432 b02b0f6d proc%s
 D system.ads		20210520051136 2ffa5114 system%s
@@ -59,20 +59,20 @@ X 1 ada.ads
 16K9*Ada 20e8 13|1r6 2r5
 X 9 a-textio.ads
 58K13*Text_IO 725e16 13|1w10 2r9
-262U14*New_Line 13|27s7
-463U14*Put 13|22s7 23s7 24s7 25s7 26s7
-506U14*Put_Line 13|18s4 19s4 20s4 29s4
+262U14*New_Line 13|20s7
+463U14*Put 13|15s7 16s7 17s7 18s7 19s7
+506U14*Put_Line 13|11s4 12s4 13s4 22s4
 X 13 main.adb
-4U11*main 4b11 32l5 32t9
-5a4 Procedimientos{14|3A9} 6r30 17r11
-6a4 Tiempos{14|4A9} 17m27 21r13 25r12
-21i8 i{integer} 23r12 25r20
+4U11*main 4b11 24l5 24t9
+5a4 Procedimientos{14|3A9} 6r30 10r11
+6a4 Tiempos{14|4A9} 10m27 14r13 18r12
+14i8 i{integer} 16r12 18r20
 X 14 plan.ads
 1K9*plan 13|1w19 2r18 14|7e9
 2P9*ref_Procedimiento_t
 3A9*array_ref_Procedimiento_t(2P9)<integer> 13|5r20
 4A9*array_Tiempos_t(natural)<integer> 13|6r13
-6U14*Medir 13|17s4
+6U14*Medir 13|10s4
 X 15 proc.ads
 1K9*Proc 13|1w25 2r24 15|6e9
 2U14*P1 13|5r50
