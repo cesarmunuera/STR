@@ -19,12 +19,4 @@ package plan is
 
    procedure Planificar (Tareas: in out array_reg_Planificacion_t);
 
-   type array_reg is record
-      Valor : Integer;
-      Posicion : Integer;
-   end record;
-
-   type array_t is array (Integer range <>) of array_reg;
-   type pArray_t is access array_t;
-
 end plan;

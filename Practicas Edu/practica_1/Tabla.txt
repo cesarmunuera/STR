@@ -1,5 +1,0 @@
-Número entero más pequeño -------------------------------> -2147483648
-Número entero más grande---------------------------------> 2147483647
-Número natural más pequeño-------------------------------> 0
-Número positivo más pequeño -----------------------------> 1
-Número de dígitos significativos de los números reales --> 6
