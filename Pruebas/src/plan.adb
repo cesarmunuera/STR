@@ -50,8 +50,9 @@ package body plan is
    procedure Planificar (Tareas : in out array_reg_Planificacion_t) is
       valor, posicion: Integer;
       tareas_aux : pVector_t;
+
       condicion : Boolean;
-      acumulador, Wn, comprobante, aux : Integer;
+      acuAux1, acuAux2, Wn: Integer;
 
       type array_reg is record
          Valor : Integer;
@@ -111,25 +112,36 @@ package body plan is
       -- ++++++++++++++++++++++++ CALCULO DE TIEMPO DE RESPUESTA ++++++++++++++++++++++++
       condicion := True;
       Tareas(Tareas'Last).R := Tareas(Tareas'Last).C;
+      acuAux1 := Tareas(Tareas'Last).C;
+      Wn := 0;
 
-      acumulador := Tareas(Tareas'Last).C;
       for i in reverse Tareas'First..Tareas'Last-1 loop
-         acumulador := acumulador + Tareas(i).C;
 
-         comprobante := acumulador;
-         aux := acumulador;
+         acuAux1 := acuAux1 + Tareas(i).C;
+         acuAux2 := acuAux1;
+
          while condicion loop
-            Wn := Tareas(i).C + (Tareas(i+1).C * (aux/Tareas(i+1).T));
-            if (comprobante = Wn) then
-               condicion := false;
+
+            for j in i+1..Tareas'Last loop
+               Wn := Wn + Integer(Float'ceiling(Float(acuAux1) / Float(Tareas(j).T))) * Tareas(j).C;
+               Put_Line("La Wn vale " & Wn'Image);
+            end loop;
+            Wn := Wn + Tareas(i).C;
+
+            if (Wn = acuAux2) then
+               condicion := False;
+               --Put_Line("La i vale " & i'Image);
+               --Put_Line("La Wn vale " & Wn'Image);
                Tareas(i).R := Wn;
             else
-               comprobante := Wn;
-               aux := Wn;
+               acuAux2 := Wn;
             end if;
+
          end loop;
+         condicion := True;
 
       end loop;
+
 
 
       -- ++++++++++++++++++++++++++ CHEQUEO DE PLANIFICABILIDAD ++++++++++++++++++++++++

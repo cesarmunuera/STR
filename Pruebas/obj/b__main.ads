@@ -284,7 +284,7 @@ package ada_main is
    pragma Export (C, u00121, "ada__text_io__generic_auxB");
    u00122 : constant Version_32 := 16#48b7189e#;
    pragma Export (C, u00122, "ada__text_io__generic_auxS");
-   u00123 : constant Version_32 := 16#27caef4c#;
+   u00123 : constant Version_32 := 16#07ca5441#;
    pragma Export (C, u00123, "planB");
    u00124 : constant Version_32 := 16#ca30979a#;
    pragma Export (C, u00124, "planS");
@@ -314,34 +314,40 @@ package ada_main is
    pragma Export (C, u00136, "ada__calendar__delaysB");
    u00137 : constant Version_32 := 16#d86d2f1d#;
    pragma Export (C, u00137, "ada__calendar__delaysS");
-   u00138 : constant Version_32 := 16#3720d920#;
-   pragma Export (C, u00138, "system__img_biuS");
-   u00139 : constant Version_32 := 16#7a7e1efe#;
-   pragma Export (C, u00139, "system__img_llbS");
-   u00140 : constant Version_32 := 16#15e60e4c#;
-   pragma Export (C, u00140, "system__img_lliS");
-   u00141 : constant Version_32 := 16#0d8feb8c#;
-   pragma Export (C, u00141, "system__img_lllbS");
-   u00142 : constant Version_32 := 16#7e360bb4#;
-   pragma Export (C, u00142, "system__img_llliS");
-   u00143 : constant Version_32 := 16#07fbf280#;
-   pragma Export (C, u00143, "system__img_lllwS");
-   u00144 : constant Version_32 := 16#264c6bf5#;
-   pragma Export (C, u00144, "system__img_llwS");
-   u00145 : constant Version_32 := 16#08fa6212#;
-   pragma Export (C, u00145, "system__img_wiuS");
-   u00146 : constant Version_32 := 16#ae4beccb#;
-   pragma Export (C, u00146, "system__val_intS");
-   u00147 : constant Version_32 := 16#a5b55d2f#;
-   pragma Export (C, u00147, "system__val_unsS");
-   u00148 : constant Version_32 := 16#e37e7d10#;
-   pragma Export (C, u00148, "system__val_llliS");
-   u00149 : constant Version_32 := 16#f82486d6#;
-   pragma Export (C, u00149, "system__val_llluS");
-   u00150 : constant Version_32 := 16#eca5ecae#;
-   pragma Export (C, u00150, "system__memoryB");
-   u00151 : constant Version_32 := 16#76873720#;
-   pragma Export (C, u00151, "system__memoryS");
+   u00138 : constant Version_32 := 16#fd83e873#;
+   pragma Export (C, u00138, "system__concat_2B");
+   u00139 : constant Version_32 := 16#2d5a86c4#;
+   pragma Export (C, u00139, "system__concat_2S");
+   u00140 : constant Version_32 := 16#ecc88e78#;
+   pragma Export (C, u00140, "system__fat_fltS");
+   u00141 : constant Version_32 := 16#3720d920#;
+   pragma Export (C, u00141, "system__img_biuS");
+   u00142 : constant Version_32 := 16#7a7e1efe#;
+   pragma Export (C, u00142, "system__img_llbS");
+   u00143 : constant Version_32 := 16#15e60e4c#;
+   pragma Export (C, u00143, "system__img_lliS");
+   u00144 : constant Version_32 := 16#0d8feb8c#;
+   pragma Export (C, u00144, "system__img_lllbS");
+   u00145 : constant Version_32 := 16#7e360bb4#;
+   pragma Export (C, u00145, "system__img_llliS");
+   u00146 : constant Version_32 := 16#07fbf280#;
+   pragma Export (C, u00146, "system__img_lllwS");
+   u00147 : constant Version_32 := 16#264c6bf5#;
+   pragma Export (C, u00147, "system__img_llwS");
+   u00148 : constant Version_32 := 16#08fa6212#;
+   pragma Export (C, u00148, "system__img_wiuS");
+   u00149 : constant Version_32 := 16#ae4beccb#;
+   pragma Export (C, u00149, "system__val_intS");
+   u00150 : constant Version_32 := 16#a5b55d2f#;
+   pragma Export (C, u00150, "system__val_unsS");
+   u00151 : constant Version_32 := 16#e37e7d10#;
+   pragma Export (C, u00151, "system__val_llliS");
+   u00152 : constant Version_32 := 16#f82486d6#;
+   pragma Export (C, u00152, "system__val_llluS");
+   u00153 : constant Version_32 := 16#eca5ecae#;
+   pragma Export (C, u00153, "system__memoryB");
+   u00154 : constant Version_32 := 16#76873720#;
+   pragma Export (C, u00154, "system__memoryS");
 
    --  BEGIN ELABORATION ORDER
    --  ada%s
@@ -385,6 +391,8 @@ package ada_main is
    --  system.wch_jis%b
    --  system.wch_cnv%s
    --  system.wch_cnv%b
+   --  system.concat_2%s
+   --  system.concat_2%b
    --  system.traceback%s
    --  system.traceback%b
    --  ada.characters.handling%s
@@ -463,6 +471,7 @@ package ada_main is
    --  ada.strings.text_buffers.utils%b
    --  system.arith_64%s
    --  system.arith_64%b
+   --  system.fat_flt%s
    --  system.put_images%s
    --  system.put_images%b
    --  ada.streams%s
