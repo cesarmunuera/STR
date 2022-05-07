@@ -65,8 +65,8 @@ package body plan is
 
    begin
       -- +++++++++++++++++++++++++++++ CALCULO DE PRIORIDADES ++++++++++++++++++++++++++++
-      vec := new array_t (1..4);
-      tareas_aux := new array_reg_Planificacion_t (1..4);
+      vec := new array_t (Tareas'First..Tareas'Last);
+      tareas_aux := new array_reg_Planificacion_t (Tareas'First..Tareas'Last);
 
       --Primero rellenamos un array provisional
       for i in Tareas'Range loop
@@ -123,18 +123,17 @@ package body plan is
          while condicion loop
 
             for j in i+1..Tareas'Last loop
-               Wn := Wn + Integer(Float'ceiling(Float(acuAux1) / Float(Tareas(j).T))) * Tareas(j).C;
-               Put_Line("La Wn vale " & Wn'Image);
+               Wn := Wn + Integer(Float'ceiling(Float(acuAux2) / Float(Tareas(j).T))) * Tareas(j).C;
             end loop;
             Wn := Wn + Tareas(i).C;
 
             if (Wn = acuAux2) then
                condicion := False;
-               --Put_Line("La i vale " & i'Image);
-               --Put_Line("La Wn vale " & Wn'Image);
                Tareas(i).R := Wn;
+               Wn := 0;
             else
                acuAux2 := Wn;
+               Wn := 0;
             end if;
 
          end loop;
@@ -156,4 +155,60 @@ package body plan is
 
 
    end Planificar;
+
+
+
+
+   procedure PuntoFinal (Tareas : in out array_reg_Planificacion_t) is
+      Procedimientos: array_ref_Procedimiento_t := (P1'Access, P2'Access, P3'Access, P4'Access);
+      Tiempos: array_Tiempos_t (Procedimientos'Range);
+   begin
+      --Primero calculamos los tiempos de computo, y los imprimimos
+      Medir (Procedimientos, Tiempos);
+
+      Put_line ("+--------------------------+");
+      Put_Line ("| Procedimiento  T.Computo |");
+      Put_line ("|--------------------------|");
+      for i in Tiempos'Range loop
+         Put ("|    ");
+         Put (i'Image);
+         Put ("            ");
+         Put (Tiempos(i)'Image);
+         Put ("    |");
+         New_Line;
+      end loop;
+      Put_line ("+--------------------------+");
+
+
+      --Despues, rellenamos el array de tareas con los tiempos de computo
+      for i in 1..4 loop
+         Tareas(i).C := Tiempos(i);
+      end loop;
+
+
+      --Una vez que tenemos las tareas preparadas para ser ejecutadas, las ejecutamos
+      Planificar(Tareas);
+
+      --Y ahora imprimimos las tareas
+      Put_line ("+------------------------------------------------+");
+      Put_Line ("|  Tarea   T    D    C    P    R    Planificable |");
+      Put_line ("|------------------------------------------------|");
+      for I in Tareas'Range loop
+         Put ("| ");
+         Put (Tareas(I).Nombre'Image); Put ("   ");
+         Put (Tareas(I).T'Image); Put (" ");
+         Put (Tareas(I).D'Image); Put (" ");
+         Put (Tareas(I).C'Image); Put (" ");
+         Put (Tareas(I).P'Image); Put (" ");
+         Put (Tareas(I).R'Image); Put (" ");
+         if Tareas(I).Planificable then
+            Put_Line ("        SI      |");
+         else
+            Put_Line ("        NO      |");
+         end if;
+      end loop;
+      Put_line ("+------------------------------------------------+");
+   end PuntoFinal;
+
+
 end plan;

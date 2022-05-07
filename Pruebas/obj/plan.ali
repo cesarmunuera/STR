@@ -20,17 +20,16 @@ RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_IMPLICIT_LOOPS
 
-U plan%b		plan.adb		07ca5441 NE OO PK IL
+U plan%b		plan.adb		cc7043cd NE OO PK IL
 W ada%s			ada.ads			ada.ali
 W ada.calendar%s	a-calend.adb		a-calend.ali
 Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 W proc%s		proc.adb		proc.ali
-Z system.concat_2%s	s-conca2.adb		s-conca2.ali
 Z system.fat_flt%s	s-fatflt.ads		s-fatflt.ali
 Z system.img_int%s	s-imgint.ads		s-imgint.ali
 
-U plan%s		plan.ads		ca30979a EE NE OO PK IL
+U plan%s		plan.ads		1217c1bc EE NE OO PK IL
 Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
 
 D ada.ads		20210520051132 76789da1 ada%s
@@ -46,11 +45,10 @@ D a-textio.ads		20210520051130 aef4d56d ada.text_io%s
 D a-unccon.ads		20210520051130 0e9b276f ada.unchecked_conversion%s
 D interfac.ads		20210520051132 edec285f interfaces%s
 D i-cstrea.ads		20210520051132 e53d8b8e interfaces.c_streams%s
-D plan.ads		20220505165744 ca30979a plan%s
-D plan.adb		20220507125304 94688efb plan%b
+D plan.ads		20220507161822 1217c1bc plan%s
+D plan.adb		20220507164026 87f5cf51 plan%b
 D proc.ads		20220501095912 b02b0f6d proc%s
 D system.ads		20210520051136 2ffa5114 system%s
-D s-conca2.ads		20210520051132 02a0d7d0 system.concat_2%s
 D s-crtl.ads		20210520051132 0ebbdb71 system.crtl%s
 D s-exctab.ads		20210520051132 54135002 system.exception_table%s
 D s-fatflt.ads		20210520051132 11beb392 system.fat_flt%s
@@ -73,6 +71,7 @@ D unchconv.ads		20210520051136 ca2f9e18 unchecked_conversion%s
 G a e
 G c Z s b [medir plan 6 14 none]
 G c Z s b [planificar plan 20 14 none]
+G c Z s b [puntofinal plan 23 14 none]
 G c Z s s [array_ref_procedimiento_tIP plan 3 9 none]
 G c Z s s [array_tiempos_tIP plan 4 9 none]
 G c Z s s [reg_planificacion_tIP plan 8 9 none]
@@ -88,29 +87,38 @@ X 2 a-calend.ads
 226I9 Time_Rep<long_long_integer>
 X 10 a-textio.ads
 58K13*Text_IO 725e16 15|1w10 1r27
-506U14*Put_Line 15|127s16
+262U14*New_Line 15|178s10
+463U14*Put 15|173s10 174s10 175s10 176s10 177s10 197s10 198s10 198s40 199s10
+. 199s35 200s10 200s35 201s10 201s35 202s10 202s35 203s10 203s35
+506U14*Put_Line 15|169s7 170s7 171s7 180s7 193s7 194s7 195s7 205s13 207s13
+. 210s7
 X 14 plan.ads
-1K9*plan 22l5 22e9 15|5b14 159l5 159t9
+1K9*plan 25l5 25e9 15|5b14 214l5 214t9
 2P9*ref_Procedimiento_t 3r67
-3A9*array_ref_Procedimiento_t(2P9)<integer> 6r37 15|7r37
-4A9*array_Tiempos_t(natural)<integer> 6r78 15|7r78
-6U14*Medir 6>21 6<64 15|7b14 43l8 43t13
+3A9*array_ref_Procedimiento_t(2P9)<integer> 6r37 15|7r37 163r23
+4A9*array_Tiempos_t(natural)<integer> 6r78 15|7r78 164r16
+6U14*Medir 6>21 6<64 15|7b14 43l8 43t13 167s7
 6a21 Procedimientos{3A9} 15|7b21 16r7 22r7 28r7 34r7
 6a64 Tiempos{4A9} 15|7b64 39m7 40m7 41m7 42m7
 8R9*reg_Planificacion_t 16e14 17r67
-9i7*Nombre{positive}
-10i7*T{natural} 15|126r82
-11i7*D{natural} 15|73r36 149r38 149r67
-12i7*C{natural} 15|114r52 115r38 120r41 126r99 129r34
-13i7*P{positive} 15|99m34
-14i7*R{natural} 15|114m27 135m26 149r24 149r53
-15b7*Planificable{boolean} 15|150m23 152m23
-17A9*array_reg_Planificacion_t(8R9)<integer> 18r29 20r41 15|50r42 69r25
+9i7*Nombre{positive} 15|198r25
+10i7*T{natural} 15|126r82 199r25
+11i7*D{natural} 15|73r36 148r38 148r67 200r25
+12i7*C{natural} 15|114r52 115r38 120r41 126r99 128r34 185m20 201r25
+13i7*P{positive} 15|99m34 202r25
+14i7*R{natural} 15|114m27 132m26 148r24 148r53 203r25
+15b7*Planificable{boolean} 15|149m23 151m23 204r23
+17A9*array_reg_Planificacion_t(8R9)<integer> 18r29 20r41 23r41 15|50r42 69r25
+. 162r42
 18P9*pVector_t(17A9) 15|52r20
-20U14*Planificar 20=26 15|50b14 158l8 158t18
-20a26 Tareas{17A9} 15|50b26 72r16 73r26 99m10 103r17 104r27 106r17 107m10
-. 114m7 114r14 114r32 114r39 115r18 115r25 118r24 118r38 120r31 125r27 126r72
-. 126r89 129r24 135m16 148r16 149r14 149r28 149r43 149r57 150m13 152m13
+20U14*Planificar 20=26 15|50b14 157l8 157t18 190s7
+20a26 Tareas{17A9} 15|50b26 68r27 68r41 69r52 69r66 72r16 73r26 99m10 103r17
+. 104r27 106r17 107m10 114m7 114r14 114r32 114r39 115r18 115r25 118r24 118r38
+. 120r31 125r27 126r72 126r89 128r24 132m16 147r16 148r14 148r28 148r43 148r57
+. 149m13 151m13
+23U14*PuntoFinal 23=26 15|162b14 211l8 211t18
+23a26 Tareas{17A9} 15|162b26 185m10 190m18 196r16 198r15 199r15 200r15 201r15
+. 202r15 203r15 204r13
 X 15 plan.adb
 8f7 t1{float} 18m7 39r29
 8f11 t2{float} 24m7 40r29
@@ -127,11 +135,11 @@ X 15 plan.adb
 51i7 valor{integer} 82m16 88r34
 51i14 posicion{integer} 83m16 89r37
 52p7 tareas_aux{14|18P9} 69m7 104r10 107r23
-54b7 condicion{boolean} 113m7 123r16 132m16 141m10
-55i7 acuAux1{integer} 115m7 120m10 120r21 121r21 126r55
-55i16 acuAux2{integer} 121m10 131r22 137m16
-55i25 Wn{integer} 116m7 126m16 126r22 127r41 129m13 129r19 131r17 135r31
-. 137r27
+54b7 condicion{boolean} 113m7 123r16 131m16 140m10
+55i7 acuAux1{integer} 115m7 120m10 120r21 121r21
+55i16 acuAux2{integer} 121m10 126r55 130r22 135m16
+55i25 Wn{integer} 116m7 126m16 126r22 128m13 128r19 130r17 132r31 133m16
+. 135r27 136m16
 57R12 array_reg 60e17 62r51
 58i10 Valor{integer} 73m17 81r23 81r40 82r32 85m23 85r41 88m25
 59i10 Posicion{integer} 74m17 83r35 86m23 86r44 89m25 99r24 104r41
@@ -145,9 +153,18 @@ X 15 plan.adb
 98i11 i{integer} 99r21 99r39
 103i11 i{integer} 104r21 104r38
 106i11 i{integer} 107r17 107r34
-118i11 i{integer} 120r38 125r22 129r31 135r23
+118i11 i{integer} 120r38 125r22 128r31 132r23
 125i17 j{integer} 126r79 126r96
-148i11 i{integer} 149r21 149r35 149r50 149r64 150r20 152r20
+147i11 i{integer} 148r21 148r35 148r50 148r64 149r20 151r20
+163a7 Procedimientos{14|3A9} 164r33 167r14
+164a7 Tiempos{14|4A9} 167m30 172r16 176r15 185r25
+172i11 i{integer} 174r15 176r23
+184i11 i{integer} 185r17 185r33
+196i11 I{integer} 198r22 199r22 200r22 201r22 202r22 203r22 204r20
 X 16 proc.ads
 1K9*Proc 15|2w6 3r5 16|6e9
+2U14*P1 15|163r53
+3U14*P2 15|163r64
+4U14*P3 15|163r75
+5U14*P4 15|163r86
 

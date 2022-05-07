@@ -16,7 +16,7 @@ RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U main%b		main.adb		eedca113 NE OO SU IL
+U main%b		main.adb		0b4d565f NE OO SU IL
 W ada%s			ada.ads			ada.ali
 Z ada.exceptions%s	a-except.adb		a-except.ali
 Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
@@ -56,8 +56,8 @@ D a-tiinio.adb		20210520051130 b79731f4 ada.text_io.integer_io%b
 D a-unccon.ads		20210520051130 0e9b276f ada.unchecked_conversion%s
 D interfac.ads		20210520051132 edec285f interfaces%s
 D i-cstrea.ads		20210520051132 e53d8b8e interfaces.c_streams%s
-D main.adb		20220501155722 8a18e3e4 main%b
-D plan.ads		20220505165744 ca30979a plan%s
+D main.adb		20220507162426 b7ae428e main%b
+D plan.ads		20220507161822 1217c1bc plan%s
 D system.ads		20210520051136 2ffa5114 system%s
 D s-crtl.ads		20210520051132 0ebbdb71 system.crtl%s
 D s-exctab.ads		20210520051132 54135002 system.exception_table%s
@@ -96,33 +96,19 @@ D s-wchcon.ads		20210520051136 1b7d22d2 system.wch_con%s
 D unchconv.ads		20210520051136 ca2f9e18 unchecked_conversion%s
 G a e
 G c Z b b [main standard 4 11 none]
-G r c none [main standard 4 11 none] [planificar plan 20 14 none]
+G r c none [main standard 4 11 none] [puntofinal plan 23 14 none]
 X 1 ada.ads
 16K9*Ada 20e8 18|1r6 2r5
 X 9 a-textio.ads
 58K13*Text_IO 725e16 18|1w10 2r9
-87I12*Field{integer}
-463U14*Put 18|23s7 24s41 25s36 26s36 27s36 28s36 29s36
-506U14*Put_Line 18|19s4 20s4 21s4 31s10 33s10 36s4
 X 13 a-tiinio.ads
 46k21*Integer_IO 108e27 18|5r30
-80U14 Put 18|24s7[5] 25s7[5] 26s7[5] 27s7[5] 28s7[5] 29s7[5]
-82i7 Width{9|87I12} 18|24r30[5] 25r25[5] 26r25[5] 27r25[5] 28r25[5] 29r25[5]
 X 18 main.adb
-4U11*main 4b11 37l5 37t9
+4U11*main 4b11 20l5 20t9
 5K12 Integer_Es[13|46] 6r8
-7a4 Tareas{19|17A9} 18m16 18r16 22r13 24r12 25r12 26r12 27r12 28r12 29r12
-. 30r10
-22i8 I{integer} 24r19 25r19 26r19 27r19 28r19 29r19 30r17
+7a4 Tareas{19|17A9} 18m16 18r16
 X 19 plan.ads
-1K9*plan 18|1w19 2r18 19|22e9
-9i7*Nombre{positive} 18|24r22
-10i7*T{natural} 18|25r22
-11i7*D{natural} 18|26r22
-12i7*C{natural} 18|27r22
-13i7*P{positive} 18|28r22
-14i7*R{natural} 18|29r22
-15b7*Planificable{boolean} 18|30r20
+1K9*plan 18|1w19 2r18 19|25e9
 17A9*array_reg_Planificacion_t(8R9)<integer> 18|7r12
-20U14*Planificar 18|18s4
+23U14*PuntoFinal 18|18s4
 

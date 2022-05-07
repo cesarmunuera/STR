@@ -19,4 +19,7 @@ package plan is
 
    procedure Planificar (Tareas: in out array_reg_Planificacion_t);
 
+   --Para el último punto
+   procedure PuntoFinal (Tareas: in out array_reg_Planificacion_t);
+
 end plan;
