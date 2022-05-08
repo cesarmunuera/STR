@@ -1,24 +1,20 @@
-with Ada.Text_Io, Plan, Proc;
-use Ada.Text_Io, Plan, Proc;
+with Ada.Text_Io, Plan;
+use Ada.Text_Io, Plan;
 
 procedure main is
-   Procedimientos: array_ref_Procedimiento_t := (P1'Access, P2'Access, P3'Access, P4'Access);
-   Tiempos: array_Tiempos_t (Procedimientos'Range);
-
+   package Integer_Es is new Integer_Io (Integer);
+   use Integer_Es;
+   Tareas: array_reg_Planificacion_t := (
+                                         -- -------------------------------------------------
+                                         -- Tarea T D C P R Planificable
+                                         -- -------------------------------------------------
+                                           ( 1, 2400, 600, 3, 1, 0, False ),
+                                         ( 2, 3200, 1200, 3, 1, 0, False ),
+                                         ( 3, 3600, 2000, 3, 1, 0, False ),
+                                         ( 4, 4000, 3200, 4, 1, 0, False )
+                                         -- -------------------------------------------------
+                                        );
 begin
-
-   Medir (Procedimientos, Tiempos);
-   Put_line ("+--------------------------+");
-   Put_Line ("| Procedimiento  T.Computo |");
-   Put_line ("|--------------------------|");
-   for i in Tiempos'Range loop
-      Put ("|    ");
-      Put (i'Image);
-      Put ("            ");
-      Put (Tiempos(i)'Image);
-      Put ("    |");
-      New_Line;
-   end loop;
-   Put_line ("+--------------------------+");
+   PuntoFinal (Tareas);
 
 end main;

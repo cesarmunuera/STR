@@ -4,6 +4,8 @@ use Proc, Ada.Calendar;
 
 package body plan is
 
+   --Medotod al que pasamos una serie de procedimientos, y cuenta el tiempo que tarda en ejecutarse
+   --cada uno de ellos.
    procedure Medir (Procedimientos: array_ref_Procedimiento_t; Tiempos : out array_Tiempos_t) is
       t1, t2 ,t3, t4 : Float;
       t1fin, t2fin, t3fin, t4fin: Time;
@@ -159,6 +161,9 @@ package body plan is
 
 
 
+   --En este ultimo metodo, he reciclado los main correspondientes al punto 1 y 2, y con ayuda de
+   --los metodos anteriores, podemos calcular la prioridad, retardos y planificabilidad de un
+   --sistema, simulando los tiempos de computo.
    procedure PuntoFinal (Tareas : in out array_reg_Planificacion_t) is
       Procedimientos: array_ref_Procedimiento_t := (P1'Access, P2'Access, P3'Access, P4'Access);
       Tiempos: array_Tiempos_t (Procedimientos'Range);
