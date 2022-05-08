@@ -1,39 +1,43 @@
 <?xml version="1.0"?>
 <Locations >
   <Project >
-    <file_marker column=" 36" line=" 190" >
+    <file_marker column=" 64" line=" 20" >
       <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\Pruebas\pruebas.gpr</vfs_project>
       <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\Pruebas\src\plan.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 55" line=" 42" >
+    <file_marker column=" 1" line=" 39" >
       <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\Pruebas\pruebas.gpr</vfs_project>
       <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\Pruebas\src\main.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 43" >
+    <file_marker column=" 27" line=" 24" >
       <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\Pruebas\pruebas.gpr</vfs_project>
       <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\Pruebas\src\main.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 1" >
-      <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\Pruebas\pruebas.gpr</vfs_project>
-      <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\Pruebas\src\proc.adb</vfs_file>
-    </file_marker>
-    <file_marker column=" 46" line=" 46" >
+    <file_marker column=" 13" line=" 19" >
       <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\Pruebas\pruebas.gpr</vfs_project>
       <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\Pruebas\src\main.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 40" line=" 12" >
+    <file_marker column=" 25" line=" 38" >
       <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\Pruebas\pruebas.gpr</vfs_project>
       <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\Pruebas\src\main.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 69" line=" 30" >
+    <file_marker column=" 1" line=" 37" >
       <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\Pruebas\pruebas.gpr</vfs_project>
       <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\Pruebas\src\main.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 16" line=" 18" >
+    <file_marker column=" 34" line=" 38" >
       <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\Pruebas\pruebas.gpr</vfs_project>
       <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\Pruebas\src\main.adb</vfs_file>
     </file_marker>
-    <file_marker current="true" column=" 20" line=" 31" >
+    <file_marker column=" 7" line=" 20" >
+      <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\Pruebas\pruebas.gpr</vfs_project>
+      <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\Pruebas\src\main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 34" line=" 38" >
+      <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\Pruebas\pruebas.gpr</vfs_project>
+      <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\Pruebas\src\main.adb</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 7" line=" 20" >
       <vfs_project>C:\Users\cesar\Desktop\Universidad\STR\STR\Pruebas\pruebas.gpr</vfs_project>
       <vfs_file>C:\Users\cesar\Desktop\Universidad\STR\STR\Pruebas\src\main.adb</vfs_file>
     </file_marker>

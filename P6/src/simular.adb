@@ -16,7 +16,8 @@ procedure simular is
    stop : Boolean;
    task body Tarea_t is
       tcomienzo, tfin : Time;
-      tiempo : Float;
+      tiempo: Float;
+      --periodo : Integer;
    begin
       stop := false;
 
@@ -29,8 +30,11 @@ procedure simular is
          --Ahora checkeamos si los deadline se cumplen
          tiempo := Float(Seconds(tfin)) - Float(Seconds(tcomienzo));
          if tiempo > Float(Tarea_t.D) then
-            Put_Line("La tarea no es planificable!");
+            Put_Line("Este sistema no es planificable!");
          end if;
+
+         --Finalmente, dormimos la tarea, para que se ejecute en su periodo
+         delay Duration(Tarea_t.T/1000);
 
       end loop;
 

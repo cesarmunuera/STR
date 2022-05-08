@@ -21,7 +21,7 @@ RV NO_DEFAULT_INITIALIZATION
 RV NO_IMPLEMENTATION_PRAGMAS
 RV MAX_TASKS=1+
 
-U main%b		main.adb		25a9ca63 NE OO SU IL
+U main%b		main.adb		fce54d78 NE OO SU IL
 W ada%s			ada.ads			ada.ali
 W ada.calendar%s	a-calend.adb		a-calend.ali
 Z ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
@@ -54,7 +54,7 @@ D interfac.ads		20210520051132 edec285f interfaces%s
 D i-c.ads		20210520051132 d9beded9 interfaces.c%s
 D i-cstrin.ads		20210520051132 341d0ddf interfaces.c.strings%s
 D i-cstrea.ads		20210520051132 e53d8b8e interfaces.c_streams%s
-D main.adb		20220508122140 6e2c46ff main%b
+D main.adb		20220508214824 b760c1e4 main%b
 D plan.ads		20220507161822 1217c1bc plan%s
 D proc.ads		20220501095912 b02b0f6d proc%s
 D system.ads		20210520051136 2ffa5114 system%s
@@ -91,39 +91,39 @@ X 2 a-calend.ads
 36K13*Calendar 413e17 18|1w35 2r34
 42I9*Time<226I9> 18|18r25
 54O12*Day_Duration{duration}
-56V13*Clock{42I9} 18|24s23 26s18
-67V13*Seconds{54O12} 18|30s26 30s49
+56V13*Clock{42I9} 18|25s23 27s18
+67V13*Seconds{54O12} 18|31s26 31s49
 226I9 Time_Rep<long_long_integer>
 X 12 a-textio.ads
 58K13*Text_IO 725e16 18|1w10 2r9
-506U14*Put_Line 18|32s13 46s4 51s4
+506U14*Put_Line 18|33s13 51s4 56s4
 X 18 main.adb
-4U11*main 4b11 53l5 53t9
+4U11*main 4b11 58l5 58t9
 5P9 ref_Procedimiento_t 12r40
-7T14 Tarea_t 7d23 8d23 9d23 10d23 11d23 12d23 14l8 14e15 17b14 25r10 31r28
-. 37l8 37t15 39r12 40r12 41r12 42r12
+7T14 Tarea_t 7d23 8d23 9d23 10d23 11d23 12d23 14l8 14e15 17b14 26r10 32r28
+. 38r25 42l8 42t15 44r12 45r12 46r12 47r12
 7i23 Nombre{natural}
-8i23 T{natural}
-9i23 D{natural} 31r36
+8i23 T{natural} 38r33
+9i23 D{natural} 32r36
 10i23 C{natural}
 11i23 P{natural} 13r24
-12p23 Codigo_Ciclico{5P9} 25r18
-16b4 stop{boolean} 21m7 23r18 49m4
-18i7 tcomienzo{2|42I9} 24m10 30r57
-18i18 tfin{2|42I9} 26m10 30r34
-19f7 tiempo{float} 30m10 31r13
-39t4 Tarea1{7T14}
-40t4 Tarea2{7T14}
-41t4 Tarea3{7T14}
-42t4 Tarea4{7T14}
+12p23 Codigo_Ciclico{5P9} 26r18
+16b4 stop{boolean} 22m7 24r18 54m4
+18i7 tcomienzo{2|42I9} 25m10 31r57
+18i18 tfin{2|42I9} 27m10 31r34
+19f7 tiempo{float} 31m10 32r13
+44t4 Tarea1{7T14}
+45t4 Tarea2{7T14}
+46t4 Tarea3{7T14}
+47t4 Tarea4{7T14}
 X 19 plan.ads
 1K9*plan 18|1w19 2r18 19|25e9
 X 20 proc.ads
 1K9*Proc 18|1w25 2r24 20|6e9
-2U14*P1 18|39r43
-3U14*P2 18|40r44
-4U14*P3 18|41r44
-5U14*P4 18|42r44
+2U14*P1 18|44r43
+3U14*P2 18|45r44
+4U14*P3 18|46r44
+5U14*P4 18|47r44
 X 33 s-stausa.ads
 208U14*Initialize 209i<c,__gnat_stack_usage_initialize>22
 273U14*Output_Results 277i<c,__gnat_stack_usage_output_results>22

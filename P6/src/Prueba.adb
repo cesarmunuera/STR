@@ -1,7 +1,7 @@
 with Ada.Text_Io, Plan;
 use Ada.Text_Io, Plan;
 
-procedure main3 is
+procedure Prueba is
    package Integer_Es is new Integer_Io (Integer);
    use Integer_Es;
    Tareas: array_reg_Planificacion_t := (
@@ -34,4 +34,4 @@ begin
       end if;
   end loop;
    Put_line ("+------------------------------------------------+");
-end main3;
+end Prueba;
