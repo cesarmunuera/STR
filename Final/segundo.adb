@@ -149,51 +149,51 @@ begin
 	if ((Err_ang > 0.0) and (Err_lat < 0.0)) then
 		Put_Line("El coche está en la izquierda, pero va hacia la derecha ++++++");
 		if ((Err_lat > -3.5) and (Err_lat < 0.0)) then
-			refVelocidad := 30.0;
+			refVelocidad := 45.0;
 			volante := 0.05;
 		else
-			refVelocidad := 28.5;
+			refVelocidad := 43.5;
 		end if;
 
 	elsif ((Err_ang < 0.0) and (Err_lat > 0.0)) then
 		Put_Line("El coche está en la derecha, pero va hacia la izquierda ++++++");
 		if ((Err_lat > 0.0) and (Err_lat < 3.5)) then
-			refVelocidad := 30.0;
+			refVelocidad := 45.0;
 			volante := -0.05;
 		else
-			refVelocidad := 28.5;
+			refVelocidad := 43.5;
 		end if;
 
 	elsif ((Err_ang > 0.0) and (Err_lat >= 0.0)) then
 		Put_Line("El coche se va hacia la derecha, desde la derecha");
 		if ((0.0 <= Err_lat) and (Err_lat <= 7.0)) then
 			volante := 0.1;
-			refVelocidad := 28.5;
+			refVelocidad := 43.5;
 		elsif ((7.1 <= Err_lat) and (Err_lat <= 14.0)) then
-			volante := 0.15;
-			refVelocidad := 28.0;
+			volante := 0.125;
+			refVelocidad := 43.0;
 		elsif ((14.1 <= Err_lat) and (Err_lat <= 20.0)) then
-			volante := 0.2;
-			refVelocidad := 27.5;
+			volante := 0.15;
+			refVelocidad := 42.5;
 		elsif ((20.1 <= Err_lat)) then
-			volante := 0.3;
-			refVelocidad := 23.5;
+			volante := 0.2;
+			refVelocidad := 40.5;
 		end if;
 
 	elsif ((Err_ang < 0.0) and (Err_lat <= 0.0)) then
 		Put_Line("El coche se va hacia la izquierda, desde la izquierda");
 		if ((0.0 >= Err_lat) and (Err_lat >= -7.0)) then
 			volante := -0.1;
-			refVelocidad := 28.5;
+			refVelocidad := 43.5;
 		elsif ((-7.1 >= Err_lat) and (Err_lat >= -14.0)) then
-			volante := -0.15;
-			refVelocidad := 28.0;
+			volante := -0.125;
+			refVelocidad := 43.0;
 		elsif ((-14.1 >= Err_lat) and (Err_lat >= -20.0)) then
-			volante := -0.2;
-			refVelocidad := 27.5;
+			volante := -0.15;
+			refVelocidad := 42.5;
 		elsif ((-20.1 >= Err_lat)) then
 			volante := -0.3;
-			refVelocidad := 23.5;
+			refVelocidad := 40.5;
 		end if;
 
 	end if;
